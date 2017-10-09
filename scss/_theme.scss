@@ -1,0 +1,794 @@
+body {
+  opacity: 0;
+  
+  /* make things invisible upon start */
+  display: grid;
+  position: relative;
+  font-size: $font-size-base;
+  color: $gray-850;
+  flex-wrap: wrap;
+  -webkit-animation: fadeIn ease-in 1;
+  
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: .5s;
+  -moz-animation-duration: .5s;
+  animation-duration: .5s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.axis {
+  display: flow-root;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+form {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.text-small {
+  font-size: $font-size-sm;
+}
+
+.tg-list {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.tg-list-item {
+  margin: 0 2em;
+}
+
+.tgl {
+  display: none; // add default box-sizing for this scope
+  &,
+  &:after,
+  &:before,
+  & *,
+  & *:after,
+  & *:before,
+  &+.tgl-btn {
+    box-sizing: border-box;
+    &::selection {
+      background: none;
+    }
+  }
+  +.tgl-btn {
+    outline: 0;
+    display: block;
+    width: 7rem;
+    height: 1.8rem;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    &:after,
+    &:before {
+      position: relative;
+      display: block;
+      content: "";
+      width: 50%;
+      height: 100%;
+    }
+    &:after {
+      left: 0;
+    }
+    &:before {
+      display: none;
+    }
+  }
+  &:checked+.tgl-btn:after {
+    left: 50%;
+  }
+}
+
+.tgl-skewed {
+  +.tgl-btn {
+    overflow: hidden;
+    transform: skew(-10deg);
+    backface-visibility: hidden;
+    transition: all .2s ease;
+    font-family: sans-serif;
+    background: $green;
+    &:after,
+    &:before {
+      transform: skew(10deg);
+      display: inline-block;
+      transition: all .2s ease;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      line-height: 2em;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
+    }
+    &:after {
+      left: 100%;
+      content: attr(data-tg-on);
+    }
+    &:before {
+      left: 0;
+      content: attr(data-tg-off);
+    }
+    &:active {
+      background: $green;
+      &:before {
+        left: -10%;
+      }
+    }
+  }
+  &:checked+.tgl-btn {
+    background: #888;
+    &:before {
+      left: -100%;
+    }
+    &:after {
+      left: 0;
+    }
+    &:active:after {
+      left: 10%;
+    }
+  }
+}
+
+.flex-no-shrink {
+  flex-shrink: 0;
+}
+
+//page loader
+.pace {
+  -webkit-pointer-events: none;
+  -moz-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #2299dd;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+// ---------------------------
+button:hover {
+  cursor: pointer;
+}
+
+.actionButtons {
+  .actionBtn label {
+    display: inline-flex;
+  }
+}
+
+.btn {
+  font-size: $font-size-base;
+  border-radius: 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-primary {
+  border: 3px solid $blue;
+}
+
+.btn-b-1 {
+  border: 1px solid $cyan;
+}
+
+.full-screen-bg-landing-page {
+  //@include make-container();
+  background-image: url('images/bg/usa-fb-bg.jpg');
+  background-color: $blue-450-50;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  object-fit: contain;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.full-screen-container {
+  //@include make-container();
+  background-image: url('images/bg/USAF_introscreen-HeroBoy2.png');
+  background-color: $blue-000;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 0;
+  position: relative;
+  right: 0;
+  top: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+}
+
+.header-container {
+  background-image: linear-gradient(to bottom, $blue, $blue-400);
+  color: $blue-500;
+  @include px-to-rem-height(28px);
+  //height: 11.85rem; // padding-top: 28px;
+}
+
+.brand-container {
+  padding: 0 20px;
+  .brand-logo {
+    display: flex;
+  }
+}
+
+.page-title-container {
+  //position: relative;
+  //top: -75px;
+  .page-title {
+    color: $blue-600;
+    font-family: $font-family-base;
+    font-size: $h4-font-size;
+    text-transform: uppercase;
+    .fa {
+      color: $page-title-fa-color;
+      font-size: ($font-size-lg / $font-size-base + .5rem);
+      margin: $page-title-fa-margin;
+    }
+    .form-control {
+      border: 0;
+      border-radius: 0;
+      height: 42px;
+      flex: 0 0 auto;
+      width: 80%;
+    }
+  }
+  .title-bar {
+    position: absolute;
+    top: 12rem;
+    color: $white;
+    display: flex;
+    margin-left: 5px;
+  }
+}
+
+.header-content-divider {
+  background-color: $blue;
+  color: $white;
+  height: 20px;
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  max-width: 100%;
+  margin-right: -20px;
+}
+
+.editMode {
+  border: 1px solid $cyan !important;
+  background: rgba(0, 0, 0, 0.35) !important;
+}
+
+.formField {
+  padding: 6px 10px;
+  color: $white;
+  width: 100%;
+  display: flex;
+  border: solid 1px transparent;
+  transition: background 0.2s ease, border 0.2s ease;
+  -webkit-transition: background 0.2s ease, border 0.2s ease;
+  &:disabled {
+    background: transparent;
+    border: 1px solid transparent;
+    transition: background 0.4s ease, border 0.4s ease;
+    -webkit-transition: background 0.4s ease, border 0.4s ease;
+  }
+}
+
+.editMode .formField {
+  border: 1px solid $cyan;
+  background-color: rgba(0, 0, 0, 0.35);
+  transition: background 0.4s ease, border 0.4s ease;
+  -webkit-transition: background 0.4s ease, border 0.4s ease;
+}
+
+.profile-data {
+  display: flex;
+}
+
+.profile-data label {
+  margin-bottom: 0;
+}
+
+.selLabel {
+  //height: 34px;
+  padding-left: 4px; //margin-bottom: 0;
+  // line-height: $custom-select-line-height;
+  vertical-align: middle;
+  border: $custom-select-border-width solid $custom-select-border-color;
+  &:disabled {
+    display: none;
+  }
+}
+
+.text-yellow {
+  color: $light-yellow;
+}
+
+.page-title-container a:link,
+.page-title-container a:visited,
+.page-title-container a:active {
+  color: $light-yellow;
+}
+
+.custom-select {
+  background: $blue;
+  color: $white;
+  height: 34px;
+  &:disabled {
+    background: none;
+    background-image: $custom-select-indicator-2 !important;
+    color: $white;
+    border: 1px solid transparent;
+  }
+}
+
+// .navbar-nav .nav-item {
+// }
+.my-account {
+  color: $white;
+  font-size: .85rem;
+}
+
+.user-avatar {
+  background-color: $user-avatar-bg-color;
+  width: $user-avatar-width;
+  max-width: 100%;
+  margin: $user-avatar-margin;
+  border: $user-avatar-border-width $border-type-solid $blue-400;
+  border-radius: $user-avatar-border-radius;
+}
+
+.user-avatar-md {
+  background-color: $user-avatar-md-bg-color;
+  width: $user-avatar-md-width;
+  max-width: 100%;
+  margin: $user-avatar-md-margin;
+  border: $user-avatar-md-border-width $border-type-solid $blue-400;
+  border-radius: $user-avatar-md-border-radius;
+}
+
+.user-avatar-lg {
+  background-color: $user-avatar-lg-bg-color;
+  width: $user-avatar-lg-width;
+  max-width: 100%;
+  margin: $user-avatar-lg-margin;
+  border: $user-avatar-lg-border-width $border-type-solid $blue-400;
+  border-radius: $user-avatar-lg-border-radius;
+}
+
+.my-account .nav-link.dropdown-toggle {
+  text-transform: lowercase !important;
+}
+
+.my-account .dropdown-menu {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.content-container {
+  padding: 20px;
+  display: flex
+}
+
+.footer-container {
+  background-image: $darkblue-gradient-reverse;
+  height: 236px;
+}
+
+// forms
+.text-field-email {
+  background: url('img/icons/email.png');
+}
+
+.col-form-label {
+  color: $form-label-font-color;
+}
+
+.edit-button {
+  font-size: $font-size-sm;
+  align-self: center;
+}
+
+.fixed-table-container thead th .both {
+  background-position-x: -6px;
+}
+
+//user profile
+.border-bottom {
+  border-bottom: $border-type-solid $border-width-1 $blue-025;
+}
+
+.edit-col {
+  height: 100%;
+}
+
+// sign in page
+.sign-in-page-logo {
+  width: 23.38rem;
+}
+
+.width-si-form {
+  width: 23.75rem;
+}
+
+.sign-in-form {
+  margin-top: 1.875rem;
+  color: $white;
+  .input-wrapper {
+    flex-grow: 0;
+    border: $sign-in-input-border;
+    border-radius: 0;
+    background: $white;
+    box-shadow: $blur-20;
+    white-space: nowrap;
+    .input-wrapper>.form-control-theme {
+      width: 23.75rem;
+    }
+    .checkbox-theme {
+      border: $sign-in-input-border;
+    }
+    input[type="password"],
+    input[type="text"] {
+      border: 0;
+      margin-left: .625rem;
+      width: 19.9rem;
+    }
+    .fa-layer {
+      display: flex;
+      z-index: 500;
+      margin: 0 6px;
+      color: $gray-600;
+      font-size: $font-size-lg;
+    }
+    .fa-envelope {
+      position: absolute;
+      top: .4375rem;
+      left: .25rem;
+    }
+    .fa-lock {
+      position: absolute;
+      top: .4375rem;
+      left: .4rem;
+    }
+    .row>[class^=col-] {
+      padding-bottom: 0;
+    }
+  }
+  .input-group {
+    font-size: $font-size-sm;
+    .form-control {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+  }
+}
+
+// .full-screen-container {
+//     background-image: url('images/bg/USAF_introscreen-HeroBoy2.png');
+//     background-color: $blue-000;
+//     background-size: 100%;
+//     background-repeat: no-repeat;
+//     bottom: 0;
+//     left: 0;
+//     position: relative;
+//     right: 0;
+//     top: 0;
+//     padding: 0;
+//     height: 100vh;
+//     display: flex;
+//     align-self: stretch;
+//     align-items: center;
+// }
+// manage users
+thead {
+  text-transform: uppercase;
+  background-color: $blue-200 !important;
+  color: $white;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal !important;
+  border-bottom: $border-width-3 $border-type-solid $blue-200 !important;
+  th {
+    background: $blue-200 !important;
+    text-align: center;
+    &:hover {
+      background: $blue-300;
+      cursor: pointer;
+    }
+    &:not(:last-child) {
+      border-right: $border-width-3 $border-type-solid $blue-400;
+    }
+  }
+}
+
+.table thead th {
+  vertical-align: middle;
+  border-bottom: 0;
+  padding: 0.60rem 0.75rem 0.35rem 0.65rem;
+}
+
+.table td {
+  padding: 0.90rem;
+  font-size: $font-size-sm;
+  vertical-align: middle;
+  border-top: 0;
+}
+
+//butoons 
+.button-save {
+  background: $green;
+  color: $white;
+  margin: $btn-save-margin;
+}
+
+.button.clear {
+  display: flex;
+}
+
+//status circle
+.status-disabled {
+  color: $red;
+  &:link,
+  &:visited,
+  &:hover {
+    color: $red;
+    text-decoration: none;
+  }
+  .fa-minus-circle::after {
+    display: inline-block;
+    font-family: $font-family-base;
+    font-size: $font-size-sm;
+    content: "Disabled";
+    margin-left: 4px
+  }
+}
+
+.status-enabled {
+  color: $green;
+  &:link,
+  &:visited,
+  &:hover {
+    color: $green;
+    text-decoration: none;
+  }
+  .fa-check-circle::after {
+    display: inline-block;
+    font-family: $font-family-base;
+    font-size: $font-size-sm;
+    content: "Active";
+    margin-left: 4px
+  }
+}
+
+.status-enabled .fa-plus-square,
+.status-disabled .fa-minus-square {
+  margin-right: 10px;
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2.5rem, 0);
+    transform: translate3d(0, 2.5rem, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.mc-container {
+  position: relative;
+  background-image: url(images/bg/usa-fb-bg.jpg);
+  background-color: $blue-450-50;
+  background-blend-mode: multiply;
+  object-fit: contain;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.mc-container-overlay {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 90%;
+}
+
+.profile-container {
+  width: 85%;
+  margin: 0 auto;
+  background: rgba(73, 144, 226, 0.25);
+  border-radius: 2px; // background-color: #000;
+  border: solid 1px rgba(73, 144, 226, 0.25);
+  .titlebar {
+    background: $red;
+    padding: 0.625rem 1.25rem;
+    .h3-title {
+      font-size: $h4-font-size;
+      color: $white;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .profile-data {
+    width: 98%;
+    background: rgba(0, 0, 0, 0.35);
+    color: $blue-600;
+    padding: 0 20px 20px 20px;
+    margin: 0 auto;
+    border: solid 1px $blue-450-50;
+    border-radius: 2px;
+    .profileCard {
+      padding: 20px 10px 10px 10px;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+      width: 100%;
+    }
+  }
+}
+
+.stats {
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgba(9, 37, 74, 0.5);
+    background-clip: border-box;
+    border: $card-border-width solid $blue-300;
+    color: $white; //@include border-radius($card-border-radius);
+  }
+  .card-header {
+    padding: $card-spacer-y $card-spacer-x;
+    margin-bottom: 0; // Removes the default margin-bottom of <hN>
+    background-color: $blue-000;
+    border-bottom: $card-border-width solid $card-border-color;
+    &:first-child {
+      //@include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+    }
+  }
+  .card-body {
+    // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+    // as much space as possible, ensuring footers are aligned to the bottom.
+    flex: 1 1 auto;
+    padding: $card-spacer-x;
+  }
+  .card-title {
+    margin-bottom: $card-spacer-y;
+  }
+  .card-subtitle {
+    margin-top: -($card-spacer-y / 2);
+    margin-bottom: 0;
+  }
+  .card-text:last-child {
+    margin-bottom: 0;
+  }
+  .card-link {
+    @include hover {
+      text-decoration: none;
+    }
+    +.card-link {
+      margin-left: $card-spacer-x;
+    }
+  }
+  .card {
+    >.list-group:first-child {
+      .list-group-item:first-child {
+        @include border-top-radius($card-border-radius);
+      }
+    }
+    >.list-group:last-child {
+      .list-group-item:last-child {
+        @include border-bottom-radius($card-border-radius);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .row>[class^=col-] {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+// ------------------- nothing below the following class ---------------//
+.row>[class^=col-] {
+  padding-bottom: .75rem;
+  padding-top: .75rem; //border: $border-wireframe;
+}
+
+.row {
+  width: 100%;
+  margin: 0;
+}

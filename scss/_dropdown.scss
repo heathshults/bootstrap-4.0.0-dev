@@ -5,8 +5,24 @@
 }
 
 .dropdown-toggle {
+  border-radius: $border-radius-top-lr;
+  white-space: nowrap; 
   // Generate the caret automatically
-  @include caret;
+  &::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: $caret-width * .85;
+    vertical-align: $caret-width * .85;
+    content: "";
+    border-top: $caret-width solid;
+    border-right: $caret-width solid transparent;
+    border-left: $caret-width solid transparent;
+  }
+
+  &:empty::after {
+    margin-left: 0;
+  }
 }
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
@@ -15,10 +31,14 @@
   .dropdown-menu {
     margin-top: 0;
     margin-bottom: $dropdown-spacer;
+    border: 0;
   }
 
   .dropdown-toggle {
-    @include caret(up);
+    &::after {
+      border-top: 0;
+      border-bottom: $caret-width solid;
+    }
   }
 }
 
@@ -26,22 +46,21 @@
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 0px;
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: $dropdown-min-width;
   padding: $dropdown-padding-y 0;
-  margin: $dropdown-spacer 0 0; // override default ul
+  margin: $dropdown-spacer -4px 0 0 0; // override default ul
   font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
   color: $body-color;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
   background-color: $dropdown-bg;
   background-clip: padding-box;
-  border: $dropdown-border-width solid $dropdown-border-color;
-  @include border-radius($border-radius);
-  @include box-shadow($dropdown-box-shadow);
+  border-radius: $border-radius-bottom-lr;
+  width: 100%;
 }
 
 // Dividers (basically an `<hr>`) within the dropdown
@@ -88,6 +107,14 @@
   }
 }
 
+// Open state for the dropdown
+.show {
+  // Remove the outline when :focus is triggered
+  > a {
+    outline: 0;
+  }
+}
+
 .dropdown-menu.show {
   display: block;
 }
@@ -100,4 +127,33 @@
   font-size: $font-size-sm;
   color: $dropdown-header-color;
   white-space: nowrap; // as with > li > a
+}
+.show .dropdown-toggle, .show .nav-link.dropdown-toggle  {
+  background-color: $dropdown-bg;
+  color: $white;
+}
+.navbar-collapse.collapse.show .navbar-nav, .navbar-collapse.collapsing .navbar-nav {
+  position: relative;
+  left: 0px;
+  z-index: $zindex-dropdown;
+  float: left;
+  min-width: $dropdown-min-width;
+  padding: $dropdown-padding-y $dropdown-padding-x;
+  margin: $dropdown-spacer -4px 0 0 0; // override default ul
+  font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
+  // color: $body-color;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  list-style: none;
+  background-color: $dropdown-bg;
+  background-clip: padding-box;
+  border-radius: $border-radius-bottom-lr;
+  width: 100%;
+}
+
+.navbar-collapse.collapse.show .navbar-nav .nav-item-separator, .navbar-collapse.collapsing .navbar-nav .nav-item-separator {
+  display: none;
+}
+
+.navbar-collapse.collapse.show .navbar-nav .myaccount {
+  position: relative;
 }

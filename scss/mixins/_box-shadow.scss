@@ -1,5 +1,17 @@
 @mixin box-shadow($shadow...) {
-  @if $enable-shadows {
-    box-shadow: $shadow;
-  }
+    @if $enable-shadows {
+        box-shadow: $shadow;
+    }
+}
+
+@mixin box-shadow-custom($t, $r, $b, $l, $s-color) {
+    @if $enable-shadows {
+        box-shadow: $t $r $b $l $s-color;
+    }
+}
+
+@mixin bs-light-off-axis-y($box-shadow-light-off-axis-y) {
+    @if $enable-shadows {
+        box-shadow: $box-shadow-light-off-axis-y;
+    }
 }

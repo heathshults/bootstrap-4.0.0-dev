@@ -15,11 +15,13 @@
 @import "mixins/text-hide";
 @import "mixins/text-truncate";
 @import "mixins/visibility";
+@import "mixins/px-to-rem-font-size";
+@import "mixins/px-to-rem-height";
+@import "mixins/px-to-rem-width";
 
 // // Components
 @import "mixins/alert";
 @import "mixins/buttons";
-@import "mixins/caret";
 @import "mixins/pagination";
 @import "mixins/lists";
 @import "mixins/list-group";

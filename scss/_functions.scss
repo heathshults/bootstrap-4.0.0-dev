@@ -72,7 +72,7 @@
   @return map-get($theme-colors, $key);
 }
 
-@function gray($key: "100") {
+@function grayscale($key: "100") {
   @return map-get($grays, $key);
 }
 
@@ -80,7 +80,17 @@
 @function theme-color-level($color-name: "primary", $level: 0) {
   $color: theme-color($color-name);
   $color-base: if($level > 0, #000, #fff);
-  $level: abs($level);
 
-  @return mix($color-base, $color, $level * $theme-color-interval);
+  @if $level < 0 {
+    // Lighter values need a quick double negative for the Sass math to work
+    @return mix($color-base, $color, $level * -1 * $theme-color-interval);
+  } @else {
+    @return mix($color-base, $color, $level * $theme-color-interval);
+  }
+}
+
+//px to rem calculator
+@function calculate-px-to-rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
 }

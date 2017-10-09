@@ -32,12 +32,9 @@
 .nav-tabs {
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 
-  .nav-item {
-    margin-bottom: -$nav-tabs-border-width;
-  }
-
   .nav-link {
     border: $nav-tabs-border-width solid transparent;
+    color: $gray-650;
     @include border-top-radius($nav-tabs-border-radius);
 
     @include hover-focus {
@@ -74,12 +71,12 @@
 .nav-pills {
   .nav-link {
     @include border-radius($nav-pills-border-radius);
-  }
 
-  .nav-link.active,
-  .show > .nav-link {
-    color: $nav-pills-link-active-color;
-    background-color: $nav-pills-link-active-bg;
+    &.active,
+    .show > & {
+      color: $nav-pills-link-active-color;
+      background-color: $nav-pills-link-active-bg;
+    }
   }
 }
 
