@@ -1,24 +1,27 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
-  "version": "4.0.0-beta",
+  "name": "usafb-custom-bootstrap",
+  "description": "Customized version of Bootstrap 4 - Blue Star Sports",
+  "version": "4.0.0",
   "keywords": [
     "css",
     "sass",
-    "mobile-first",
+    "USA-Football-Connect",
     "responsive",
     "front-end",
     "framework",
     "web"
   ],
-  "homepage": "https://getbootstrap.com",
+  "homepage": "https://BlueStarSports.com",
   "author": "The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)",
   "contributors": [
-    "Twitter, Inc."
+    "Twitter, Inc.",
+    "Blue Star Sports"
   ],
   "scripts": {
     "bash": "bash",
     "bundlesize": "bundlesize",
+    "css-package-up-skeleton": "npm-run-all css-lint-skeleton css-compile-skeleton css-prefix-skeleton css-minify-skeleton",
+    "css-package-up": "npm-run-all css-lint css-compile css-prefix css-minify",
     "css": "npm-run-all --parallel css-lint* css-compile* --sequential css-prefix* css-minify*",
     "css-main": "npm-run-all --parallel css-lint css-compile --sequential css-prefix css-minify",
     "css-docs": "npm-run-all --parallel css-lint-docs css-compile-docs --sequential css-prefix-docs css-minify-docs",
