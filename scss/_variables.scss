@@ -205,12 +205,6 @@ $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
 
-// Paragraphs
-//
-// Style p element.
-
-$paragraph-margin-bottom: 1rem !default;
-
 
 // Grid breakpoints
 //
@@ -260,7 +254,6 @@ $border-width-1: 1px !default;
 $border-width-2: 2px !default;
 $border-width-3: 3px !default;
 $border-type-solid: solid !default;
-$border-color: $gray-200 !default;
 
 
 $border-radius:             .25rem !default;
@@ -300,7 +293,7 @@ $font-size-base-vw: .87vw !default; // Assumes the browser default, typically `1
 $font-size-lg-vw:   1.12vw !default;
 $font-size-sm-vw:   .862vw !default;
 
-$font-weight-light: 300 !default;
+
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
 
@@ -374,11 +367,11 @@ $table-border-color:            $gray-200 !default;
 $table-head-bg:                 $gray-200 !default;
 $table-head-color:              $gray-700 !default;
 
-$table-dark-bg:              $gray-900 !default;
-$table-dark-accent-bg:       rgba($white, .05) !default;
-$table-dark-hover-bg:        rgba($white, .075) !default;
-$table-dark-border-color:    lighten($gray-900, 7.5%) !default;
-$table-dark-color:           $body-bg !default;
+$table-inverse-bg:              $gray-900 !default;
+$table-inverse-accent-bg:       rgba($white, .05) !default;
+$table-inverse-hover-bg:        rgba($white, .075) !default;
+$table-inverse-border-color:    lighten($gray-900, 7.5%) !default;
+$table-inverse-color:           $body-bg !default;
 
 
 // Buttons
@@ -753,19 +746,18 @@ $popover-arrow-outer-width:           ($popover-arrow-width + 1px) !default;
 $popover-arrow-outer-color:           fade-in($popover-border-color, .05) !default;
 
 
-/// Badges
+// Badges
 
+$badge-color:                 $white !default;
 $badge-font-size:             75% !default;
 $badge-font-weight:           $font-weight-bold !default;
 $badge-padding-y:             .25em !default;
 $badge-padding-x:             .4em !default;
-$badge-border-radius:         $border-radius !default;
 
 $badge-pill-padding-x:        .6em !default;
 // Use a higher than normal value to ensure completely rounded edges when
 // customizing padding or font-size on labels.
 $badge-pill-border-radius:    10rem !default;
-
 
 
 // Modals
@@ -875,7 +867,6 @@ $breadcrumb-bg:                 $gray-200 !default;
 $breadcrumb-divider-color:      $gray-600 !default;
 $breadcrumb-active-color:       $gray-600 !default;
 $breadcrumb-divider:            "/" !default;
-$breadcrumb-margin-bottom:      1rem !default;
 
 
 // Carousel
@@ -922,7 +913,7 @@ $pre-scrollable-max-height:   340px !default;
 
 // layout elements
 $page-title-fa-margin:  0 4px 0 0 !default;
-$page-title-fa-color:   $white !default;
+$page-title-fa-color:   $blue-300 !default;
 
 //avatar
 $user-avatar-width:             40px !default; 

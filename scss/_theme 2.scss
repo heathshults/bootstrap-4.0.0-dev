@@ -265,10 +265,8 @@ button:hover {
 .header-container {
   background-image: linear-gradient(to bottom, $blue, $blue-400);
   color: $blue-500;
-  @include px-to-rem-height(96px);
-  //height: rem(200px)
-  //height: 12.5rem; 
-  //padding-top: 28px;
+  @include px-to-rem-height(28px);
+  //height: 11.85rem; // padding-top: 28px;
 }
 
 .brand-container {
@@ -279,22 +277,17 @@ button:hover {
 }
 
 .page-title-container {
-  display: table-cell;
-  vertical-align: middle;
   //position: relative;
   //top: -75px;
   .page-title {
-    color: $blue;
+    color: $blue-600;
     font-family: $font-family-base;
     font-size: $h4-font-size;
-    font-weight: bold;
     text-transform: uppercase;
-    vertical-align: middle;
     .fa {
       color: $page-title-fa-color;
       font-size: ($font-size-lg / $font-size-base + .5rem);
       margin: $page-title-fa-margin;
-      vertical-align: middle;
     }
     .form-control {
       border: 0;
@@ -354,15 +347,6 @@ button:hover {
   -webkit-transition: background 0.4s ease, border 0.4s ease;
 }
 
-select, option {
-  -webkit-appearance : none; // To gain control over the appearance on WebKit/Chromium 
-  -moz-appearance : none; // To gain control over the appearance on Gecko 
-
-  // To gain control over the appearance on and Trident (IE)
-  // Note that it also works on Gecko and has partial effects on WebKit 
-  background : none;
-}
-
 .profile-data {
   display: flex;
 }
@@ -373,7 +357,7 @@ select, option {
 
 .selLabel {
   //height: 34px;
-  padding-left: rem(4px); //margin-bottom: 0;
+  padding-left: 4px; //margin-bottom: 0;
   // line-height: $custom-select-line-height;
   vertical-align: middle;
   border: $custom-select-border-width solid $custom-select-border-color;
@@ -395,7 +379,7 @@ select, option {
 .custom-select {
   background: $blue;
   color: $white;
-  height: rem(34px);
+  height: 34px;
   &:disabled {
     background: none;
     background-image: $custom-select-indicator-2 !important;
@@ -475,17 +459,6 @@ select, option {
   background-position-x: -6px;
 }
 
-.fixed-table-container thead.cpl th .both {
-  padding-left: 10px;
-  padding-right: 40px;
-  background-position-x: right
-  ;
-}
-
-.fixed-table-container thead.cpl td {
-  padding-left: 10px;
-}
-
 //user profile
 .border-bottom {
   border-bottom: $border-type-solid $border-width-1 $blue-025;
@@ -553,14 +526,12 @@ select, option {
       flex: 0 0 auto;
       width: 50%;
     }
-    .form-control.control-width-50 {
-      flex: .5 0 auto;
-      width: 50% !important;
-    }
   }
 }
 
-
+.width-control-59 {
+  flex: .5 0 auto;
+}
 
 // .full-screen-container {
 //     background-image: url('images/bg/USAF_introscreen-HeroBoy2.png');
@@ -590,26 +561,7 @@ thead {
     background: $blue-200 !important;
     text-align: center;
     &:hover {
-      background: $blue;
-      cursor: pointer;
-    }
-    &:not(:last-child) {
-      border-right: $border-width-3 $border-type-solid $blue-400;
-    }
-  }
-}
-thead.cpl {
-  text-transform: uppercase;
-  background-color: $blue-200 !important;
-  color: $white;
-  font-size: $font-size-sm;
-  font-weight: $font-weight-normal !important;
-  border-bottom: $border-width-3 $border-type-solid $blue-200 !important;
-  th {
-    background: $blue-200 !important;
-    text-align: left;
-    &:hover {
-      background: $blue;
+      background: $blue-300;
       cursor: pointer;
     }
     &:not(:last-child) {
@@ -822,31 +774,11 @@ thead.cpl {
   }
 }
 
-// font sizing
-.font-xl {
-  font-size: rem(36px);
-  vertical-align: middle;
-}
-
-.font-lg {
-  font-size: rem(32px);
-  vertical-align: middle;
-}
-
-.font-md {
-  font-size: rem(24px)
-}
-
-.offset-top-2 {
-  position: relative;
-  top: rem(2px)
-}
-
-@media (max-width: 768px) {
-  // .col-md-3 {
-  //   flex: 0 0 100%;
-  //   max-width: 100%;
-  // }
+@media (min-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
   .row>[class^=col-] {
     flex: 0 0 100%;
     max-width: 100%;

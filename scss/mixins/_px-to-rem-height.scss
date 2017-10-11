@@ -1,5 +1,5 @@
 
 @mixin px-to-rem-height($size) {
-  width: $size; //Fallback in px
-  width: calculate-px-to-rem($size);
+  height: $size; //Fallback in px
+  height: calculate-px-to-rem($size);
 }
