@@ -409,6 +409,7 @@ select, option {
 .my-account {
   color: $white;
   font-size: .85rem;
+  margin-right: rem(28px)
 }
 
 .user-avatar {
@@ -476,7 +477,7 @@ select, option {
 }
 
 .fixed-table-container thead.cpl th .both {
-  padding-left: 10px;
+  padding-left: 20px;
   padding-right: 40px;
   background-position-x: right
   ;
@@ -839,7 +840,20 @@ thead.cpl {
 
 .offset-top-2 {
   position: relative;
+  top: 2px;
   top: rem(2px)
+}
+
+.offset-top--6 {
+  position: relative;
+  top: -6px;
+  top: rem(-6px)
+}
+
+.offset-top-10 {
+  position: relative;
+  top: 10px;
+  top: rem(10px)
 }
 
 @media (max-width: 768px) {

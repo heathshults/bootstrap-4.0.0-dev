@@ -8223,6 +8223,7 @@ select, option {
 .my-account {
   color: #fff;
   font-size: .85rem;
+  margin-right: 1.75rem;
 }
 
 .user-avatar {
@@ -8289,7 +8290,7 @@ select, option {
 }
 
 .fixed-table-container thead.cpl th .both {
-  padding-left: 10px;
+  padding-left: 20px;
   padding-right: 40px;
   background-position-x: right;
 }
@@ -8645,7 +8646,20 @@ thead.cpl th:not(:last-child) {
 
 .offset-top-2 {
   position: relative;
+  top: 2px;
   top: 0.125rem;
+}
+
+.offset-top--6 {
+  position: relative;
+  top: -6px;
+  top: -0.375rem;
+}
+
+.offset-top-10 {
+  position: relative;
+  top: 10px;
+  top: 0.625rem;
 }
 
 @media (max-width: 768px) {
