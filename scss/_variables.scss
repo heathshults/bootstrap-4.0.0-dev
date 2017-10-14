@@ -94,6 +94,7 @@ $orange:                #fd7e14 !default;
 $yellow:                #ffc107 !default;
 $light-yellow:          #fafad2 !default;
 $green:                 #28a745 !default;
+$green-000-40:          rgba(40, 167, 69, 0.5) !default;
 $teal:                  #20c997 !default;
 $cyan:                  #0288d5 !default;
 
@@ -107,6 +108,7 @@ $blue-300:              #083660 !default;
 $blue-400:              #2e69a3 !default;
 $blue-400-50:           rgba(46, 105, 163, 0.6) !default;
 $blue-450:              #4990e2 !default;
+$blue-450-14:           rgba(73, 144, 226, 0.14) !default;
 $blue-450-50:           rgba(9, 48, 90, 0.93) !default;
 $blue-500:              #8AB8E4 !default;
 $blue-600:              #D6ECFF !default;
@@ -801,6 +803,14 @@ $alert-margin-bottom:         1rem !default;
 $alert-border-radius:         $border-radius !default;
 $alert-link-font-weight:      $font-weight-bold !default;
 $alert-border-width:          $border-width !default;
+
+$alert-padding-y-01:          .25rem !default;
+$alert-padding-x-01:          .25rem !default;
+$alert-margin-bottom-01:      0rem !default;
+$alert-border-radius-01:      $border-radius !default;
+$alert-link-font-weight-01:   $font-weight-bold !default;
+$alert-border-width-01:       $border-width !default;
+$alert-dismiss-border-l:      $green-000-40 !default;
 
 
 // Progress bars

@@ -1,0 +1,40 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "gulp",
+      "task": "gulp-autoprefixThis",
+      "problemMatcher": [
+          "$eslint-stylish"
+      ]
+    },
+    {
+      "type": "gulp",
+      "task": "autoprefixme",
+      "problemMatcher": [
+          "$eslint-stylish"
+       ]
+    },
+    {
+      "type": "gulp",
+      "task": "sass",
+      "problemMatcher": [
+          "$eslint-stylish"
+      ]
+    },
+    {
+      "type": "gulp",
+      "task": "sass:watch",
+      "problemMatcher": [
+          "$jshint"
+      ]
+    },
+    {
+      "type": "npm",
+      "script": "css-prefix",
+      "problemMatcher": []
+    }
+  ]
+}

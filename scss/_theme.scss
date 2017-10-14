@@ -213,12 +213,25 @@ button:hover {
   }
 }
 
-.btn-primary {
-  border: 3px solid $blue;
+.actionBtn {
+  font-size: $font-size-sm;
+  text-align: center;
+  background-color: $blue;
+  min-width: rem(80px);
+  min-height: rem(40px);
+  border: 1px solid $cyan;
+  align-self: center;
+  &:hover, &:active, &:focus {
+    background-color: $blue-400;
+    border: 1px solid $cyan !important;
+    cursor: pointer;
+    transition: background-color 1s ease-in;
+  }
 }
 
-.btn-b-1 {
-  border: 1px solid $cyan;
+.action-button-icon {
+  font-size: $font-size-sm;
+  align-self: center;
 }
 
 .full-screen-bg-landing-page {
@@ -272,9 +285,11 @@ button:hover {
 .page-title-container {
   display: table-cell;
   vertical-align: middle;
+  padding-left: 0;
   //position: relative;
   //top: -75px;
   .page-title {
+    display: inline-flex;
     color: $blue;
     font-family: $font-family-base;
     font-size: $h4-font-size;
@@ -283,7 +298,7 @@ button:hover {
     vertical-align: middle;
     .fa {
       color: $page-title-fa-color;
-      font-size: ($font-size-lg / $font-size-base + .5rem);
+      //font-size: ($font-size-lg / $font-size-base + .5rem);
       margin: $page-title-fa-margin;
       vertical-align: middle;
     }
@@ -317,13 +332,43 @@ button:hover {
   margin-right: -20px;
 }
 
+.alertPane {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: rem(10px);
+  height: rem(76px);
+  .alert {
+    padding: 0rem 1rem;
+    margin: 0rem;
+    .alert-dismissible {
+      label {
+        font-size: $font-size-base;
+      }
+    } 
+  }
+}
+
+.alert-dismissible {
+  .close {
+    font-size: $font-size-sm;
+    font-weight: normal;
+    top:0;
+    right: -1.25rem;
+    padding: 0.75rem;
+    color: inherit;
+    border-left: solid 1px $green-000-40;
+  }
+}
+
 .editMode {
   border: 1px solid $cyan !important;
   background: rgba(0, 0, 0, 0.35) !important;
+  transition: opacity .2s ease;
+  -moz-transition: opacity .2s ease;
 }
 
 .formField {
-  padding: 6px 10px;
+  padding: rem(6px 10px);
   color: $white;
   width: 100%;
   display: flex;
@@ -352,6 +397,7 @@ select, option {
   // To gain control over the appearance on and Trident (IE)
   // Note that it also works on Gecko and has partial effects on WebKit 
   background : none;
+  background-color: transparent;
 }
 
 .profile-data {
@@ -390,6 +436,7 @@ select, option {
   &:disabled {
     background: none;
     background-image: $custom-select-indicator-2 !important;
+    background-color: transparent;
     color: $white;
     border: 1px solid transparent;
   }
@@ -464,11 +511,6 @@ select, option {
   color: $form-label-font-color;
 }
 
-.edit-button {
-  font-size: $font-size-sm;
-  align-self: center;
-}
-
 .fixed-table-container thead th .both {
   background-position-x: -6px;
 }
@@ -482,6 +524,11 @@ select, option {
 
 .fixed-table-container thead.cpl td {
   padding-left: 10px;
+}
+
+//bootstrap-table
+.table-striped tbody tr:nth-of-type(2n+1) {
+  background-color: $blue-450-14;
 }
 
 //user profile
