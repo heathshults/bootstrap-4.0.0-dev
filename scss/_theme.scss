@@ -205,16 +205,42 @@ button:hover {
   }
 }
 
-.btn {
-  font-size: $font-size-base;
-  border-radius: 0;
-  &:hover {
-    cursor: pointer;
+.bss-btn {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $input-btn-border-width solid transparent;
+  @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
+  @include transition($btn-transition);
+
+  // Share hover and focus styles
+  @include hover-focus {
+    text-decoration: none;
+  }
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: .65;
+    @include box-shadow(none);
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
   }
 }
 
 .actionBtn {
-  font-size: $font-size-sm;
   text-align: center;
   background-color: $blue;
   min-width: rem(80px);
@@ -227,12 +253,12 @@ button:hover {
     cursor: pointer;
     transition: background-color 1s ease-in;
   }
+  .action-button-icon {
+    margin: 0 4px;
+  }
 }
 
-.action-button-icon {
-  font-size: $font-size-sm;
-  align-self: center;
-}
+
 
 .full-screen-bg-landing-page {
   //@include make-container();
