@@ -927,6 +927,12 @@ thead.cpl {
   top: rem(-6px)
 }
 
+.offset-top-8 {
+  position: relative;
+  top: 18px;
+  top: rem(8px)
+}
+
 .offset-top-10 {
   position: relative;
   top: 10px;
@@ -943,6 +949,33 @@ thead.cpl {
     max-width: 100%;
     text-align: center;
   }
+}
+
+// modal customizations
+
+.modal-header {
+  background: $blue;
+  color: $white;
+  text-transform: uppercase;
+  .close {
+    color: $white;
+    text-shadow: 0 1px 0 #000;
+  }
+}
+
+// borders
+.border-lightGrey-2s{
+  border: $border-width-2 solid $gray-400 !important;
+}
+
+// drag and drop
+.dnd-div {
+  .border-lightGrey-2s {
+    &:hover {
+      border-color: $green;
+    }
+  }
+  
 }
 
 // ------------------- nothing below the following class ---------------//
