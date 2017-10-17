@@ -7874,7 +7874,7 @@ header {
 }
 
 form {
-  flex-shrink: 0;
+  flex: 0 1 100%;
   width: 100%;
   max-width: 100%;
 }

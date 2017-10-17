@@ -53,7 +53,7 @@ header {
 }
 
 form {
-  flex-shrink: 0;
+  flex: 0 1 100%;
   width: 100%;
   max-width: 100%;
 }
@@ -975,8 +975,8 @@ thead.cpl {
       border-color: $green;
     }
   }
-  
 }
+
 
 // ------------------- nothing below the following class ---------------//
 .row>[class^=col-] {

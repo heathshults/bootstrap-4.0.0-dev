@@ -95,7 +95,7 @@ gulp.task('autoprefixme', function () {
 })
 
 // autoprefix with gulp prefixer
-gulp.task('gulp-autoprefixThis', () =>
+gulp.task('gulpautoprefixer', () =>
 gulp.src('../USAFB/http/css/*.css')
   .pipe(autoprefixer({
     browsers: ['last 2 versions'],
