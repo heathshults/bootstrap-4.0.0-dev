@@ -8,7 +8,6 @@ const uglify = require('gulp-uglify')
 const postcss = require('gulp-postcss')
 const sourcemaps = require('gulp-sourcemaps')
 const autoprefixer = require('autoprefixer')
-const gulpAutoprefixer = require('gulp-autoprefixer')
 const pkg = require('./package.json')
 
 // Set the banner content
@@ -93,16 +92,6 @@ gulp.task('autoprefixme', function () {
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('../USAFB/http/css/*.css'))
 })
-
-// autoprefix with gulp prefixer
-gulp.task('gulpautoprefixer', () =>
-gulp.src('../USAFB/http/css/*.css')
-  .pipe(autoprefixer({
-    browsers: ['last 2 versions'],
-    cascade: false
-  }))
-  .pipe(gulp.dest('../USAFB/http/css/*.css'))
-)
 
 // Run everything
 gulp.task('default', ['sass', 'minify-css', 'minify-js'])

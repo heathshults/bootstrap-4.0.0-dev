@@ -7,33 +7,38 @@
       "type": "gulp",
       "task": "gulp-autoprefixThis",
       "problemMatcher": [
-          "$eslint-stylish"
+        "$eslint-stylish"
       ]
     },
     {
       "type": "gulp",
       "task": "autoprefixme",
       "problemMatcher": [
-          "$eslint-stylish"
-       ]
+        "$eslint-stylish"
+      ]
     },
     {
       "type": "gulp",
       "task": "sass",
       "problemMatcher": [
-          "$eslint-stylish"
+        "$eslint-stylish"
       ]
     },
     {
       "type": "gulp",
       "task": "sass:watch",
       "problemMatcher": [
-          "$jshint"
+        "$jshint"
       ]
     },
     {
       "type": "npm",
       "script": "css-prefix",
+      "problemMatcher": []
+    },
+    {
+      "type": "npm",
+      "script": "heathenscript",
       "problemMatcher": []
     }
   ]
