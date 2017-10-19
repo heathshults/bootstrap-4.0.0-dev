@@ -240,6 +240,24 @@ button:hover {
   }
 }
 
+.btn-primary-02 {
+  color: $btn-primary-02-color;
+  font-size: $btn-primary-02-font-size;
+  background-image: $btn-primary-02-bg-grad;
+  padding:$btn-primary-02-padding;
+  border: $btn-primary-02-border;
+  border-radius: $btn-primary-02-border-radius;
+  &:hover, &:active, &:focus {
+    color: $btn-primary-02-color;
+    background-color: $blue-400;
+    border: $btn-primary-02-border-hover !important;
+    transition: $btn-primary-02-trans-bgcolor;
+  }
+  .fa {
+    font-size: $btn-primary-02-fa-size;
+  }
+}
+
 .actionBtn {
   text-align: center;
   background-color: $blue;
@@ -503,7 +521,9 @@ select, option {
 .user-avatar-lg {
   background-color: $user-avatar-lg-bg-color;
   width: $user-avatar-lg-width;
+  width: $user-avatar-lg-height;
   max-width: 100%;
+  max-height: 100%;
   margin: $user-avatar-lg-margin;
   border: $user-avatar-lg-border-width $border-type-solid $blue-400;
   border-radius: $user-avatar-lg-border-radius;
@@ -537,19 +557,19 @@ select, option {
   color: $form-label-font-color;
 }
 
-.fixed-table-container thead th .both {
-  background-position-x: -6px;
+.fixed-table-container thead th .sortable {
+  
+  background-position: right 2px center;
+  background-repeat: no-repeat;
 }
 
-.fixed-table-container thead.cpl th .both {
-  padding-left: 20px;
-  padding-right: 40px;
-  background-position-x: right
-  ;
-}
+// .fixed-table-container thead.cpl th .both {
+//   padding-left: rem(15px);
+//   padding-right: rem(35px);
+// }
 
 .fixed-table-container thead.cpl td {
-  padding-left: 10px;
+  padding-left: rem(10px);
 }
 
 //bootstrap-table
@@ -640,59 +660,42 @@ select, option {
       outline: none;
     }
 }
+form.dropzone {
+  min-height: 183px;
+}
 
-// .full-screen-container {
-//     background-image: url('images/bg/USAF_introscreen-HeroBoy2.png');
-//     background-color: $blue-000;
-//     background-size: 100%;
-//     background-repeat: no-repeat;
-//     bottom: 0;
-//     left: 0;
-//     position: relative;
-//     right: 0;
-//     top: 0;
-//     padding: 0;
-//     height: 100vh;
-//     display: flex;
-//     align-self: stretch;
-//     align-items: center;
-// }
-// manage users
 thead {
   text-transform: uppercase;
-  background-color: $blue-200 !important;
   color: $white;
-  font-size: $font-size-sm;
+  font-size: $font-size-xsm !important;
   font-weight: $font-weight-normal !important;
-  border-bottom: $border-width-3 $border-type-solid $blue-200 !important;
+  border-bottom: $border-width-3 $border-type-solid $blue !important;
   th {
-    background: $blue-200 !important;
+    background: $blue !important;
     text-align: center;
     &:hover {
-      background: $blue;
+      background: $blue-400 !important;
+      border-top: solid 10px $blue-400;
+      border-bottom: solid 10px $blue-400;
       cursor: pointer;
-    }
-    &:not(:last-child) {
-      border-right: $border-width-3 $border-type-solid $blue-400;
     }
   }
 }
+
 thead.cpl {
   text-transform: uppercase;
-  background-color: $blue-200 !important;
   color: $white;
   font-size: $font-size-sm;
   font-weight: $font-weight-normal !important;
-  border-bottom: $border-width-3 $border-type-solid $blue-200 !important;
   th {
-    background: $blue-200 !important;
-    text-align: left;
-    &:hover {
-      background: $blue;
-      cursor: pointer;
-    }
-    &:not(:last-child) {
-      border-right: $border-width-3 $border-type-solid $blue-400;
+    .th-inner {
+      display: block;
+      width: 100%;
+      padding: 0 6px 0 8px;;
+      padding: 0 rem(6px) 0 rem(8px);
+      margin: 0;
+      // margin: 10px 0;
+      // margin: rem(10px) 0;
     }
   }
 }
@@ -700,14 +703,23 @@ thead.cpl {
 .table thead th {
   vertical-align: middle;
   border-bottom: 0;
-  padding: 0.60rem 0.75rem 0.35rem 0.65rem;
+  padding: 0;
+  border-top: 10px solid $blue;
+  border-bottom: 10px solid $blue;
+  &:hover {
+    border-top: 10px solid $blue-400;
+    border-bottom: 10px solid $blue-400;
+  }
+  &:not(:last-child) {
+    border-right: $border-width-1 $border-type-solid $green;
+  }
 }
 
 .table td {
-  padding: 0.90rem;
+  // padding: 0.90rem;
   font-size: $font-size-sm;
   vertical-align: middle;
-  border-top: 0;
+  // border-top: 0;
 }
 
 //butoons 
@@ -813,24 +825,25 @@ thead.cpl {
   margin: 0 auto;
   background: rgba(73, 144, 226, 0.25);
   border-radius: 2px; // background-color: #000;
-  border: solid 1px rgba(73, 144, 226, 0.25);
+  //border: solid 1px rgba(73, 144, 226, 0.25);
   .titlebar {
     background: $red;
+    height: rem(40px);
     padding: 0.625rem 1.25rem;
     .h3-title {
       font-size: $h4-font-size;
       color: $white;
       padding: 0;
-      margin: 0;
+      margin: rem(1px) rem(20px) rem(20px) rem(20px);
     }
   }
   .profile-data {
-    width: 98%;
+    width: 96%;
     background: rgba(0, 0, 0, 0.35);
     color: $blue-600;
-    padding: 0 20px 20px 20px;
+    padding: rem(20px);
     margin: 0 auto;
-    border: solid 1px $blue-450-50;
+    border: solid 1px transparent;
     border-radius: 2px;
     .profileCard {
       padding: 20px 10px 10px 10px;
@@ -977,6 +990,40 @@ thead.cpl {
   }
 }
 
+//animations
+@include keyframes(motion-right) {
+  0%   { left: 0px; }
+  100% { right: 200px; }
+}
+
+.move-from-left-0--right-200 {
+  @include animation('motion-right .5s 1', 'move-the-object-again .5s 1 .5s');
+} 
+
+// progress bars
+.progress-auto-grow {
+  @include animateWidth(0%, 100%);
+         animation : growHorizontal 1.5s linear 1;
+         width:100%;
+}
+
+.progressbar-inmodal {
+  height: 5px;
+  min-width: 286px;
+  max-width: 100%;
+  margin: rem(10px) auto;
+  .progressbar-bg {
+    height: 5px;
+    min-width: 286px;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+.dz-started {
+  .btnUpload[disabled] {
+
+  }
+}
 
 // ------------------- nothing below the following class ---------------//
 .row>[class^=col-] {

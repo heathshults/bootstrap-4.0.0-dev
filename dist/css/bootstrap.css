@@ -1825,7 +1825,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .btn:focus, .btn.focus {
   outline: 0;
-  box-shadow: 0 0 0 3px rgba(9, 37, 74, 0.25);
+  box-shadow: 0 0 0 0.1875rem rgba(9, 37, 74, 0.25);
 }
 
 .btn.disabled, .btn:disabled {
@@ -8056,7 +8056,7 @@ button:hover {
 
 .bss-btn:focus, .bss-btn.focus {
   outline: 0;
-  box-shadow: 0 0 0 3px rgba(9, 37, 74, 0.25);
+  box-shadow: 0 0 0 0.1875rem rgba(9, 37, 74, 0.25);
 }
 
 .bss-btn.disabled, .bss-btn:disabled {
@@ -8065,6 +8065,26 @@ button:hover {
 
 .bss-btn:active, .bss-btn.active {
   background-image: none;
+}
+
+.btn-primary-02 {
+  color: #fff;
+  font-size: 0.75rem;
+  background-image: linear-gradient(180deg, #09254a 65%, #113f69, 90%, #0d3353);
+  padding: 0.625rem 2.5rem;
+  border: solid 0.0625rem #0d2240;
+  border-radius: 0.1875rem;
+}
+
+.btn-primary-02:hover, .btn-primary-02:active, .btn-primary-02:focus {
+  color: #fff;
+  background-color: #2e69a3;
+  border: 0.0625rem solid #0288d5 !important;
+  transition: background-color 1s ease-in;
+}
+
+.btn-primary-02 .fa {
+  font-size: 1rem;
 }
 
 .actionBtn {
@@ -8321,8 +8341,10 @@ select, option {
 
 .user-avatar-lg {
   background-color: #4990e2;
-  width: 200px;
+  width: 8.75rem;
+  width: 14 0rem;
   max-width: 100%;
+  max-height: 100%;
   margin: 0.375rem;
   border: 0.25rem solid #2e69a3;
   border-radius: 50%;
@@ -8355,18 +8377,13 @@ select, option {
   color: #ccc;
 }
 
-.fixed-table-container thead th .both {
-  background-position-x: -6px;
-}
-
-.fixed-table-container thead.cpl th .both {
-  padding-left: 20px;
-  padding-right: 40px;
-  background-position-x: right;
+.fixed-table-container thead th .sortable {
+  background-position: right 2px center;
+  background-repeat: no-repeat;
 }
 
 .fixed-table-container thead.cpl td {
-  padding-left: 10px;
+  padding-left: 0.625rem;
 }
 
 .table-striped tbody tr:nth-of-type(2n+1) {
@@ -8466,11 +8483,14 @@ select, option {
   outline: none;
 }
 
+form.dropzone {
+  min-height: 183px;
+}
+
 thead {
   text-transform: uppercase;
-  background-color: #09254a !important;
   color: #fff;
-  font-size: 0.875rem;
+  font-size: 0.75rem !important;
   font-weight: normal !important;
   border-bottom: 3px solid #09254a !important;
 }
@@ -8481,48 +8501,47 @@ thead th {
 }
 
 thead th:hover {
-  background: #09254a;
+  background: #2e69a3 !important;
+  border-top: solid 10px #2e69a3;
+  border-bottom: solid 10px #2e69a3;
   cursor: pointer;
-}
-
-thead th:not(:last-child) {
-  border-right: 3px solid #2e69a3;
 }
 
 thead.cpl {
   text-transform: uppercase;
-  background-color: #09254a !important;
   color: #fff;
   font-size: 0.875rem;
   font-weight: normal !important;
-  border-bottom: 3px solid #09254a !important;
 }
 
-thead.cpl th {
-  background: #09254a !important;
-  text-align: left;
-}
-
-thead.cpl th:hover {
-  background: #09254a;
-  cursor: pointer;
-}
-
-thead.cpl th:not(:last-child) {
-  border-right: 3px solid #2e69a3;
+thead.cpl th .th-inner {
+  display: block;
+  width: 100%;
+  padding: 0 6px 0 8px;
+  padding: 0 0.375rem 0 0.5rem;
+  margin: 0;
 }
 
 .table thead th {
   vertical-align: middle;
   border-bottom: 0;
-  padding: 0.60rem 0.75rem 0.35rem 0.65rem;
+  padding: 0;
+  border-top: 10px solid #09254a;
+  border-bottom: 10px solid #09254a;
+}
+
+.table thead th:hover {
+  border-top: 10px solid #2e69a3;
+  border-bottom: 10px solid #2e69a3;
+}
+
+.table thead th:not(:last-child) {
+  border-right: 1px solid #28a745;
 }
 
 .table td {
-  padding: 0.90rem;
   font-size: 0.875rem;
   vertical-align: middle;
-  border-top: 0;
 }
 
 .button-save {
@@ -8626,11 +8645,11 @@ thead.cpl th:not(:last-child) {
   margin: 0 auto;
   background: rgba(73, 144, 226, 0.25);
   border-radius: 2px;
-  border: solid 1px rgba(73, 144, 226, 0.25);
 }
 
 .profile-container .titlebar {
   background: #9e0a0f;
+  height: 2.5rem;
   padding: 0.625rem 1.25rem;
 }
 
@@ -8638,16 +8657,16 @@ thead.cpl th:not(:last-child) {
   font-size: 1.25rem;
   color: #fff;
   padding: 0;
-  margin: 0;
+  margin: 0.0625rem 1.25rem 1.25rem 1.25rem;
 }
 
 .profile-container .profile-data {
-  width: 98%;
+  width: 96%;
   background: rgba(0, 0, 0, 0.35);
   color: #D6ECFF;
-  padding: 0 20px 20px 20px;
+  padding: 1.25rem;
   margin: 0 auto;
-  border: solid 1px rgba(9, 48, 90, 0.93);
+  border: solid 1px transparent;
   border-radius: 2px;
 }
 
@@ -8776,6 +8795,74 @@ thead.cpl th:not(:last-child) {
 
 .dnd-div .border-lightGrey-2s:hover {
   border-color: #28a745;
+}
+
+@-webkit-keyframes motion-right {
+  0% {
+    left: 0px;
+  }
+  100% {
+    right: 200px;
+  }
+}
+
+@-moz-keyframes motion-right {
+  0% {
+    left: 0px;
+  }
+  100% {
+    right: 200px;
+  }
+}
+
+@-o-keyframes motion-right {
+  0% {
+    left: 0px;
+  }
+  100% {
+    right: 200px;
+  }
+}
+
+@keyframes motion-right {
+  0% {
+    left: 0px;
+  }
+  100% {
+    right: 200px;
+  }
+}
+
+.move-from-left-0--right-200 {
+  animation: motion-right .5s 1, move-the-object-again .5s 1 .5s;
+}
+
+.progress-auto-grow {
+  animation: growHorizontal 1.5s linear 1;
+  width: 100%;
+}
+
+@keyframes growHorizontal {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.progressbar-inmodal {
+  height: 5px;
+  min-width: 286px;
+  max-width: 100%;
+  margin: 0.625rem auto;
+}
+
+.progressbar-inmodal .progressbar-bg {
+  height: 5px;
+  min-width: 286px;
+  max-width: 100%;
+  margin: 0;
 }
 
 .row > [class^=col-] {

@@ -21,7 +21,7 @@ const banner = ['/*!\n',
 
 // Compiles SCSS files from /scss into /css
 gulp.task('sass', () => {
-  return gulp.src('scss/bootstrap.scss')
+  return gulp.src('./scss/bootstrap.scss')
         .pipe(sass())
         .pipe(header(banner, {
           pkg: 'pkg'
@@ -34,7 +34,7 @@ gulp.task('sass', () => {
 
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], () => {
-  return gulp.src('dist/css/bootstrap.css')
+  return gulp.src('./dist/css/*.css')
         .pipe(cleanCSS({
           compatibility: 'ie8'
         }))
@@ -42,7 +42,7 @@ gulp.task('minify-css', ['sass'], () => {
           prefix: 'usafb-',
           suffix: '.min'
         }))
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('../USAFB/http/css/'))
         .pipe(browserSync.reload({
           stream: true
         }))
@@ -50,7 +50,7 @@ gulp.task('minify-css', ['sass'], () => {
 
 // Minify JS
 gulp.task('minify-js', () => {
-  return gulp.src('dist/js/bootstrap.js')
+  return gulp.src('dist/js/*.js')
         .pipe(uglify())
         .pipe(header(banner, {
           pkg
@@ -59,7 +59,7 @@ gulp.task('minify-js', () => {
           prefix: 'usafb-',
           suffix: '.min'
         }))
-        .pipe(gulp.dest('js'))
+        .pipe(gulp.dest('../USAFB/http/css/'))
         .pipe(browserSync.reload({
           stream: true
         }))
@@ -86,15 +86,16 @@ gulp.task('copy', () => {
 
 // autoprefix vendor browsers where necessary
 gulp.task('autoprefixme', function () {
-  return gulp.src('../USAFB/http/css/*.css')
+  return gulp.src('/dist/css/*.css')
       .pipe(sourcemaps.init())
       .pipe(postcss([ autoprefixer() ]))
       .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('../USAFB/http/css/*.css'))
+      .pipe(rename({prefix: 'usafb-'}))
+      .pipe(gulp.dest('../USAFB/http/css/'))
 })
 
 // Run everything
-gulp.task('default', ['sass', 'minify-css', 'minify-js'])
+gulp.task('default', ['sass', 'autoprefixme', 'minify-css', 'minify-js'])
 // Configure the browserSync task
 gulp.task('browserSync', () => {
   browserSync.init({
@@ -104,12 +105,13 @@ gulp.task('browserSync', () => {
   })
 })
 
-// Dev task with browserSync
-gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], () => {
-  gulp.watch('sass/*.scss', ['sass'])
-  gulp.watch('css/*.css', ['minify-css'])
+// Build CSS & JS files with browserSync
+gulp.task('all-in-one', ['browserSync', 'sass', 'autoprefixme', 'minify-css', 'minify-js'], () => {
+  gulp.watch('scss/*.scss', ['sass'])
+  gulp.watch('css/*.css', ['minify-css'], ['autoprefixme'])
   gulp.watch('js/*.js', ['minify-js'])
-  // Reloads the browser whenever HTML or JS files change
+  // Reloads the browser whenever HTML, CSS or JS files change
   gulp.watch('*.html', browserSync.reload)
+  gulp.watch('*.css', browserSync.reload)
   gulp.watch('js/**/*.js', browserSync.reload)
 })

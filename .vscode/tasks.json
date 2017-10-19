@@ -15,7 +15,7 @@
       "task": "autoprefixme",
       "problemMatcher": [
         "$eslint-stylish"
-      ]
+       ]
     },
     {
       "type": "gulp",
@@ -39,6 +39,11 @@
     {
       "type": "npm",
       "script": "heathenscript",
+      "problemMatcher": []
+    },
+    {
+      "type": "npm",
+      "script": "css-compile",
       "problemMatcher": []
     }
   ]
