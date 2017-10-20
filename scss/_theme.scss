@@ -62,6 +62,24 @@ form {
   font-size: $font-size-sm;
 }
 
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: none;
+  -webkit-box-shadow: none;
+  transition: none;
+}
+
+
 .tg-list {
   text-align: center;
   display: flex;
@@ -239,7 +257,10 @@ button:hover {
     @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
   }
 }
-
+.btn-danger, .btn-primary{
+  font-size: $btn-primary-02-font-size;
+  padding:$btn-primary-02-padding;
+}
 .btn-primary-02 {
   color: $btn-primary-02-color;
   font-size: $btn-primary-02-font-size;
@@ -599,14 +620,14 @@ select, option {
   margin-top: 1.875rem;
   color: $white;
   .input-wrapper {
-    flex-grow: 0;
+    flex-grow: 1 0 100%;
     border: $sign-in-input-border;
     border-radius: 0;
     background: $white;
     box-shadow: $blur-20;
     white-space: nowrap;
     .input-wrapper>.form-control-theme {
-      width: 23.75rem;
+      //width: 23.75rem;
     }
     .checkbox-theme {
       border: $sign-in-input-border;
@@ -615,7 +636,7 @@ select, option {
     input[type="text"] {
       border: 0;
       margin-left: .625rem;
-      width: 19.9rem;
+      width: 100%; //19.9rem;
     }
     .fa-layer {
       display: flex;
