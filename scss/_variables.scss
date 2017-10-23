@@ -90,6 +90,9 @@ $purple:                #6f42c1 !default;
 $pink:                  #e83e8c !default;
 $red:                   #9e0a0f !default;
 $red-000:               #4B0508 !default;
+$red-10:                #c90c12 !default;
+$red-20:                #9e0a0f !default;
+$red-100:               #5c090c !default;
 $orange:                #fd7e14 !default;
 $yellow:                #ffc107 !default;
 $light-yellow:          #fafad2 !default;
@@ -231,9 +234,9 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
+  sm: 576px, //540px,
+  md: 768px, //720px,
+  lg: 992px, //960px,
   xl: 1280px
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -926,7 +929,7 @@ $close-text-shadow:           0 1px 0 $white !default;
 $code-font-size:              90% !default;
 $code-padding-y:              .2rem !default;
 $code-padding-x:              .4rem !default;
-$code-color:                  #bd4147 !default;
+$code-color:                  $red-10 !default; //#bd4147
 $code-bg:                     $gray-100 !default;
 
 $kbd-color:                   $white !default;
@@ -937,6 +940,14 @@ $pre-scrollable-max-height:   340px !default;
 // layout elements
 $page-title-fa-margin:  0 4px 0 0 !default;
 $page-title-fa-color:   $blue-300 !default;
+$sidebar-bg:            $red-10 !default;
+$sidebar-border-color:  $red-100 !default;
+$sidebar-link:          $white !default;
+$sidebar-link-hover:    $white !default;
+$sidebar-icon-color:    $red-20 !default;
+$sidebar-icon-w-h:      27px !default;
+$sidebar-icon-home:     url(/images/icons/icon-home-nav.svg) !default;
+
 
 //avatar
 $user-avatar-width:             40px !default; 
