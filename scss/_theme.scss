@@ -1,18 +1,17 @@
 body {
   opacity: 0;
-  /* make things invisible upon start */
-  //display: grid;
-  //position: relative;
   font-size: $font-size-base;
+  font-weight: $font-weight-base;
   color: $gray-850;
-  -webkit-animation: fadeIn ease-in 1;
-  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  // call the keyframe fadeIn, use animattion ease-in and repeat 1 time
+  -webkit-animation: fadeIn ease-in 1;  
   -moz-animation: fadeIn ease-in 1;
   animation: fadeIn ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  // making sure after animation is complete we remain at the last keyframe value (opacity: 1)
+  -webkit-animation-fill-mode: forwards; 
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+
   -webkit-animation-duration: .5s;
   -moz-animation-duration: .5s;
   animation-duration: .5s;
@@ -367,8 +366,6 @@ button:hover {
   padding: 18px 20px;
   color: $white;
   .brand-logo {
-    height: 30px;
-    height: rem(30px);
     max-width: 100%;
     max-height: 100%; //display: flex;
   }
@@ -607,10 +604,6 @@ option {
   color: $form-label-font-color;
 }
 
-// .fixed-table-container thead.cpl th .both {
-//   padding-left: rem(15px);
-//   padding-right: rem(35px);
-// }
 .fixed-table-container thead th .sortable {
   background-position: right 2px center;
   background-repeat: no-repeat;
@@ -891,7 +884,7 @@ thead.cpl {
   }
 }
 
-.stats {
+.card-theme-blue {
   .card {
     position: relative;
     display: flex;
@@ -1037,8 +1030,8 @@ thead.cpl {
 }
 
 .move-from-left-0--right-200 {
-  @include animation('motion-right .5s 1',
-  'move-the-object-again .5s 1 .5s');
+  @include animation('motion-1 .5s 1',
+  'motion-2 .5s 1 .5s');
 }
 
 // progress bars
@@ -1066,187 +1059,46 @@ thead.cpl {
   .btnUpload[disabled] {}
 }
 
-// new layout 
-// Shrinking the sidebar from 250px to 80px and center aligining its content
-.page-wrapper {
+// making sure the base font weight is normal
+body {
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+}
+// notify box
+.card-theme-blue h4.card-header {
+  font-weight: normal !important;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.notify {
   display: flex;
-  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: $blue-400;
+  padding: 0 !important;
 }
-.bg-home {
-  background: url(/images/bg/fridayNightLights.jpg);
-  background-size: cover;
-  background-position: bottom;
+
+.notify-item {
+  color: $blue-600;
+  font-size: .90rem;
+  /* padding: .625rem .625rem .625rem 3.125rem; */
+  border-bottom: $border-lightblue-solid-1;
 }
-.sidebar {
-  width: 180px;
-  background: $sidebar-bg;
+
+.notify-item i.fa {
+  font-size: 1.25rem;
+}
+
+.notify-icon {
+  color: $blue-600;
   text-align: center;
-  color: $white;
-  transition: all 0.3s;
-  .navbar-nav .nav-item .nav-link {
-    height: 196px;
-    color: $white;
-    text-align: center;
-    padding-top: 70px;
-    padding-top: 4.2rem;
-    display: block;
-    border-bottom: 1px solid $sidebar-border-color;
-    text-transform: uppercase; // display: flex;
-    //border-bottom: 1px solid $sidebar-border-color;
-    transition: all 0.3s;
-    &:hover {
-      background: $sidebar-link-bg-hover;
-    }
-  }
-  .nav-link-content {
-    margin-top: 80px;
-    margin-top: rem(80px);
-  }
-  .navbar-nav .nav-item.active>a.nav-link,
-  a[aria-expanded="true"] {
-    color: #fff;
-  }
-  a.nav-link[aria-expanded="false"]::before,
-  a.nav-link[aria-expanded="true"]::before {
-    content: '\f078';
-    display: block;
-    position: absolute;
-    right: rem(20px);
-    font-family: 'FontAwesome';
-    font-size: rem(10px);
-    opacity: .65;
-  }
-  .sidebar-icon {
-    width: 34px;
-    width: rem(34px);
-    height: 34px;
-    height: rem(34px);
-  }
-  .nav-link.active {
-    background-image: $sidebar-link-bg-active;
-  }
 }
 
-.sidebar.active {
-  min-width: 80px;
-  max-width: 80px;
-  text-align: center;
-  .sidebar-header h3,
-  .CTAs {
-    display: none;
-  }
-  .nav-link-text {
-    display: none;
-  }
-  .navbar-nav .nav-item .nav-link {
-    color: $white;
-    //padding: 20px 10px;
-    text-align: center;
-    font-size: 0.85em;
-  }
-  .navbar-nav .nav-item .nav-link i {
-    margin-right: 0;
-    display: block;
-    font-size: 1.8em;
-    margin-bottom: 5px;
-  }
-  // .navbar-nav .nav-item .nav-link {
-  //   padding: 10px !important;
-  // }
-  a[aria-expanded="false"]::before,
-  a[aria-expanded="true"]::before {
-    top: auto;
-    bottom: 5px;
-    right: 50%;
-    -webkit-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    transform: translateX(50%);
-  }
-  a.nav-link[aria-expanded="true"]::before {
-    content: '\f077';
-  }
-  
-  a.nav-link[data-toggle="collapse"] {
-    position: relative;
-  }
+.notify-item .lead {
+  font-size: .95rem;
 }
 
-// content
-.content-wrapper {
-  display: flex;
-  flex: 0 1 100%;
-  min-height: 100vh;
-  transition: all 0.3s;
-  align-items: flex-start;
-}
-
-//media query
-@media (max-width: 768px) {
-  .sidebar {
-    min-width: rem(80px);
-    max-width: rem(80px);
-    text-align: center;
-    margin-left: -80px !important;
-    .active {
-    margin-left: 0 !important;
-    }
-    .navbar-nav .nav-item .nav-link {
-      padding: 20px 10px;
-    }
-    .navbar-nav .nav-item .nav-link span {
-        font-size: 0.85em;
-    }
-    .navbar-nav .nav-item .nav-link i {
-      margin-right: 0;
-      display: block;
-    }
-    .nav-link {
-      padding: 10px !important;
-    }
-    .navbar-nav .nav-item .nav-link i {
-      font-size: 1.3em;
-    }
-    .sidebarCollapse span {
-      display: none;
-    }
-  }
-  a[aria-expanded="false"]::before,
-  a[aria-expanded="true"]::before {
-    top: auto;
-    bottom: 5px;
-    right: 50%;
-    -webkit-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    transform: translateX(50%);
-  }
-  
-  .sidebar {
-    margin-left: 0;
-  }
-  
-}
-
-//fix gutters and padding
-.page-wrapper.no-gutters,
-.header-container.no-gutters {
-  margin: 0;
-  >.col,
-  >[class*="col-"] {
-    padding: 0;
-  }
-  .row>[class^=col-] {
-    padding: 0; //border: $border-wireframe;
-  }
-}
-//sidebar icons
-.icon-home-st0{filter:url(#Adobe_OpacityMaskFilter);}
-.icon-home-st1{fill:#FFFFFF;}
-.icon-home-st2{mask:url(#page-1-b_1_);fill:#FFFFFF;}
-.icon-home-st3{fill:#FFFFFF;}
-.icon-home-st4{mask:url(#page-1-d_1_);fill:#FFFFFF;}
-.icon-home-st5{fill:#FFFFFF;}
-
-// end new layout
 // ------------------- nothing below the following class ---------------//
 .row>[class^=col-] {
   padding-bottom: .75rem;
