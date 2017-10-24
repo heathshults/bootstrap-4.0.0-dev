@@ -944,9 +944,10 @@ $sidebar-bg:            $red-10 !default;
 $sidebar-border-color:  $red-100 !default;
 $sidebar-link:          $white !default;
 $sidebar-link-hover:    $white !default;
+$sidebar-link-bg-hover: $red-100 !default;
+$sidebar-link-bg-active: linear-gradient(to top, rgba(255,255,255,0.513), rgba(255,255,255,0.807) 61%, rgba(255,255,255,0.807) 61%, rgba(255,255,255,0.811) 61%, rgba(255,255,255,0.811));
 $sidebar-icon-color:    $red-20 !default;
-$sidebar-icon-w-h:      27px !default;
-$sidebar-icon-home:     url(/images/icons/icon-home-nav.svg) !default;
+$sidebar-icon-w-h:      34px !default;
 
 
 //avatar
