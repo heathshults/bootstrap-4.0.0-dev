@@ -8005,7 +8005,7 @@ a.text-dark:focus, a.text-dark:hover {
   font-size: 11px;
 }
 
-.prog-bar {
+.age-chart .prog-bar {
   height: 20px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -8013,11 +8013,11 @@ a.text-dark:focus, a.text-dark:hover {
   border-radius: 4px;
 }
 
-.prog-bar-lightblue-success {
+.age-chart .prog-bar-lightblue-success {
   background-color: #5cb85c;
 }
 
-.prog-bar-lightblue {
+.age-chart .prog-bar-lightblue {
   float: left;
   width: 0;
   height: 100%;
