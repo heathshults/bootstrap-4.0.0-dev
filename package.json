@@ -114,6 +114,7 @@
     "cross-env": "^5.0.5",
     "eslint": "^4.2.0",
     "eslint-plugin-compat": "^1.0.4",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "htmllint-cli": "^0.0.6",
     "jsunitsaucelabs": "^1.2.0",
