@@ -92,15 +92,15 @@ gulp.task('copy', () => {
   gulp.src(['./dist/js/*.js'])
         .pipe(gulp.dest('../http/js'))
 
-  //gulp.src(['./dist/css/*.css', './dist/css/*.map'
+  // gulp.src(['./dist/css/*.css', './dist/css/*.map'
     // 'node_modules/font-awesome/css/**',
     // '!node_modules/font-awesome/**/*.map',
     // '!node_modules/font-awesome/.npmignore'
     // '!node_modules/font-awesome/*.txt',
     // '!node_modules/font-awesome/*.md',
     // '!node_modules/font-awesome/*.json'
-    //])
-    //.pipe(gulp.dest('../http/css'))
+    // ])
+    // .pipe(gulp.dest('../http/css'))
 })
 
 // autoprefix vendor browsers where necessary

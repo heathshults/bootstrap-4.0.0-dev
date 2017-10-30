@@ -604,6 +604,7 @@ option {
   color: $form-label-font-color;
 }
 
+//bootstrap-table
 .fixed-table-container thead th .sortable {
   background-position: right 2px center;
   background-repeat: no-repeat;
@@ -613,7 +614,7 @@ option {
   padding-left: rem(10px);
 }
 
-//bootstrap-table
+
 .table-striped tbody tr:nth-of-type(2n+1) {
   background-color: $blue-450-14;
 }
@@ -711,16 +712,16 @@ thead {
   color: $white;
   font-size: $font-size-xsm !important;
   font-weight: $font-weight-normal !important;
-  border-bottom: $border-width-3 $border-type-solid $blue !important;
+  //border-bottom: $border-width-3 $border-type-solid $blue !important;
   th {
     background: $blue !important;
     text-align: center;
-    &:hover {
-      background: $blue-400 !important;
-      border-top: solid 10px $blue-400;
-      border-bottom: solid 10px $blue-400;
-      cursor: pointer;
-    }
+    // &:hover {
+    //   background: $blue-400 !important;
+    //   border-top: solid 10px $blue-400;
+    //   border-bottom: solid 10px $blue-400;
+    //   cursor: pointer;
+    // }
   }
 }
 
