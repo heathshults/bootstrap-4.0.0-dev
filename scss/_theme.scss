@@ -790,15 +790,20 @@ thead.cpl {
     color: $green;
     text-decoration: none;
   }
-  .fa-check-circle::after {
-    display: inline-block;
-    font-family: $font-family-base;
-    font-size: $font-size-sm;
-    content: "Active";
-    margin-left: 4px
+  .fa-check-circle:after {
+  display: inline-block;
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  content: "Active";
   }
 }
-
+.status-disabled {
+  .fa-minus-circle:after {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    content: "Disabled";
+  }
+}
 .status-enabled .fa-plus-square,
 .status-disabled .fa-minus-square {
   margin-right: 10px;

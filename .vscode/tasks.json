@@ -50,6 +50,11 @@
       "type": "npm",
       "script": "css-lint",
       "problemMatcher": []
+    },
+    {
+      "type": "gulp",
+      "task": "browserSync",
+      "problemMatcher": []
     }
   ]
 }

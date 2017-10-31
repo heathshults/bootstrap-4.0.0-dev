@@ -7,7 +7,6 @@
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 400;
   src: local("Roboto"), local("Roboto-Regular"), url("/css/web-fonts/roboto/roboto-regular") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
@@ -15,7 +14,6 @@
 @font-face {
   font-family: 'Roboto Condensed';
   font-style: normal;
-  font-weight: 400;
   src: local("Roboto Condensed"), local("RobotoCondensed-Regular"), url("/css/web-fonts/roboto/roboto-condensed.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
@@ -23,7 +21,6 @@
 @font-face {
   font-family: 'Roboto Mono';
   font-style: normal;
-  font-weight: 400;
   src: local("Roboto Mono"), local("RobotoMono-Regular"), url("/css/web-fonts/roboto/roboto-mono.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
@@ -9070,12 +9067,17 @@ thead.cpl th .th-inner {
   text-decoration: none;
 }
 
-.status-enabled .fa-check-circle::after {
+.status-enabled .fa-check-circle:after {
   display: inline-block;
   font-family: "Roboto", Roboto, sans-serif;
   font-size: 0.875rem;
   content: "Active";
-  margin-left: 4px;
+}
+
+.status-disabled .fa-minus-circle:after {
+  font-family: "Roboto", Roboto, sans-serif;
+  font-size: 1rem;
+  content: "Disabled";
 }
 
 .status-enabled .fa-plus-square,
