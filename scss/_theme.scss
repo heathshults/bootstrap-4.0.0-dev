@@ -117,7 +117,7 @@ form {
   }
   +.tgl-btn {
     outline: 0;
-    display: block;
+    display: inline-block;
     width: 7rem;
     height: 1.8rem;
     position: relative;
@@ -126,7 +126,7 @@ form {
     &:after,
     &:before {
       position: relative;
-      display: block;
+      display: inline-block;
       content: "";
       width: 50%;
       height: 100%;
@@ -149,7 +149,7 @@ form {
     transform: skew(-10deg);
     backface-visibility: hidden;
     transition: all .2s ease;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: $green;
     &:after,
     &:before {
@@ -231,6 +231,25 @@ button:hover {
 .actionButtons {
   .actionBtn label {
     display: inline-flex;
+  }
+}
+.btn-skewed {
+  outline: 0;
+  display: inline-block;
+  background-color: $blue;
+  color: $white;
+  //width: 7rem;
+  height: 1.8rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  top: 0;
+  transform: skew(-10deg);
+  &:hover {
+    background-color: $blue-375;
+  } 
+  .lbl-save {
+    transform: skew(10deg);
   }
 }
 
@@ -757,16 +776,16 @@ thead.cpl {
     border-right: $border-width-1 $border-type-solid $green;
   }
 }
-tbody {
-  tr {
-    border-bottom: 1px solid $gray-500 !important;
-    border-left: 1px solid $gray-500 !important;
-  }
-  td {
-    border-right: 1px solid $gray-500 !important;
-    border-top: 1px solid $gray-500 !important;
-  }
-}
+// tbody {
+//   tr {
+//     border-bottom: 1px solid $gray-500 !important;
+//     border-left: 1px solid $gray-500 !important;
+//   }
+//   td {
+//     border-right: 1px solid $gray-500 !important;
+//     border-top: 1px solid $gray-500 !important;
+//   }
+// }
 
 .table td {
   // padding: 0.90rem;
@@ -1027,6 +1046,12 @@ tbody {
     color: $white;
     text-shadow: 0 1px 0 #000;
   }
+}
+
+.modal {
+  position:fixed;
+  top: 10%;
+  
 }
 
 // borders
