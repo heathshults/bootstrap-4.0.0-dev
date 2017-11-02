@@ -9004,6 +9004,13 @@ thead th {
   text-align: center;
 }
 
+thead th:hover {
+  background: #2e69a3 !important;
+  border-top: solid 10px #2e69a3;
+  border-bottom: solid 10px #2e69a3;
+  cursor: pointer;
+}
+
 thead.cpl {
   text-transform: uppercase;
   color: #fff;
@@ -9034,6 +9041,16 @@ thead.cpl th .th-inner {
 
 .table thead th:not(:last-child) {
   border-right: 1px solid #28a745;
+}
+
+tbody tr {
+  border-bottom: 1px solid #adb5bd !important;
+  border-left: 1px solid #adb5bd !important;
+}
+
+tbody td {
+  border-right: 1px solid #adb5bd !important;
+  border-top: 1px solid #adb5bd !important;
 }
 
 .table td {
@@ -9074,9 +9091,19 @@ thead.cpl th .th-inner {
   content: "Active";
 }
 
+.status-disabled {
+  color: #9e0a0f;
+}
+
+.status-disabled:link, .status-disabled:visited, .status-disabled:hover {
+  color: #9e0a0f;
+  text-decoration: none;
+}
+
 .status-disabled .fa-minus-circle:after {
+  display: inline-block;
   font-family: "Roboto", Roboto, sans-serif;
-  font-size: 1rem;
+  font-size: 0.875rem;
   content: "Disabled";
 }
 

@@ -716,12 +716,12 @@ thead {
   th {
     background: $blue !important;
     text-align: center;
-    // &:hover {
-    //   background: $blue-400 !important;
-    //   border-top: solid 10px $blue-400;
-    //   border-bottom: solid 10px $blue-400;
-    //   cursor: pointer;
-    // }
+    &:hover {
+      background: $blue-400 !important;
+      border-top: solid 10px $blue-400;
+      border-bottom: solid 10px $blue-400;
+      cursor: pointer;
+    }
   }
 }
 
@@ -755,6 +755,16 @@ thead.cpl {
   }
   &:not(:last-child) {
     border-right: $border-width-1 $border-type-solid $green;
+  }
+}
+tbody {
+  tr {
+    border-bottom: 1px solid $gray-500 !important;
+    border-left: 1px solid $gray-500 !important;
+  }
+  td {
+    border-right: 1px solid $gray-500 !important;
+    border-top: 1px solid $gray-500 !important;
   }
 }
 
@@ -798,9 +808,17 @@ thead.cpl {
   }
 }
 .status-disabled {
+  color: $red;
+  &:link,
+  &:visited,
+  &:hover {
+    color: $red;
+    text-decoration: none;
+  }
   .fa-minus-circle:after {
+    display: inline-block;
     font-family: $font-family-base;
-    font-size: $font-size-base;
+    font-size: $font-size-sm;
     content: "Disabled";
   }
 }
