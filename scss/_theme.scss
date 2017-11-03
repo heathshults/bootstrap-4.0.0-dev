@@ -242,11 +242,14 @@ button:hover {
   height: 1.8rem;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 7px;
   position: relative;
   top: 0;
   transform: skew(-10deg);
   &:hover {
     background-color: $blue-375;
+    color:$white;
+    text-decoration: none;
   } 
   .lbl-save {
     transform: skew(10deg);
@@ -262,7 +265,9 @@ button:hover {
   user-select: none;
   border: $input-btn-border-width solid transparent;
   @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
-  @include transition($btn-transition); // Share hover and focus styles
+  @include transition($btn-transition);
+
+  // Share hover and focus styles
   @include hover-focus {
     text-decoration: none;
   }
@@ -270,23 +275,20 @@ button:hover {
   &.focus {
     outline: 0;
     box-shadow: $btn-focus-box-shadow;
-  } // Disabled comes first so active can properly restyle
+  }
+
+  // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
     opacity: .65;
     @include box-shadow(none);
   }
+
   &:active,
   &.active {
     background-image: none;
     @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
   }
-}
-
-.btn-danger,
-.btn-primary {
-  font-size: $btn-primary-02-font-size;
-  padding: $btn-primary-02-padding;
 }
 
 .btn-primary-02 {
@@ -307,6 +309,12 @@ button:hover {
   .fa {
     font-size: $btn-primary-02-fa-size;
   }
+}
+.btn-danger,
+.btn-primary,
+.btn-primary-02 {
+  font-size: $btn-primary-02-font-size;
+  padding: $btn-primary-02-padding;
 }
 
 .actionBtn {

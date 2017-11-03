@@ -409,9 +409,9 @@ $btn-primary-02-fa-size:        rem(16px) !default;
 $btn-primary-02-color:          $white;
 $btn-primary-02-padding:        rem(10px) rem(40px) !default;
 $btn-primary-02-bg-grad:        linear-gradient(180deg, $blue 65%, $blue-350, 90%, $blue--01)!default;
-$btn-primary-02-border:         solid rem(1px) $blue-000 !default;
-$btn-primary-02-border-radius:  rem(3px) !default;
-$btn-primary-02-border-hover:   rem(1px) solid $cyan !default;
+$btn-primary-02-border:         solid rem(3px) $blue-000 !default;
+$btn-primary-02-border-radius:  rem(4px) !default;
+$btn-primary-02-border-hover:   rem(3px) solid $cyan !default;
 $btn-primary-02-trans-bgcolor:  background-color 1s ease-in !default;
 
 $btn-font-weight:                $font-weight-normal !default;

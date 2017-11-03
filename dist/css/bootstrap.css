@@ -8527,6 +8527,7 @@ button:hover {
   height: 1.8rem;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 7px;
   position: relative;
   top: 0;
   transform: skew(-10deg);
@@ -8534,6 +8535,8 @@ button:hover {
 
 .btn-skewed:hover {
   background-color: #26579C;
+  color: #fff;
+  text-decoration: none;
 }
 
 .btn-skewed .lbl-save {
@@ -8572,30 +8575,31 @@ button:hover {
   background-image: none;
 }
 
-.btn-danger,
-.btn-primary {
-  font-size: 0.75rem;
-  padding: 0.625rem 2.5rem;
-}
-
 .btn-primary-02 {
   color: #fff;
   font-size: 0.75rem;
   background-image: linear-gradient(180deg, #09254a 65%, #113f69, 90%, #0d3353);
   padding: 0.625rem 2.5rem;
-  border: solid 0.0625rem #0d2240;
-  border-radius: 0.1875rem;
+  border: solid 0.1875rem #0d2240;
+  border-radius: 0.25rem;
 }
 
 .btn-primary-02:hover, .btn-primary-02:active, .btn-primary-02:focus {
   color: #fff;
   background-color: #2e69a3;
-  border: 0.0625rem solid #0288d5 !important;
+  border: 0.1875rem solid #0288d5 !important;
   transition: background-color 1s ease-in;
 }
 
 .btn-primary-02 .fa {
   font-size: 1rem;
+}
+
+.btn-danger,
+.btn-primary,
+.btn-primary-02 {
+  font-size: 0.75rem;
+  padding: 0.625rem 2.5rem;
 }
 
 .actionBtn {
