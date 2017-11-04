@@ -3949,7 +3949,7 @@ tbody.collapse.show {
 
 .alert-primary {
   color: #051326;
-  background-color: #ced3db;
+  background-color: #a6b1be;
   border-color: #bac2cc;
   transition: all 0.15s ease-in-out;
 }
@@ -3964,7 +3964,7 @@ tbody.collapse.show {
 
 .alert-secondary {
   color: #464a4e;
-  background-color: #e7e8ea;
+  background-color: #d3d6d9;
   border-color: #dddfe2;
   transition: all 0.15s ease-in-out;
 }
@@ -3979,7 +3979,7 @@ tbody.collapse.show {
 
 .alert-success {
   color: #155724;
-  background-color: #d4edda;
+  background-color: #b2dfbc;
   border-color: #c3e6cb;
   transition: all 0.15s ease-in-out;
 }
@@ -3994,7 +3994,7 @@ tbody.collapse.show {
 
 .alert-info {
   color: #01476f;
-  background-color: #cce7f7;
+  background-color: #a4d4f0;
   border-color: #b8def3;
   transition: all 0.15s ease-in-out;
 }
@@ -4009,7 +4009,7 @@ tbody.collapse.show {
 
 .alert-warning {
   color: #856404;
-  background-color: #fff3cd;
+  background-color: #ffe9a6;
   border-color: #ffeeba;
   transition: all 0.15s ease-in-out;
 }
@@ -4024,7 +4024,7 @@ tbody.collapse.show {
 
 .alert-danger {
   color: #520508;
-  background-color: #eccecf;
+  background-color: #dca7a9;
   border-color: #e4babc;
   transition: all 0.15s ease-in-out;
 }
@@ -4039,7 +4039,7 @@ tbody.collapse.show {
 
 .alert-light {
   color: #818182;
-  background-color: #fefefe;
+  background-color: #fcfdfd;
   border-color: #fdfdfe;
   transition: all 0.15s ease-in-out;
 }
@@ -4054,7 +4054,7 @@ tbody.collapse.show {
 
 .alert-dark {
   color: #1b1e21;
-  background-color: #d6d8d9;
+  background-color: #b6b8ba;
   border-color: #c6c8ca;
   transition: all 0.15s ease-in-out;
 }
@@ -4477,6 +4477,7 @@ button.close {
 .modal-title {
   margin-bottom: 0;
   line-height: 1.5;
+  margin: 10px auto;
 }
 
 .modal-body {
@@ -8363,10 +8364,6 @@ form {
   max-width: 100%;
 }
 
-.text-small {
-  font-size: 0.875rem;
-}
-
 .tg-list {
   text-align: center;
   display: flex;
@@ -8602,6 +8599,34 @@ button:hover {
   padding: 0.625rem 2.5rem;
 }
 
+.btn-red {
+  color: #fff;
+  font-size: 0.75rem;
+  vertical-align: middle;
+  background-image: linear-gradient(180deg, #9e0a0f 65%, #c90c12, 90%, #9e0a0f);
+  padding: 0.625rem 2.5rem;
+  border: solid 0.1875rem #9e0a0f;
+  border-radius: 0.25rem;
+}
+
+.btn-red:hover, .btn-red:active, .btn-red:focus {
+  color: #fff;
+  background-color: #9e0a0f;
+  border: 0.1875rem solid #ed687c !important;
+  transition: background-color 1s ease-in;
+}
+
+.btn-red .fa {
+  font-size: 1rem;
+}
+
+.btn-danger,
+.btn-primary,
+.btn-primary-02 {
+  font-size: 0.75rem;
+  padding: 0.625rem 2.5rem;
+}
+
 .actionBtn {
   text-align: center;
   background-color: #09254a;
@@ -8818,6 +8843,18 @@ option {
 
 .selLabel:disabled {
   display: none;
+}
+
+.text-small {
+  font-size: 0.875rem;
+}
+
+.text-lg {
+  font-size: 1.25rem;
+}
+
+.text-xlg {
+  font-size: 2rem;
 }
 
 .text-yellow {
@@ -9324,13 +9361,16 @@ thead.cpl th .th-inner {
   text-shadow: 0 1px 0 #000;
 }
 
-.modal {
-  position: fixed;
-  top: 10%;
+.modal-body .container-fluid {
+  height: 306px;
 }
 
 .border-lightGrey-2s {
   border: 2px solid #ced4da !important;
+}
+
+form.dropzone {
+  height: 185px;
 }
 
 .dnd-div .border-lightGrey-2s:hover {

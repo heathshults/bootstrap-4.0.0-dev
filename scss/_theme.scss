@@ -73,9 +73,7 @@ form {
   max-width: 100%;
 }
 
-.text-small {
-  font-size: $font-size-sm;
-}
+
 
 // Change autocomplete styles in WebKit  
 // input:-webkit-autofill,
@@ -317,6 +315,33 @@ button:hover {
   padding: $btn-primary-02-padding;
 }
 
+.btn-red{
+  color: $btn-red-color;
+  font-size: $btn-red-font-size;
+  vertical-align: $btn-red-fa-valign;
+  background-image: $btn-red-bg-grad;
+  padding: $btn-red-padding;
+  border: $btn-red-border;
+  border-radius: $btn-red-border-radius;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $btn-red-color;
+    background-color: $red;
+    border: $btn-red-border-hover !important;
+    transition: $btn-red-trans-bgcolor;
+  }
+  .fa {
+    font-size: $btn-red-fa-size;
+  }
+}
+.btn-danger,
+.btn-primary,
+.btn-primary-02 {
+  font-size: $btn-red-font-size;
+  padding: $btn-red-padding;
+}
+
 .actionBtn {
   text-align: center;
   background-color: $blue;
@@ -383,7 +408,7 @@ button:hover {
   display: flex; //background-image: linear-gradient(to bottom, $blue, $blue-400);
   background: $blue;
   color: $blue-500;
-  @include px-to-rem-height(66px); //height: rem(200px)
+  @include px-to-rem-height(90px); //height: rem(200px)
   //height: 12.5rem; 
   //padding-top: 28px;
 }
@@ -535,6 +560,18 @@ option {
   &:disabled {
     display: none;
   }
+}
+
+.text-small {
+  font-size: $font-size-sm;
+}
+
+.text-lg {
+  font-size: $font-size-lg;
+}
+
+.text-xlg {
+  font-size: $font-size-xlg;
 }
 
 .text-yellow {
@@ -1056,10 +1093,13 @@ thead.cpl {
   }
 }
 
-.modal {
-  position:fixed;
-  top: 10%;
-  
+// .modal {
+//   position: ;
+//   top: 10%;
+// }
+
+.modal-body .container-fluid {
+  height: 306px;
 }
 
 // borders
@@ -1068,7 +1108,12 @@ thead.cpl {
 }
 
 // drag and drop
+form.dropzone {
+  height: 185px;
+}
+
 .dnd-div {
+  
   .border-lightGrey-2s {
     &:hover {
       border-color: $green;
@@ -1112,11 +1157,12 @@ thead.cpl {
   }
 }
 
-// making sure the base font weight is normal
+// making sure the base font weight is normal - DELETE BEFORE RELEASE
 body {
   font-size: $font-size-base;
   font-weight: $font-weight-base;
 }
+
 // notify box
 .card-theme-blue h4.card-header {
   font-weight: normal !important;
