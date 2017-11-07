@@ -222,6 +222,9 @@ form {
 }
 
 // buttons ---------------------------
+.btn {
+  text-transform: uppercase;
+}
 button:hover {
   cursor: pointer;
 }
@@ -257,6 +260,7 @@ button:hover {
 .bss-btn {
   display: inline-block;
   font-weight: $btn-font-weight;
+  text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -292,6 +296,7 @@ button:hover {
 .btn-primary-02 {
   color: $btn-primary-02-color;
   font-size: $btn-primary-02-font-size;
+  text-transform: uppercase;
   background-image: $btn-primary-02-bg-grad;
   padding: $btn-primary-02-padding;
   border: $btn-primary-02-border;
@@ -318,6 +323,7 @@ button:hover {
 .btn-red{
   color: $btn-red-color;
   font-size: $btn-red-font-size;
+  text-transform: uppercase;
   vertical-align: $btn-red-fa-valign;
   background-image: $btn-red-bg-grad;
   padding: $btn-red-padding;
@@ -678,6 +684,9 @@ option {
   padding-left: rem(10px);
 }
 
+.fixed-table-header > table { 
+	display: none;
+	}
 
 .table-striped tbody tr:nth-of-type(2n+1) {
   background-color: $blue-450-14;
@@ -1086,6 +1095,7 @@ thead.cpl {
 
 .modal-body .container-fluid {
   height: 306px;
+  overflow-y: scroll;
 }
 
 // borders
@@ -1182,6 +1192,30 @@ body {
 
 .notify-item .lead {
   font-size: .95rem;
+}
+
+//table column menu
+.bss-ddm-overide {
+
+  .sectionTitle{
+    white-space: nowrap;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+  }
+  .dropdown-menu {
+    background: $white;
+  }
+  
+  
+}
+.bss-ddm-overide input[type="radio" i], 
+.bss-ddm-overide input[type="checkbox" i] {
+  background-color: initial;
+  margin: 3px 0.5ex;
+  padding: initial;
+  border: initial;
 }
 
 // ----------------- nothing below the following class --------------//

@@ -8508,6 +8508,10 @@ form {
   height: 2px;
 }
 
+.btn {
+  text-transform: uppercase;
+}
+
 button:hover {
   cursor: pointer;
 }
@@ -8543,6 +8547,7 @@ button:hover {
 .bss-btn {
   display: inline-block;
   font-weight: normal;
+  text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -8575,6 +8580,7 @@ button:hover {
 .btn-primary-02 {
   color: #fff;
   font-size: 0.75rem;
+  text-transform: uppercase;
   background-image: linear-gradient(180deg, #09254a 65%, #113f69, 90%, #0d3353);
   padding: 0.625rem 2.5rem;
   border: solid 0.1875rem #0d2240;
@@ -8602,6 +8608,7 @@ button:hover {
 .btn-red {
   color: #fff;
   font-size: 0.75rem;
+  text-transform: uppercase;
   vertical-align: middle;
   background-image: linear-gradient(180deg, #9e0a0f 65%, #c90c12, 90%, #9e0a0f);
   padding: 0.625rem 2.5rem;
@@ -8956,6 +8963,10 @@ option {
 
 .fixed-table-container thead.cpl td {
   padding-left: 0.625rem;
+}
+
+.fixed-table-header > table {
+  display: none;
 }
 
 .table-striped tbody tr:nth-of-type(2n+1) {
@@ -9348,6 +9359,7 @@ thead.cpl th .th-inner {
 
 .modal-body .container-fluid {
   height: 306px;
+  overflow-y: scroll;
 }
 
 .border-lightGrey-2s {
@@ -9467,6 +9479,18 @@ body {
 
 .notify-item .lead {
   font-size: .95rem;
+}
+
+.bss-ddm-overide .sectionTitle {
+  white-space: nowrap;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+.bss-ddm-overide .dropdown-menu {
+  background: #fff;
 }
 
 .row > [class^=col-] {
