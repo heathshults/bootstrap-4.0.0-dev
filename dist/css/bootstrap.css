@@ -8691,8 +8691,8 @@ button:hover {
   display: flex;
   background: #09254a;
   color: #8AB8E4;
-  height: 66px;
-  height: 4.125rem;
+  height: 90px;
+  height: 5.625rem;
 }
 
 .brand-container {
@@ -9142,22 +9142,7 @@ thead.cpl th .th-inner {
   font-family: "Roboto", Roboto, sans-serif;
   font-size: 0.875rem;
   content: "Active";
-}
-
-.status-disabled {
-  color: #9e0a0f;
-}
-
-.status-disabled:link, .status-disabled:visited, .status-disabled:hover {
-  color: #9e0a0f;
-  text-decoration: none;
-}
-
-.status-disabled .fa-minus-circle:after {
-  display: inline-block;
-  font-family: "Roboto", Roboto, sans-serif;
-  font-size: 0.875rem;
-  content: "Disabled";
+  margin-left: 4px;
 }
 
 .status-enabled .fa-plus-square,

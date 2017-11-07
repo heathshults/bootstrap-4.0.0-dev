@@ -855,7 +855,6 @@ thead.cpl {
     margin-left: 4px
   }
 }
-
 .status-enabled {
   color: $green;
   &:link,
@@ -869,23 +868,10 @@ thead.cpl {
   font-family: $font-family-base;
   font-size: $font-size-sm;
   content: "Active";
+  margin-left: 4px
   }
 }
-.status-disabled {
-  color: $red;
-  &:link,
-  &:visited,
-  &:hover {
-    color: $red;
-    text-decoration: none;
-  }
-  .fa-minus-circle:after {
-    display: inline-block;
-    font-family: $font-family-base;
-    font-size: $font-size-sm;
-    content: "Disabled";
-  }
-}
+
 .status-enabled .fa-plus-square,
 .status-disabled .fa-minus-square {
   margin-right: 10px;
