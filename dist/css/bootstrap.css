@@ -8508,6 +8508,10 @@ form {
   height: 2px;
 }
 
+a {
+  outline-color: transparent;
+}
+
 .btn {
   text-transform: uppercase;
 }
@@ -8868,6 +8872,10 @@ option {
   color: #fafad2;
 }
 
+.text-lightGray {
+  color: #adb5bd;
+}
+
 .page-title-container a:link,
 .page-title-container a:visited,
 .page-title-container a:active {
@@ -9137,6 +9145,7 @@ thead.cpl th .th-inner {
   font-size: 0.875rem;
   content: "Disabled";
   margin-left: 4px;
+  outline: 0px;
 }
 
 .status-enabled {
@@ -9481,16 +9490,42 @@ body {
   font-size: .95rem;
 }
 
-.bss-ddm-overide .sectionTitle {
+.bss-ddm-overide .row > [class^=col-] {
   white-space: nowrap;
-  -webkit-margin-before: 0px;
-  -webkit-margin-after: 0px;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
 }
 
-.bss-ddm-overide .dropdown-menu {
+.bss-ddm-overide .sectionTitle {
+  white-space: nowrap;
+  margin: 10px 0 !important;
+}
+
+.bss-ddm-overide .dropdown-menu,
+.bss-ddm-overide .dropdown-menu[style] {
+  position: absolute;
+  top: unset !important;
+  left: -130px !important;
   background: #fff;
+  width: 190%vw !important;
+  width: 75rem !important;
+  max-width: 100% vw-20% px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  transform: translate3d(0px, 0px, 0px) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+}
+
+.bss-ddm-overide .dropdown-menu label,
+.bss-ddm-overide .dropdown-menu[style] label {
+  font-size: 0.875rem;
+}
+
+.bss-ddm-overide .dropdown-menu span,
+.bss-ddm-overide .dropdown-menu[style] span {
+  display: block;
+}
+
+.bss-ddm-overide .dropdown-menu div.col-2.form-check,
+.bss-ddm-overide .dropdown-menu[style] div.col-2.form-check {
+  overflow-x: hidden;
 }
 
 .row > [class^=col-] {
