@@ -73,9 +73,7 @@ form {
   max-width: 100%;
 }
 
-.text-small {
-  font-size: $font-size-sm;
-}
+
 
 // Change autocomplete styles in WebKit  
 // input:-webkit-autofill,
@@ -117,7 +115,7 @@ form {
   }
   +.tgl-btn {
     outline: 0;
-    display: block;
+    display: inline-block;
     width: 7rem;
     height: 1.8rem;
     position: relative;
@@ -126,7 +124,7 @@ form {
     &:after,
     &:before {
       position: relative;
-      display: block;
+      display: inline-block;
       content: "";
       width: 50%;
       height: 100%;
@@ -149,7 +147,7 @@ form {
     transform: skew(-10deg);
     backface-visibility: hidden;
     transition: all .2s ease;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: $green;
     &:after,
     &:before {
@@ -222,8 +220,14 @@ form {
   width: 100%;
   height: 2px;
 }
-
+// a links
+a {
+  outline-color: transparent;
+}
 // buttons ---------------------------
+.btn {
+  text-transform: uppercase;
+}
 button:hover {
   cursor: pointer;
 }
@@ -233,17 +237,42 @@ button:hover {
     display: inline-flex;
   }
 }
+.btn-skewed {
+  outline: 0;
+  display: inline-block;
+  background-color: $blue;
+  color: $white;
+  //width: 7rem;
+  height: 1.8rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  position: relative;
+  top: 0;
+  transform: skew(-10deg);
+  &:hover {
+    background-color: $blue-375;
+    color:$white;
+    text-decoration: none;
+  } 
+  .lbl-save {
+    transform: skew(10deg);
+  }
+}
 
 .bss-btn {
   display: inline-block;
   font-weight: $btn-font-weight;
+  text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
   border: $input-btn-border-width solid transparent;
   @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
-  @include transition($btn-transition); // Share hover and focus styles
+  @include transition($btn-transition);
+
+  // Share hover and focus styles
   @include hover-focus {
     text-decoration: none;
   }
@@ -251,12 +280,15 @@ button:hover {
   &.focus {
     outline: 0;
     box-shadow: $btn-focus-box-shadow;
-  } // Disabled comes first so active can properly restyle
+  }
+
+  // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
     opacity: .65;
     @include box-shadow(none);
   }
+
   &:active,
   &.active {
     background-image: none;
@@ -264,15 +296,10 @@ button:hover {
   }
 }
 
-.btn-danger,
-.btn-primary {
-  font-size: $btn-primary-02-font-size;
-  padding: $btn-primary-02-padding;
-}
-
 .btn-primary-02 {
   color: $btn-primary-02-color;
   font-size: $btn-primary-02-font-size;
+  text-transform: uppercase;
   background-image: $btn-primary-02-bg-grad;
   padding: $btn-primary-02-padding;
   border: $btn-primary-02-border;
@@ -288,6 +315,40 @@ button:hover {
   .fa {
     font-size: $btn-primary-02-fa-size;
   }
+}
+.btn-danger,
+.btn-primary,
+.btn-primary-02 {
+  font-size: $btn-primary-02-font-size;
+  padding: $btn-primary-02-padding;
+}
+
+.btn-red{
+  color: $btn-red-color;
+  font-size: $btn-red-font-size;
+  text-transform: uppercase;
+  vertical-align: $btn-red-fa-valign;
+  background-image: $btn-red-bg-grad;
+  padding: $btn-red-padding;
+  border: $btn-red-border;
+  border-radius: $btn-red-border-radius;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $btn-red-color;
+    background-color: $red;
+    border: $btn-red-border-hover !important;
+    transition: $btn-red-trans-bgcolor;
+  }
+  .fa {
+    font-size: $btn-red-fa-size;
+  }
+}
+.btn-danger,
+.btn-primary,
+.btn-primary-02 {
+  font-size: $btn-red-font-size;
+  padding: $btn-red-padding;
 }
 
 .actionBtn {
@@ -319,6 +380,7 @@ button:hover {
 .button.clear {
   display: flex;
 }
+
 
 .full-screen-bg-landing-page {
   //@include make-container();
@@ -356,7 +418,7 @@ button:hover {
   display: flex; //background-image: linear-gradient(to bottom, $blue, $blue-400);
   background: $blue;
   color: $blue-500;
-  @include px-to-rem-height(66px); //height: rem(200px)
+  @include px-to-rem-height(90px); //height: rem(200px)
   //height: 12.5rem; 
   //padding-top: 28px;
 }
@@ -510,8 +572,23 @@ option {
   }
 }
 
+.text-small {
+  font-size: $font-size-sm;
+}
+
+.text-lg {
+  font-size: $font-size-lg;
+}
+
+.text-xlg {
+  font-size: $font-size-xlg;
+}
+
 .text-yellow {
   color: $light-yellow;
+}
+.text-lightGray {
+  color: $gray-500;
 }
 
 .page-title-container a:link,
@@ -614,6 +691,9 @@ option {
   padding-left: rem(10px);
 }
 
+.fixed-table-header > table { 
+	display: none;
+	}
 
 .table-striped tbody tr:nth-of-type(2n+1) {
   background-color: $blue-450-14;
@@ -716,12 +796,12 @@ thead {
   th {
     background: $blue !important;
     text-align: center;
-    // &:hover {
-    //   background: $blue-400 !important;
-    //   border-top: solid 10px $blue-400;
-    //   border-bottom: solid 10px $blue-400;
-    //   cursor: pointer;
-    // }
+    &:hover {
+      background: $blue-400 !important;
+      border-top: solid 10px $blue-400;
+      border-bottom: solid 10px $blue-400;
+      cursor: pointer;
+    }
   }
 }
 
@@ -757,6 +837,16 @@ thead.cpl {
     border-right: $border-width-1 $border-type-solid $green;
   }
 }
+// tbody {
+//   tr {
+//     border-bottom: 1px solid $gray-500 !important;
+//     border-left: 1px solid $gray-500 !important;
+//   }
+//   td {
+//     border-right: 1px solid $gray-500 !important;
+//     border-top: 1px solid $gray-500 !important;
+//   }
+// }
 
 .table td {
   // padding: 0.90rem;
@@ -778,10 +868,10 @@ thead.cpl {
     font-family: $font-family-base;
     font-size: $font-size-sm;
     content: "Disabled";
-    margin-left: 4px
+    margin-left: 4px;
+    outline: 0px;
   }
 }
-
 .status-enabled {
   color: $green;
   &:link,
@@ -795,15 +885,10 @@ thead.cpl {
   font-family: $font-family-base;
   font-size: $font-size-sm;
   content: "Active";
+  margin-left: 4px
   }
 }
-.status-disabled {
-  .fa-minus-circle:after {
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    content: "Disabled";
-  }
-}
+
 .status-enabled .fa-plus-square,
 .status-disabled .fa-minus-square {
   margin-right: 10px;
@@ -1011,13 +1096,28 @@ thead.cpl {
   }
 }
 
+// .modal {
+//   position: ;
+//   top: 10%;
+// }
+
+.modal-body .container-fluid {
+  height: 306px;
+  overflow-y: scroll;
+}
+
 // borders
 .border-lightGrey-2s {
   border: $border-width-2 solid $gray-400 !important;
 }
 
 // drag and drop
+form.dropzone {
+  height: 185px;
+}
+
 .dnd-div {
+  
   .border-lightGrey-2s {
     &:hover {
       border-color: $green;
@@ -1061,11 +1161,12 @@ thead.cpl {
   }
 }
 
-// making sure the base font weight is normal
+// making sure the base font weight is normal - DELETE BEFORE RELEASE
 body {
   font-size: $font-size-base;
   font-weight: $font-weight-base;
 }
+
 // notify box
 .card-theme-blue h4.card-header {
   font-weight: normal !important;
@@ -1100,6 +1201,41 @@ body {
 .notify-item .lead {
   font-size: .95rem;
 }
+
+//table column menu
+.bss-ddm-overide {
+  .row>[class^=col-] {
+    white-space: nowrap;
+  }
+  .sectionTitle{
+    white-space: nowrap;
+    margin: 10px 0 !important;
+  }
+  .dropdown-menu,
+  .dropdown-menu[style] {
+    position: absolute; 
+    top: unset !important; 
+    left: -130px !important; 
+    background: $white;
+    width: 190%vw !important;
+    width: 75rem !important;
+    max-width: (100%vw - 20%)px;
+    border: 1px solid rgba(0,0,0,.15);
+    transform: translate3d(0px, 0px, 0px) !important;     
+    box-shadow: $dropdown-box-shadow;
+    label {
+      font-size: $font-size-sm;
+    }
+    span {
+      display:block;
+    }
+    div.col-2.form-check {
+      overflow-x: hidden;
+    }
+  }
+}
+
+
 
 // ----------------- nothing below the following class --------------//
 .row>[class^=col-] {

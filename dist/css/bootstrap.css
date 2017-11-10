@@ -3949,8 +3949,9 @@ tbody.collapse.show {
 
 .alert-primary {
   color: #051326;
-  background-color: #ced3db;
+  background-color: #a6b1be;
   border-color: #bac2cc;
+  transition: all 0.15s ease-in-out;
 }
 
 .alert-primary hr {
@@ -3963,8 +3964,9 @@ tbody.collapse.show {
 
 .alert-secondary {
   color: #464a4e;
-  background-color: #e7e8ea;
+  background-color: #d3d6d9;
   border-color: #dddfe2;
+  transition: all 0.15s ease-in-out;
 }
 
 .alert-secondary hr {
@@ -3977,8 +3979,9 @@ tbody.collapse.show {
 
 .alert-success {
   color: #155724;
-  background-color: #d4edda;
+  background-color: #b2dfbc;
   border-color: #c3e6cb;
+  transition: all 0.15s ease-in-out;
 }
 
 .alert-success hr {
@@ -3991,8 +3994,9 @@ tbody.collapse.show {
 
 .alert-info {
   color: #01476f;
-  background-color: #cce7f7;
+  background-color: #a4d4f0;
   border-color: #b8def3;
+  transition: all 0.15s ease-in-out;
 }
 
 .alert-info hr {
@@ -4005,8 +4009,9 @@ tbody.collapse.show {
 
 .alert-warning {
   color: #856404;
-  background-color: #fff3cd;
+  background-color: #ffe9a6;
   border-color: #ffeeba;
+  transition: all 0.15s ease-in-out;
 }
 
 .alert-warning hr {
@@ -4019,8 +4024,9 @@ tbody.collapse.show {
 
 .alert-danger {
   color: #520508;
-  background-color: #eccecf;
+  background-color: #dca7a9;
   border-color: #e4babc;
+  transition: all 0.15s ease-in-out;
 }
 
 .alert-danger hr {
@@ -4033,8 +4039,9 @@ tbody.collapse.show {
 
 .alert-light {
   color: #818182;
-  background-color: #fefefe;
+  background-color: #fcfdfd;
   border-color: #fdfdfe;
+  transition: all 0.15s ease-in-out;
 }
 
 .alert-light hr {
@@ -4047,8 +4054,9 @@ tbody.collapse.show {
 
 .alert-dark {
   color: #1b1e21;
-  background-color: #d6d8d9;
+  background-color: #b6b8ba;
   border-color: #c6c8ca;
+  transition: all 0.15s ease-in-out;
 }
 
 .alert-dark hr {
@@ -4469,6 +4477,7 @@ button.close {
 .modal-title {
   margin-bottom: 0;
   line-height: 1.5;
+  margin: 10px auto;
 }
 
 .modal-body {
@@ -8058,8 +8067,6 @@ a.text-dark:focus, a.text-dark:hover {
   content: "";
   width: 100%;
   height: 100%;
-  border: 1px solid #fff;
-  border-radius: 4px;
   position: absolute;
   top: 0;
   left: 0;
@@ -8285,11 +8292,6 @@ a.text-dark:focus, a.text-dark:hover {
   }
 }
 
-.modal {
-  position: fixed;
-  top: 20%;
-}
-
 body {
   opacity: 0;
   font-size: 1rem;
@@ -8362,10 +8364,6 @@ form {
   max-width: 100%;
 }
 
-.text-small {
-  font-size: 0.875rem;
-}
-
 .tg-list {
   text-align: center;
   display: flex;
@@ -8398,7 +8396,7 @@ form {
 
 .tgl + .tgl-btn {
   outline: 0;
-  display: block;
+  display: inline-block;
   width: 7rem;
   height: 1.8rem;
   position: relative;
@@ -8408,7 +8406,7 @@ form {
 
 .tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
   position: relative;
-  display: block;
+  display: inline-block;
   content: "";
   width: 50%;
   height: 100%;
@@ -8431,7 +8429,7 @@ form {
   transform: skew(-10deg);
   backface-visibility: hidden;
   transition: all .2s ease;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   background: #28a745;
 }
 
@@ -8510,6 +8508,14 @@ form {
   height: 2px;
 }
 
+a {
+  outline-color: transparent;
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
 button:hover {
   cursor: pointer;
 }
@@ -8518,9 +8524,34 @@ button:hover {
   display: inline-flex;
 }
 
+.btn-skewed {
+  outline: 0;
+  display: inline-block;
+  background-color: #09254a;
+  color: #fff;
+  height: 1.8rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 7px;
+  position: relative;
+  top: 0;
+  transform: skew(-10deg);
+}
+
+.btn-skewed:hover {
+  background-color: #26579C;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-skewed .lbl-save {
+  transform: skew(10deg);
+}
+
 .bss-btn {
   display: inline-block;
   font-weight: normal;
+  text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -8550,30 +8581,61 @@ button:hover {
   background-image: none;
 }
 
-.btn-danger,
-.btn-primary {
-  font-size: 0.75rem;
-  padding: 0.625rem 2.5rem;
-}
-
 .btn-primary-02 {
   color: #fff;
   font-size: 0.75rem;
+  text-transform: uppercase;
   background-image: linear-gradient(180deg, #09254a 65%, #113f69, 90%, #0d3353);
   padding: 0.625rem 2.5rem;
-  border: solid 0.0625rem #0d2240;
-  border-radius: 0.1875rem;
+  border: solid 0.1875rem #0d2240;
+  border-radius: 0.25rem;
 }
 
 .btn-primary-02:hover, .btn-primary-02:active, .btn-primary-02:focus {
   color: #fff;
   background-color: #2e69a3;
-  border: 0.0625rem solid #0288d5 !important;
+  border: 0.1875rem solid #0288d5 !important;
   transition: background-color 1s ease-in;
 }
 
 .btn-primary-02 .fa {
   font-size: 1rem;
+}
+
+.btn-danger,
+.btn-primary,
+.btn-primary-02 {
+  font-size: 0.75rem;
+  padding: 0.625rem 2.5rem;
+}
+
+.btn-red {
+  color: #fff;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  background-image: linear-gradient(180deg, #9e0a0f 65%, #c90c12, 90%, #9e0a0f);
+  padding: 0.625rem 2.5rem;
+  border: solid 0.1875rem #9e0a0f;
+  border-radius: 0.25rem;
+}
+
+.btn-red:hover, .btn-red:active, .btn-red:focus {
+  color: #fff;
+  background-color: #9e0a0f;
+  border: 0.1875rem solid #ed687c !important;
+  transition: background-color 1s ease-in;
+}
+
+.btn-red .fa {
+  font-size: 1rem;
+}
+
+.btn-danger,
+.btn-primary,
+.btn-primary-02 {
+  font-size: 0.75rem;
+  padding: 0.625rem 2.5rem;
 }
 
 .actionBtn {
@@ -8640,8 +8702,8 @@ button:hover {
   display: flex;
   background: #09254a;
   color: #8AB8E4;
-  height: 66px;
-  height: 4.125rem;
+  height: 90px;
+  height: 5.625rem;
 }
 
 .brand-container {
@@ -8794,8 +8856,24 @@ option {
   display: none;
 }
 
+.text-small {
+  font-size: 0.875rem;
+}
+
+.text-lg {
+  font-size: 1.25rem;
+}
+
+.text-xlg {
+  font-size: 2rem;
+}
+
 .text-yellow {
   color: #fafad2;
+}
+
+.text-lightGray {
+  color: #adb5bd;
 }
 
 .page-title-container a:link,
@@ -8893,6 +8971,10 @@ option {
 
 .fixed-table-container thead.cpl td {
   padding-left: 0.625rem;
+}
+
+.fixed-table-header > table {
+  display: none;
 }
 
 .table-striped tbody tr:nth-of-type(2n+1) {
@@ -9004,6 +9086,13 @@ thead th {
   text-align: center;
 }
 
+thead th:hover {
+  background: #2e69a3 !important;
+  border-top: solid 10px #2e69a3;
+  border-bottom: solid 10px #2e69a3;
+  cursor: pointer;
+}
+
 thead.cpl {
   text-transform: uppercase;
   color: #fff;
@@ -9056,6 +9145,7 @@ thead.cpl th .th-inner {
   font-size: 0.875rem;
   content: "Disabled";
   margin-left: 4px;
+  outline: 0px;
 }
 
 .status-enabled {
@@ -9072,12 +9162,7 @@ thead.cpl th .th-inner {
   font-family: "Roboto", Roboto, sans-serif;
   font-size: 0.875rem;
   content: "Active";
-}
-
-.status-disabled .fa-minus-circle:after {
-  font-family: "Roboto", Roboto, sans-serif;
-  font-size: 1rem;
-  content: "Disabled";
+  margin-left: 4px;
 }
 
 .status-enabled .fa-plus-square,
@@ -9281,8 +9366,17 @@ thead.cpl th .th-inner {
   text-shadow: 0 1px 0 #000;
 }
 
+.modal-body .container-fluid {
+  height: 306px;
+  overflow-y: scroll;
+}
+
 .border-lightGrey-2s {
   border: 2px solid #ced4da !important;
+}
+
+form.dropzone {
+  height: 185px;
 }
 
 .dnd-div .border-lightGrey-2s:hover {
@@ -9394,6 +9488,44 @@ body {
 
 .notify-item .lead {
   font-size: .95rem;
+}
+
+.bss-ddm-overide .row > [class^=col-] {
+  white-space: nowrap;
+}
+
+.bss-ddm-overide .sectionTitle {
+  white-space: nowrap;
+  margin: 10px 0 !important;
+}
+
+.bss-ddm-overide .dropdown-menu,
+.bss-ddm-overide .dropdown-menu[style] {
+  position: absolute;
+  top: unset !important;
+  left: -130px !important;
+  background: #fff;
+  width: 190%vw !important;
+  width: 75rem !important;
+  max-width: 100% vw-20% px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  transform: translate3d(0px, 0px, 0px) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+}
+
+.bss-ddm-overide .dropdown-menu label,
+.bss-ddm-overide .dropdown-menu[style] label {
+  font-size: 0.875rem;
+}
+
+.bss-ddm-overide .dropdown-menu span,
+.bss-ddm-overide .dropdown-menu[style] span {
+  display: block;
+}
+
+.bss-ddm-overide .dropdown-menu div.col-2.form-check,
+.bss-ddm-overide .dropdown-menu[style] div.col-2.form-check {
+  overflow-x: hidden;
 }
 
 .row > [class^=col-] {

@@ -82,12 +82,14 @@
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
   padding: $modal-header-padding;
   border-bottom: $modal-header-border-width solid $modal-header-border-color;
+  
 }
 
 // Title text within header
 .modal-title {
   margin-bottom: 0;
   line-height: $modal-title-line-height;
+  margin: 10px auto;
 }
 
 // Modal body
