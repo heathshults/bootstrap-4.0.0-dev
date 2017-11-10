@@ -8982,6 +8982,7 @@ option {
 }
 
 .fixed-table-container thead th .sortable {
+  background-position: right -4px center;
   background-repeat: no-repeat;
 }
 
