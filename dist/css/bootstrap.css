@@ -8710,16 +8710,28 @@ button:hover {
   display: flex;
   padding: 18px 20px;
   color: #fff;
+  white-space: nowrap;
 }
 
 .brand-container .brand-logo {
+  width: 150px;
   max-width: 100%;
   max-height: 100%;
 }
 
 .brand-container .brand-tag {
-  align-self: flex-end;
-  margin-left: 10px;
+  position: relative;
+  top: 3px;
+  color: #fff;
+  align-self: center flex-end;
+  white-space: nowrap;
+}
+
+.brand-container .brand-tag.a:link,
+.brand-container .brand-tag.a:visited,
+.brand-container .brand-tag.a:hover,
+.brand-container .brand-tag.a:active {
+  color: #fff;
 }
 
 .page-title-container {
@@ -8769,7 +8781,8 @@ button:hover {
 
 .nav-container {
   display: flex;
-  max-width: 100%;
+  align-self: flex-start;
+  max-width: calc(100% - 360px);
   margin-right: -20px;
 }
 
@@ -8894,6 +8907,10 @@ option {
   background-color: transparent;
   color: #fff;
   border: 1px solid transparent;
+}
+
+.navbar {
+  width: 100%;
 }
 
 .container-fluid .my-account {
@@ -9504,18 +9521,19 @@ body {
   position: absolute;
   top: unset !important;
   left: -130px !important;
-  background: #fff;
+  background: #fff !important;
   width: 190%vw !important;
   width: 75rem !important;
-  max-width: 100% vw-20% px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  transform: translate3d(0px, 0px, 0px) !important;
+  max-width: 100% vw-20% px !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  transform: none !important;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
 }
 
 .bss-ddm-overide .dropdown-menu label,
 .bss-ddm-overide .dropdown-menu[style] label {
   font-size: 0.875rem;
+  display: block !important;
 }
 
 .bss-ddm-overide .dropdown-menu span,
@@ -9526,6 +9544,37 @@ body {
 .bss-ddm-overide .dropdown-menu div.col-2.form-check,
 .bss-ddm-overide .dropdown-menu[style] div.col-2.form-check {
   overflow-x: hidden;
+}
+
+.dropdown-menu[style] {
+  position: absolute;
+  top: unset !important;
+  left: -130px !important;
+  background: #fff !important;
+  width: 190%vw !important;
+  width: 75rem !important;
+  max-width: 100% vw-20% px !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  transform: none !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+}
+
+.dropdown-menu[style] label {
+  font-size: 0.875rem;
+  display: block !important;
+}
+
+.dropdown-menu[style] span {
+  display: block;
+}
+
+.dropdown-menu[style] div.col-2.form-check {
+  overflow-x: hidden;
+}
+
+body.scaff .row > [class^=col-],
+body.allDivs {
+  border: 1px solid #ccc;
 }
 
 .row > [class^=col-] {
