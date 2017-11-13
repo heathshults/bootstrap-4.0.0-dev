@@ -8720,14 +8720,6 @@ button:hover {
 }
 
 .brand-container .brand-tag {
-<<<<<<< HEAD
-  color: #fff;
-  align-self: flex-end;
-  margin-left: 0.375rem;
-}
-
-.brand-container .brand-tag:hover {
-=======
   position: relative;
   top: 3px;
   color: #fff;
@@ -8739,7 +8731,6 @@ button:hover {
 .brand-container .brand-tag.a:visited,
 .brand-container .brand-tag.a:hover,
 .brand-container .brand-tag.a:active {
->>>>>>> ce43c4d3a534f15d93cd25e1a17ab2deac1372ac
   color: #fff;
 }
 
@@ -8990,9 +8981,21 @@ option {
   color: #ccc;
 }
 
+.table-wrapper {
+  min-width: 1400px !important;
+  overflow-x: scroll;
+}
+
+.table {
+  min-width: 1400px;
+  overflow-x: scroll;
+}
+
 .fixed-table-container thead th .sortable {
   background-position: right -4px center;
   background-repeat: no-repeat;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .fixed-table-container thead.cpl td {
@@ -9129,7 +9132,7 @@ thead.cpl {
 thead.cpl th .th-inner {
   display: block;
   width: 100%;
-  padding: 0 6px 0 8px;
+  padding: 0 20px;
   padding: 0 1.25rem 0 0.625rem;
   margin: 0;
 }
@@ -9517,22 +9520,30 @@ body {
 }
 
 .bss-ddm-overide .row > [class^=col-] {
-  white-space: nowrap;
+  white-space: pre;
 }
 
 .bss-ddm-overide .sectionTitle {
+  color: #2e69a3;
   white-space: nowrap;
+  padding-bottom: 4px;
   margin: 10px 0 !important;
+  border-bottom: 1px solid #adb5bd;
+  display: block;
+}
+
+.bss-ddm-overide .first-ddm-secTitle {
+  position: absolute;
+  top: 10px;
 }
 
 .bss-ddm-overide .dropdown-menu,
 .bss-ddm-overide .dropdown-menu[style] {
   position: absolute;
-  top: unset !important;
-  left: -130px !important;
   background: #fff !important;
   width: 190%vw !important;
   width: 75rem !important;
+  min-width: 1400px;
   max-width: 100% vw-20% px !important;
   border: 1px solid rgba(0, 0, 0, 0.15) !important;
   transform: none !important;
@@ -9557,13 +9568,14 @@ body {
 
 .dropdown-menu[style] {
   position: absolute;
-  top: unset !important;
-  left: -130px !important;
+  top: 42px !important;
+  left: -128px !important;
   background: #fff !important;
-  width: 190%vw !important;
+  width: 100vw !important;
   width: 75rem !important;
-  max-width: 100% vw-20% px !important;
-  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  max-width: calc(100%vw - 10%) px !important;
+  border: 1px solid #adb5bd !important;
+  border-radius: 4px;
   transform: none !important;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
 }
@@ -9579,6 +9591,25 @@ body {
 
 .dropdown-menu[style] div.col-2.form-check {
   overflow-x: hidden;
+}
+
+ul.dropdown-menu.bss-ddm-overide {
+  padding: 3.375rem 1.25rem 1.25rem 1.25rem;
+  -webkit-column-count: 6;
+  -moz-column-count: 6;
+  column-count: 6;
+}
+
+.dd-checkbox {
+  float: left;
+  margin-left: -20px;
+  margin-right: 7px;
+  border: 1px solid #adb5bd;
+}
+
+.dd-label {
+  font-size: 0.75rem;
+  margin-left: 20px;
 }
 
 body.scaff .row > [class^=col-],

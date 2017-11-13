@@ -433,14 +433,6 @@ button:hover {
     max-height: 100%; 
   }
   .brand-tag {
-<<<<<<< HEAD
-    color: $white;
-    align-self: flex-end;
-    margin-left: rem(6px);
-    &:hover {
-      color: $white;
-    }
-=======
     position: relative;
     top: 3px;
     color: $white;
@@ -452,10 +444,7 @@ button:hover {
   .brand-tag.a:hover,
   .brand-tag.a:active {
     color: $white;
->>>>>>> ce43c4d3a534f15d93cd25e1a17ab2deac1372ac
   }
-
- 
 }
 
 .page-title-container {
@@ -706,9 +695,19 @@ option {
 }
 
 //bootstrap-table
+.table-wrapper {
+  min-width: 1400px !important;
+  overflow-x: scroll;
+}
+.table {
+  min-width: 1400px;
+  overflow-x: scroll;
+}
 .fixed-table-container thead th .sortable {
   background-position: right -4px center;
   background-repeat: no-repeat;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .fixed-table-container thead.cpl td {
@@ -838,12 +837,11 @@ thead.cpl {
     .th-inner {
       display: block;
       width: 100%;
-      padding: 0 6px 0 8px;
-      ;
+      padding: 0 20px;
       padding: 0 rem(20px) 0 rem(10px);
       margin: 0; // margin: 10px 0;
       // margin: rem(10px) 0;
-    }
+    }    
   }
 }
 
@@ -1229,20 +1227,27 @@ body {
 //table column menu
 .bss-ddm-overide {
   .row>[class^=col-] {
-    white-space: nowrap;
+    white-space:pre;
   }
   .sectionTitle{
+    color: $blue-400;
     white-space: nowrap;
+    padding-bottom: 4px;
     margin: 10px 0 !important;
+    border-bottom: 1px solid $gray-500;
+    display: block;
+  }
+  .first-ddm-secTitle {
+    position: absolute;
+    top: 10px;
   }
   .dropdown-menu,
   .dropdown-menu[style] {
     position: absolute; 
-    top: unset !important; 
-    left: -130px !important; 
     background: $white !important;
     width: 190%vw !important;
     width: 75rem !important;
+    min-width: 1400px;
     max-width: (100%vw - 20%)px !important;
     border: 1px solid rgba(0,0,0,.15) !important;
     transform: none !important;     
@@ -1261,28 +1266,49 @@ body {
 }
 .dropdown-menu[style] {
   position: absolute; 
-  top: unset !important; 
-  left: -130px !important; 
+  top: 42px !important; 
+  left: -128px !important; 
   background: $white !important;
-  width: 190%vw !important;
+  width: 100vw !important;
   width: 75rem !important;
-  max-width: (100%vw - 20%)px !important;
-  border: 1px solid rgba(0,0,0,.15) !important;
+  max-width: calc(100%vw - 10%)px !important;
+  border: 1px solid $gray-500 !important;
+  border-radius: 4px;
   transform: none !important;     
   box-shadow: $dropdown-box-shadow;
   label {
     font-size: $font-size-sm;
     display: block !important;
   }
+  
   span {
     display:block;
   }
   div.col-2.form-check {
     overflow-x: hidden;
   }
+
+}
+ul.dropdown-menu.bss-ddm-overide {
+  padding: rem(54px) rem(20px) rem(20px) rem(20px);
+  -webkit-column-count: 6;
+  -moz-column-count: 6;
+  column-count: 6;
+}
+ul.dropdown-menu.bss-ddm-overide.show {
+
 }
 
-
+.dd-checkbox {
+  float: left;
+  margin-left: -20px;
+  margin-right: 7px;
+  border: 1px solid $gray-500;
+}
+.dd-label {
+  font-size: $font-size-xsm;
+  margin-left: 20px;
+}
 // ----------------- nothing below the following class --------------//
 body.scaff .row>[class^=col-],
 body.allDivs {
