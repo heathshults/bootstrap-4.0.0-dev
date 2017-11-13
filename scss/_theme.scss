@@ -433,6 +433,14 @@ button:hover {
     max-height: 100%; 
   }
   .brand-tag {
+<<<<<<< HEAD
+    color: $white;
+    align-self: flex-end;
+    margin-left: rem(6px);
+    &:hover {
+      color: $white;
+    }
+=======
     position: relative;
     top: 3px;
     color: $white;
@@ -444,7 +452,10 @@ button:hover {
   .brand-tag.a:hover,
   .brand-tag.a:active {
     color: $white;
+>>>>>>> ce43c4d3a534f15d93cd25e1a17ab2deac1372ac
   }
+
+ 
 }
 
 .page-title-container {
@@ -829,7 +840,7 @@ thead.cpl {
       width: 100%;
       padding: 0 6px 0 8px;
       ;
-      padding: 0 rem(6px) 0 rem(8px);
+      padding: 0 rem(20px) 0 rem(10px);
       margin: 0; // margin: 10px 0;
       // margin: rem(10px) 0;
     }

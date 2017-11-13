@@ -8720,6 +8720,14 @@ button:hover {
 }
 
 .brand-container .brand-tag {
+<<<<<<< HEAD
+  color: #fff;
+  align-self: flex-end;
+  margin-left: 0.375rem;
+}
+
+.brand-container .brand-tag:hover {
+=======
   position: relative;
   top: 3px;
   color: #fff;
@@ -8731,6 +8739,7 @@ button:hover {
 .brand-container .brand-tag.a:visited,
 .brand-container .brand-tag.a:hover,
 .brand-container .brand-tag.a:active {
+>>>>>>> ce43c4d3a534f15d93cd25e1a17ab2deac1372ac
   color: #fff;
 }
 
@@ -9121,7 +9130,7 @@ thead.cpl th .th-inner {
   display: block;
   width: 100%;
   padding: 0 6px 0 8px;
-  padding: 0 0.375rem 0 0.5rem;
+  padding: 0 1.25rem 0 0.625rem;
   margin: 0;
 }
 
