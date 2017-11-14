@@ -696,11 +696,8 @@ option {
 
 //bootstrap-table
 .table-wrapper {
-  min-width: 1400px !important;
-  overflow-x: scroll;
-}
-.table {
-  min-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
   overflow-x: scroll;
 }
 .fixed-table-container thead th .sortable {

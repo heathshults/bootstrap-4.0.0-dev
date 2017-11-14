@@ -8982,12 +8982,16 @@ option {
 }
 
 .table-wrapper {
-  min-width: 1400px !important;
+  min-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
   overflow-x: scroll;
 }
 
 .table {
-  min-width: 1400px;
+  min-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
   overflow-x: scroll;
 }
 
