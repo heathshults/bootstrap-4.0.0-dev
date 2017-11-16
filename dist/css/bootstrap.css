@@ -8982,14 +8982,6 @@ option {
 }
 
 .table-wrapper {
-  min-width: 1280px;
-  margin-right: auto;
-  margin-left: auto;
-  overflow-x: scroll;
-}
-
-.table {
-  min-width: 1280px;
   margin-right: auto;
   margin-left: auto;
   overflow-x: scroll;
@@ -9544,12 +9536,15 @@ body {
 .bss-ddm-overide .dropdown-menu,
 .bss-ddm-overide .dropdown-menu[style] {
   position: absolute;
+  top: 42px !important;
+  left: -128px !important;
   background: #fff !important;
-  width: 190%vw !important;
-  width: 75rem !important;
-  min-width: 1400px;
-  max-width: 100% vw-20% px !important;
-  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  width: 80vw !important;
+  width: 78rem !important;
+  background: #fff;
+  width: 1380px !important;
+  border: 1px solid #adb5bd !important;
+  border-radius: 4px;
   transform: none !important;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
 }
@@ -9571,13 +9566,15 @@ body {
 }
 
 .dropdown-menu[style] {
+  font-size: 0.875rem;
   position: absolute;
   top: 42px !important;
   left: -128px !important;
   background: #fff !important;
-  width: 100vw !important;
-  width: 75rem !important;
-  max-width: calc(100%vw - 10%) px !important;
+  width: 80vw !important;
+  width: 78rem !important;
+  background: #fff;
+  width: 1380px !important;
   border: 1px solid #adb5bd !important;
   border-radius: 4px;
   transform: none !important;

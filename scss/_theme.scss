@@ -1242,11 +1242,6 @@ body {
   .dropdown-menu[style] {
     position: absolute; 
     background: $white !important;
-    width: 190%vw !important;
-    width: 75rem !important;
-    min-width: 1400px;
-    max-width: (100%vw - 20%)px !important;
-    border: 1px solid rgba(0,0,0,.15) !important;
     transform: none !important;     
     box-shadow: $dropdown-box-shadow;
     label {
@@ -1263,13 +1258,7 @@ body {
 }
 .dropdown-menu[style] {
   position: absolute; 
-  top: 42px !important; 
-  left: -128px !important; 
   background: $white !important;
-  width: 100vw !important;
-  width: 75rem !important;
-  max-width: calc(100%vw - 10%)px !important;
-  border: 1px solid $gray-500 !important;
   border-radius: 4px;
   transform: none !important;     
   box-shadow: $dropdown-box-shadow;
