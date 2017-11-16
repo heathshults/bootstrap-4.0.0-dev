@@ -1241,7 +1241,15 @@ body {
   .dropdown-menu,
   .dropdown-menu[style] {
     position: absolute; 
+    top: 42px !important;
+    left: -128px !important;
     background: $white !important;
+    width: 80vw !important;
+    width: 78rem !important;
+    background: $white;
+    width: 1380px !important;
+    border: 1px solid #adb5bd !important;
+    border-radius: 4px;
     transform: none !important;     
     box-shadow: $dropdown-box-shadow;
     label {
@@ -1257,8 +1265,16 @@ body {
   }
 }
 .dropdown-menu[style] {
+  font-size: $font-size-sm;
   position: absolute; 
+  top: 42px !important;
+  left: -128px !important;
   background: $white !important;
+  width: 80vw !important;
+  width: 78rem !important;
+  background: $white;
+  width: 1380px !important;
+  border: 1px solid #adb5bd !important;
   border-radius: 4px;
   transform: none !important;     
   box-shadow: $dropdown-box-shadow;
