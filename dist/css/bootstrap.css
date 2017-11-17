@@ -9190,11 +9190,6 @@ thead.cpl th .th-inner {
   margin-left: 4px;
 }
 
-.status-enabled .fa-plus-square,
-.status-disabled .fa-minus-square {
-  margin-right: 10px;
-}
-
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
@@ -9536,7 +9531,7 @@ body {
 .bss-ddm-overide .dropdown-menu,
 .bss-ddm-overide .dropdown-menu[style] {
   position: absolute;
-  top: 42px !important;
+  top: 38px !important;
   left: -128px !important;
   background: #fff !important;
   width: 80vw !important;
@@ -9565,16 +9560,19 @@ body {
   overflow-x: hidden;
 }
 
+.bss-ddm-overide .dropdown-menu .btn-default,
+.bss-ddm-overide .dropdown-menu[style] .btn-default {
+  color: #333;
+  background-color: #868e96;
+  border-color: #868e96;
+}
 
 .dropdown-menu[style] {
   font-size: 0.875rem;
   position: absolute;
-  top: 42px !important;
+  top: 38px !important;
   left: -128px !important;
   background: #fff !important;
-  width: 80vw !important;
-  width: 78rem !important;
-  background: #fff;
   width: 1380px !important;
   width: 78rem !important;
   border: 1px solid #adb5bd !important;
@@ -9596,6 +9594,18 @@ body {
   overflow-x: hidden;
 }
 
+.btn-default {
+  color: #333;
+  background-color: #ced4da;
+  border: 1px solid #adb5bd;
+}
+
+.btn-default.dropdown-toggle:focus,
+.btn-default.dropdown-toggle:active {
+  border: 1px solid #09254a;
+  background: #09254a;
+  color: #fff;
+}
 
 ul.dropdown-menu.bss-ddm-overide {
   padding: 3.375rem 1.25rem 1.25rem 1.25rem;
