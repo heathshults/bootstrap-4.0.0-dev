@@ -873,6 +873,15 @@ thead.cpl {
   vertical-align: middle; // border-top: 0;
 }
 
+.card-view .title {
+  font-weight: bold;
+  text-transform: capitalize;
+  &:after {
+    content: ":";
+    margin-right: 6px;
+  }
+}
+
 //status circle
 .status-disabled {
   color: $red;

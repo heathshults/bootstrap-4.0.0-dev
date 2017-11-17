@@ -9155,6 +9155,16 @@ thead.cpl th .th-inner {
   vertical-align: middle;
 }
 
+.card-view .title {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.card-view .title:after {
+  content: ":";
+  margin-right: 6px;
+}
+
 .status-disabled {
   color: #9e0a0f;
 }
