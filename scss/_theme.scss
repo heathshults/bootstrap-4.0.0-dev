@@ -908,11 +908,6 @@ thead.cpl {
   }
 }
 
-.status-enabled .fa-plus-square,
-.status-disabled .fa-minus-square {
-  margin-right: 10px;
-}
-
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
@@ -1241,7 +1236,7 @@ body {
   .dropdown-menu,
   .dropdown-menu[style] {
     position: absolute; 
-    top: 42px !important;
+    top: 38px !important;
     left: -128px !important;
     background: $white !important;
     width: 80vw !important;
@@ -1262,22 +1257,26 @@ body {
     div.col-2.form-check {
       overflow-x: hidden;
     }
+    .btn-default {
+      color: #333;
+      background-color: #868e96;
+      border-color: #868e96;
+    }
   }
 }
 .dropdown-menu[style] {
   font-size: $font-size-sm;
   position: absolute; 
-  top: 42px !important;
+  top: 38px !important;
   left: -128px !important;
   background: $white !important;
-  width: 80vw !important;
-  width: 78rem !important;
-  background: $white;
   width: 1380px !important;
+  width: 78rem !important;
   border: 1px solid #adb5bd !important;
   border-radius: 4px;
   transform: none !important;     
   box-shadow: $dropdown-box-shadow;
+
   label {
     font-size: $font-size-sm;
     display: block !important;
@@ -1289,7 +1288,22 @@ body {
   div.col-2.form-check {
     overflow-x: hidden;
   }
+}
 
+.fixed-table-toolbar {
+
+}
+
+.btn-default {
+  color: #333;
+  background-color: $gray-400;
+  border: 1px solid $gray-500;
+}
+.btn-default.dropdown-toggle:focus,
+.btn-default.dropdown-toggle:active {
+  border: 1px solid $blue;
+  background: $blue;
+  color: $white;
 }
 ul.dropdown-menu.bss-ddm-overide {
   padding: rem(54px) rem(20px) rem(20px) rem(20px);
@@ -1298,7 +1312,7 @@ ul.dropdown-menu.bss-ddm-overide {
   column-count: 6;
 }
 ul.dropdown-menu.bss-ddm-overide.show {
-
+  //
 }
 
 .dd-checkbox {

@@ -9565,6 +9565,7 @@ body {
   overflow-x: hidden;
 }
 
+
 .dropdown-menu[style] {
   font-size: 0.875rem;
   position: absolute;
@@ -9575,6 +9576,7 @@ body {
   width: 78rem !important;
   background: #fff;
   width: 1380px !important;
+  width: 78rem !important;
   border: 1px solid #adb5bd !important;
   border-radius: 4px;
   transform: none !important;
@@ -9593,6 +9595,7 @@ body {
 .dropdown-menu[style] div.col-2.form-check {
   overflow-x: hidden;
 }
+
 
 ul.dropdown-menu.bss-ddm-overide {
   padding: 3.375rem 1.25rem 1.25rem 1.25rem;
