@@ -995,9 +995,13 @@ $blur-20:                               -1px -1px 20px 6px rgba(0,0,0,0.2) !defa
 $box-shadow-light-off-axis-y:           0px 3px 10px 5px rgba(0,0,0,0.16) !default;
 
 // text shadows
-$text-shadow-basic: -1px 0px 2px rgba(0,0,0,0.75) !default;
+$text-shadow-basic: -1px 1px 0 rgba(0,0,0,0.90) !default;
 
 // charts
 //verticle column chart
 $border-lightgray-dashed-1:             1px dashed $gray-500 !default;
 $border-lightblue-solid-1:              1px solid $blue-375 !default;
+
+// loading icons
+$loading-icon-spinner:                  url("data:image/svg+xml;charset=utf8,%3Cdiv class='loader loader--style7' title='6'%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='24px' height='30px' viewBox='0 0 24 30' style='enable-background:new 0 0 50 50;' xml:space='preserve'%3E%3Crect x='0' y='0' width='4' height='20' fill='#333'%3E%3Canimate attributeName='opacity' attributeType='XML' values='1; .2; 1'  begin='0s' dur='0.6s' repeatCount='indefinite' /%3E%3C/rect%3E%3Crect x='7' y='0' width='4' height='20' fill='#333'%3E%3Canimate attributeName='opacity' attributeType='XML' values='1; .2; 1' begin='0.2s' dur='0.6s' repeatCount='indefinite' /%3E%3C/rect%3E %3Crect x='14' y='0' width='4' height='20' fill='#333'%3E%3Canimate attributeName='opacity' attributeType='XML' values='1; .2; 1' begin='0.4s' dur='0.6s' repeatCount='indefinite' /%3E%3C/rect%3E%3C/svg%3E%3C/div%3E") !default;
+$loading-icon-spinner-bg-blue:          $blue !default;

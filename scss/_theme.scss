@@ -225,6 +225,7 @@ a {
   outline-color: transparent;
 }
 .alert-success {
+  color: $gray-900;
   background-color: #8fd19e;
   border: 2px solid #74c184;
 }
@@ -1361,6 +1362,24 @@ ul.dropdown-menu.bss-ddm-overide.show {
 .dd-label {
   font-size: $font-size-xsm;
   margin-left: 20px;
+}
+
+span.loading-icon {
+  background: $loading-icon-spinner;
+  margin: 0 0 2em;
+  height: 100px;
+  //width: 20%;
+  width: 24px;
+  height: 30px;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+span.loading-icon svg path,
+span.loading-icon svg rect{
+  fill: $loading-icon-spinner-bg-blue;
 }
 // ----------------- nothing below the following class --------------//
 body.scaff .row>[class^=col-],
