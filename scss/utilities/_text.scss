@@ -34,7 +34,7 @@
 
 // Contextual colors
 
-.text-white { color: #fff !important; }
+.text-white { color: $white !important; }
 
 @each $color, $value in $theme-colors {
   @include text-emphasis-variant('.text-#{$color}', $value);
@@ -46,4 +46,8 @@
 
 .text-hide {
   @include text-hide();
+}
+
+.text-shadow-basic {
+  text-shadow: $text-shadow-basic;
 }
