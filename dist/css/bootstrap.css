@@ -8698,6 +8698,29 @@ button:hover {
   font-size: 1rem;
 }
 
+.btn-green {
+  color: #fff;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  background-image: linear-gradient(180deg, #1d7530 65%, #26963c, 90%, #1d7530);
+  padding: 0.625rem 2.5rem;
+  border: solid 0.1875rem #1d7530;
+  border-radius: 0.25rem;
+}
+
+.btn-green:hover, .btn-green:active, .btn-green:focus {
+  color: #fff;
+  background-color: #28a745;
+  border: 0.1875rem solid #28a745 !important;
+  transition: background-color 1s ease-in;
+}
+
+.btn-green .fa {
+  font-size: 1rem;
+  margin: 0.125rem 0.125rem;
+}
+
 .btn-danger,
 .btn-primary,
 .btn-primary-02 {

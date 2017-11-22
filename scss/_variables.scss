@@ -99,7 +99,10 @@ $orange:                #fd7e14 !default;
 $yellow:                #ffc107 !default;
 $light-yellow:          #fafad2 !default;
 $green:                 #28a745 !default;
+$green-00:              #1d7530 !default;
+$green-05:              #26963c !default;
 $green-10:              #5cb85c !default;
+$green-20:              #80ff80 !default;
 $green-000-40:          rgba(40, 167, 69, 0.5) !default;
 $teal:                  #20c997 !default;
 $cyan:                  #0288d5 !default;
@@ -425,6 +428,17 @@ $btn-red-border:         solid rem(3px) $red !default;
 $btn-red-border-radius:  rem(4px) !default;
 $btn-red-border-hover:   rem(3px) solid $light-pink !default;
 $btn-red-trans-bgcolor:  background-color 1s ease-in !default;
+
+$btn-green-font-size:      rem(12px) !default;
+$btn-green-fa-size:        rem(16px) !default;
+$btn-green-fa-valign:      middle !default;
+$btn-green-color:          $white !default;
+$btn-green-padding:        rem(10px) rem(40px) !default;
+$btn-green-bg-grad:        linear-gradient(180deg, $green-00 65%, $green-05, 90%, $green-00)!default;
+$btn-green-border:         solid rem(3px) $green-00 !default;
+$btn-green-border-radius:  rem(4px) !default;
+$btn-green-border-hover:   rem(3px) solid $green !default;
+$btn-green-trans-bgcolor:  background-color 1s ease-in !default;
 
 $btn-font-weight:                $font-weight-normal !default;
 $btn-box-shadow:                 inset 0 rem(1px) 0 rgba($white,.15), 0 rem(1px) rem(1px) rgba($black,.075) !default;

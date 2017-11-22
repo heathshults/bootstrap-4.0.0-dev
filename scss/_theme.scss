@@ -325,6 +325,7 @@ button:hover {
     font-size: $btn-primary-02-fa-size;
   }
 }
+
 .btn-danger,
 .btn-primary,
 .btn-primary-02 {
@@ -353,6 +354,30 @@ button:hover {
     font-size: $btn-red-fa-size;
   }
 }
+
+.btn-green{
+  color: $btn-green-color;
+  font-size: $btn-green-font-size;
+  text-transform: uppercase;
+  vertical-align: $btn-green-fa-valign;
+  background-image: $btn-green-bg-grad;
+  padding: $btn-green-padding;
+  border: $btn-green-border;
+  border-radius: $btn-green-border-radius;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $btn-green-color;
+    background-color: $green;
+    border: $btn-green-border-hover !important;
+    transition: $btn-green-trans-bgcolor;
+  }
+  .fa {
+    font-size: $btn-green-fa-size;
+    margin: rem(2px) rem(2px)
+  }
+}
+
 .btn-danger,
 .btn-primary,
 .btn-primary-02 {
