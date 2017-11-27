@@ -9098,6 +9098,12 @@ option {
   overflow-x: scroll;
 }
 
+.fixed-table-container thead tr th {
+  min-width: 9.375rem;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
 .fixed-table-container thead th .sortable {
   background-position: right -4px center;
   background-repeat: no-repeat;
@@ -9105,8 +9111,13 @@ option {
   padding-left: 20px;
 }
 
-.fixed-table-container thead.cpl td {
+.fixed-table-container thead th .desc:after .fixed-table-container thead.cpl td {
   padding-left: 0.625rem;
+}
+
+.fht-cell {
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .fixed-table-header > table {
@@ -9507,9 +9518,36 @@ thead.cpl th .th-inner {
   text-shadow: 0 1px 0 #000;
 }
 
-.modal-body .container-fluid {
+#importer .modal-body .container-fluid {
   height: 306px;
   overflow-y: scroll;
+}
+
+#advSearch .modal-body .container-fluid {
+  display: flex;
+  height: 306px;
+  overflow-y: scroll;
+  padding-left: 1.25rem;
+  padding-top: 1.25rem;
+  border: 2px solid #ced4da !important;
+}
+
+#advSearch .modal-body .container-fluid .input-row {
+  display: inline-flex;
+  flex-direction: column;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 50%;
+  background: #dee2e6;
+  padding: 10px;
+  border-top: 2px solid #ced4da !important;
+  border-bottom: 2px solid #ced4da !important;
+  border-left: 2px solid transparent !important;
+  border-right: 2px solid transparent !important;
+}
+
+.form-horizontal {
+  margin-left: 0.625rem;
 }
 
 .border-lightGrey-2s {
@@ -9763,6 +9801,11 @@ span.loading-icon {
 span.loading-icon svg path,
 span.loading-icon svg rect {
   fill: #09254a;
+}
+
+.modal-header button[type="button"] {
+  position: absolute !important;
+  right: 20px;
 }
 
 body.scaff .row > [class^=col-],

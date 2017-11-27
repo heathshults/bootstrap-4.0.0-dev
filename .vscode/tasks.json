@@ -55,6 +55,13 @@
       "type": "gulp",
       "task": "browserSync",
       "problemMatcher": []
+    },
+    {
+      "type": "gulp",
+      "task": "watch-all",
+      "problemMatcher": [
+        "$eslint-stylish"
+      ]
     }
   ]
 }

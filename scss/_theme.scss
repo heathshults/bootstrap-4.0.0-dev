@@ -754,6 +754,13 @@ option {
   margin-left: auto;
   overflow-x: scroll;
 }
+
+.fixed-table-container thead tr th {
+  min-width: rem(150px);
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
 .fixed-table-container thead th .sortable {
   background-position: right -4px center;
   background-repeat: no-repeat;
@@ -761,8 +768,15 @@ option {
   padding-left: 20px;
 }
 
+.fixed-table-container thead th .desc:after
+
 .fixed-table-container thead.cpl td {
   padding-left: rem(10px);
+}
+
+.fht-cell {
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .fixed-table-header > table { 
@@ -1178,9 +1192,37 @@ thead.cpl {
 //   top: 10%;
 // }
 
-.modal-body .container-fluid {
+#importer .modal-body .container-fluid {
   height: 306px;
   overflow-y: scroll;
+}
+
+#advSearch .modal-body .container-fluid {
+  display: flex;
+  height: 306px;
+  overflow-y: scroll;
+  padding-left: rem(20px);
+  padding-top: rem(20px);
+  border: 2px solid $gray-400 !important;
+    .input-row {
+      display: inline-flex;
+      flex-direction: column;
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 50%;
+      background: $gray-300;
+      padding: 10px;
+      border-top: 2px solid $gray-400 !important;
+      border-bottom: 2px solid $gray-400 !important;
+      border-left: 2px solid transparent !important;
+      border-right: 2px solid transparent !important;
+    }
+}
+.form-horizontal {
+  margin-left: rem(10px)
+}
+#multiSorter .modal-body .container-fluid {
+  .bootstrap-table{}
 }
 
 // borders
@@ -1353,10 +1395,6 @@ body {
   }
 }
 
-.fixed-table-toolbar {
-
-}
-
 .btn-default {
   color: #333;
   background-color: $gray-400;
@@ -1405,6 +1443,10 @@ span.loading-icon {
 span.loading-icon svg path,
 span.loading-icon svg rect{
   fill: $loading-icon-spinner-bg-blue;
+}
+.modal-header button[type="button"] {
+  position: absolute !important;
+  right: 20px;
 }
 // ----------------- nothing below the following class --------------//
 body.scaff .row>[class^=col-],
