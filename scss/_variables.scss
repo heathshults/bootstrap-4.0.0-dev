@@ -53,7 +53,9 @@
 // Color system
 //
 
+$clearWhite:    rgba(255, 255, 255, 0.30) !default;
 $white:    #fff !default;
+$gray-05:  #ededed !default;
 $gray-10:  #d8d8d8 !default;
 $gray-20:  #ddd  !default;
 $gray-100: #f8f9fa !default;
@@ -165,7 +167,7 @@ $theme-color-interval: 8% !default;
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-rounded:            true !default;
-$enable-shadows:            true !default;
+$enable-shadows:            false !default;
 $enable-gradients:          false !default;
 $enable-transitions:        true !default;
 $enable-hover-media-query:  false !default;
@@ -429,6 +431,25 @@ $btn-red-border-radius:  rem(4px) !default;
 $btn-red-border-hover:   rem(3px) solid $light-pink !default;
 $btn-red-trans-bgcolor:  background-color 1s ease-in !default;
 
+$btn-clearWhite-font-size:                  rem(14px) !default;
+$btn-clearWhite-font-sm:                    rem(12px) !default;
+$btn-clearWhite-fa-size:                    rem(14px) !default;
+$btn-clearWhite-fa-sm:                      rem(12px) !default;
+$btn-clearWhite-fa-valign:                  middle !default;
+$btn-clearWhite-color:                      $gray-850 !default;
+$btn-clearWhite-padding:                    rem(10px) !default;
+$btn-clearWhite-bg-color:                   $white !default;
+$btn-clearWhite-bg-color-hover:             $gray-05 !default;
+$btn-clearWhite-bg-grad:                    linear-gradient(180deg, $gray-500 65%, $clearWhite, 90%)!default;
+$btn-clearWhite-border:                     solid rem(3px) $white !default;
+$btn-clearWhite-border-hover:               solid rem(3px) $gray-500 !default;
+$btn-clearWhite-border-thin:                solid rem(1px) $white !default;
+$btn-clearWhite-border-hover-thin:          solid rem(1px) $gray-500 !default;
+$btn-clearWhite-border-hover-transparent:   solid rem(3px) transparent !default;
+$btn-clearWhite-border-radius:              rem(4px) 0 !default;
+$btn-clearWhite-transition:                 all .15s ease-in !default;
+
+
 $btn-green-font-size:      rem(12px) !default;
 $btn-green-fa-size:        rem(16px) !default;
 $btn-green-fa-valign:      middle !default;
@@ -455,6 +476,14 @@ $btn-border-radius-lg:           $border-radius-lg !default;
 $btn-border-radius-sm:           $border-radius-sm !default;
 
 $btn-transition:                 all .15s ease-in-out !default;
+
+$alt-dropdown-menu-position:        absolute !default;
+$alt-dropdown-menu-z-index:         5000 !default;
+$alt-dropdown-menu-bg-color:        $white !default;
+$alt-dropdown-menu-border:          rem(3px) solid $gray-500 !default;
+$alt-dropdown-menu-border-radius:   rem(4px) !default;
+$alt-dropdown-menu-box-shadow:      0 0.5rem 1rem rgba(0, 0, 0, 0.175) !default;
+$alt-dropdown-menu-padding:         rem(30px) !default;
 
 
 // Forms
