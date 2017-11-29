@@ -1,0 +1,24 @@
+@mixin equilateral-triangle($direction, $size, $color) {
+    width: 0;
+    height: 0;
+    @if $direction == 'up' {
+        border-left: rem($size) solid transparent;
+        border-right: rem($size) solid transparent;
+        border-bottom: rem($size) solid $color;
+    }
+    @else if $direction == 'down' {
+        border-left: rem($size) solid transparent;
+        border-right: rem($size) solid transparent;
+        border-top: rem($size) solid $color;
+    }
+    @else if $direction == 'right' {
+        border-top: rem($size) solid transparent;
+        border-bottom: rem($size) solid transparent;
+        border-left: rem($size) solid $color;
+    }
+    @else if $direction == 'left' {
+        border-top: rem($size) solid transparent;
+        border-bottom: rem($size) solid transparent;
+        border-right: rem($size) solid $color;
+    }
+}

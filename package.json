@@ -81,6 +81,7 @@
   "dependencies": {
     "babel-core": "6",
     "browser-sync": "^2.18.13",
+    "cosmiconfig": "^3.1.0",
     "gpg": "^0.6.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.9.0",

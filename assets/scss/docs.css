@@ -652,8 +652,8 @@
 
 @media (min-width: 992px) {
   .example-content-main {
-    flex: 0 0 66.666667%;
-    max-width: 66.666667%;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
   }
 }
 
@@ -674,8 +674,8 @@
 
 @media (min-width: 992px) {
   .example-content-secondary {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
   }
 }
 
@@ -1864,5 +1864,6 @@
 .algolia-autocomplete .ds-suggestion.ds-cursor .algolia-docsearch-suggestion--content {
   background-color: rgba(208, 189, 236, 0.15) !important;
 }
+ 
 
-/*# sourceMappingURL=docs.min.css.map */
+ /*# sourceMappingURL= docs.css.map */

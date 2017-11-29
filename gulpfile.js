@@ -27,7 +27,7 @@ gulp.task('sass-2-css', () => {
       pkg: 'pkg'
     }))
     .pipe(rename({
-      prefix: 'usafb-',
+      prefix: 'usafb-'
     }))
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.reload({
@@ -43,7 +43,7 @@ gulp.task('sassy-skeletor', () => {
       pkg: 'pkg'
     }))
     .pipe(rename({
-      prefix: 'usafb-',
+      prefix: 'usafb-'
     }))
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.reload({
@@ -58,7 +58,7 @@ gulp.task('minify-css', ['sass'], () => {
           compatibility: 'ie8'
         }))
         .pipe(rename({
-          //prefix: 'usafb-',
+          // prefix: 'usafb-',
           suffix: '.min'
         }))
         .pipe(gulp.dest('../USAFB/http/css/'))

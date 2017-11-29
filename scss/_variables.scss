@@ -166,13 +166,13 @@ $theme-color-interval: 8% !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-rounded:            true !default;
-$enable-shadows:            false !default;
-$enable-gradients:          false !default;
-$enable-transitions:        true !default;
-$enable-hover-media-query:  false !default;
-$enable-grid-classes:       true !default;
-$enable-print-styles:       true !default;
+$enable-rounded:                    true !default;
+$enable-shadows:                    false !default;
+$enable-gradients:                  false !default;
+$enable-transitions:                true !default;
+$enable-hover-media-query:          false !default;
+$enable-grid-classes:               true !default;
+$enable-print-styles:               true !default;
 
 //gradients
 $primary-gradient:                  linear-gradient(356deg, $blue-300, $black) !default;
@@ -267,10 +267,10 @@ $grid-gutter-width: 30px !default;
 $line-height-lg:         1.5 !default;
 $line-height-sm:         1.5 !default;
 
-$border-width: 1px !default;
-$border-width-1: 1px !default;
-$border-width-2: 2px !default;
-$border-width-3: 3px !default;
+$border-width: rem(1px) !default;
+$border-width-sm: rem(.5px) !default;
+$border-width-md: rem(2px) !default;
+$border-width-lg: rem(3px) !default;
 $border-type-solid: solid !default;
 
 
@@ -441,11 +441,11 @@ $btn-clearWhite-padding:                    rem(10px) !default;
 $btn-clearWhite-bg-color:                   $white !default;
 $btn-clearWhite-bg-color-hover:             $gray-05 !default;
 $btn-clearWhite-bg-grad:                    linear-gradient(180deg, $gray-500 65%, $clearWhite, 90%)!default;
-$btn-clearWhite-border:                     solid rem(3px) $white !default;
-$btn-clearWhite-border-hover:               solid rem(3px) $gray-500 !default;
+$btn-clearWhite-border:                     solid rem(2px) $white !default;
+$btn-clearWhite-border-hover:               solid rem(2px) $gray-500 !default;
 $btn-clearWhite-border-thin:                solid rem(1px) $white !default;
 $btn-clearWhite-border-hover-thin:          solid rem(1px) $gray-500 !default;
-$btn-clearWhite-border-hover-transparent:   solid rem(3px) transparent !default;
+$btn-clearWhite-border-hover-transparent:   solid rem(2px) transparent !default;
 $btn-clearWhite-border-radius:              rem(4px) 0 !default;
 $btn-clearWhite-transition:                 all .15s ease-in !default;
 
@@ -480,10 +480,10 @@ $btn-transition:                 all .15s ease-in-out !default;
 $alt-dropdown-menu-position:        absolute !default;
 $alt-dropdown-menu-z-index:         5000 !default;
 $alt-dropdown-menu-bg-color:        $white !default;
-$alt-dropdown-menu-border:          rem(3px) solid $gray-500 !default;
-$alt-dropdown-menu-border-radius:   rem(4px) !default;
-$alt-dropdown-menu-box-shadow:      0 0.5rem 1rem rgba(0, 0, 0, 0.175) !default;
-$alt-dropdown-menu-padding:         rem(30px) !default;
+$alt-dropdown-menu-border:          rem(2px) solid $gray-500 !default;
+$alt-dropdown-menu-border-radius:   rem(2px) !default;
+$alt-dropdown-menu-box-shadow:      rem(3px) rem(3px) rem(8px) rem(1px) rgba(0, 0, 0, 0.175) !default;
+$alt-dropdown-menu-padding:         rem(20px) !default;
 
 
 // Forms
@@ -493,7 +493,7 @@ $input-disabled-bg:              $gray-200 !default;
 
 $input-color:                    $gray-700 !default;
 $input-border-color:             rgba($blue,.15) !default;
-$input-btn-border-width:         $border-width-3 !default; // For form controls and buttons
+$input-btn-border-width:         $border-width-md !default; // For form controls and buttons
 $input-box-shadow:               inset 0 1px 1px rgba($black,.075) !default;
 
 $input-border-radius:            $border-radius !default;
@@ -681,7 +681,7 @@ $nav-link-margin-y:             -20px;
 
 $nav-link-hover:                $white !default;
 
-$nav-item-divider-border:       ($border-width-2 $blue-400 $border-type-solid) !default;
+$nav-item-divider-border:       ($border-width-md $blue-400 $border-type-solid) !default;
 $nav-item-divider-transform:    skewX(-25deg) !default;
 $nav-item-skew:                 skewX(1deg) !default;
 $nav-item-divider-margin:       1rem .3rem 0 .3rem !default;

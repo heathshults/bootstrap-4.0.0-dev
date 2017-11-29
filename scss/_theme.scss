@@ -268,8 +268,8 @@ button:hover {
 }
 
 .bss-btn {
-    display: inline-flex;
-    flex-grow: 1 auto;
+    // display: inline-flex;
+    // flex-grow: 1 0 auto;
     font-weight: $btn-font-weight;
     text-transform: uppercase;
     text-align: center;
@@ -277,6 +277,7 @@ button:hover {
     vertical-align: middle;
     user-select: none;
     border: $input-btn-border-width solid transparent;
+    margin: rem(3px);
     @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
     @include transition($btn-transition); // Share hover and focus styles
     @include hover-focus {
@@ -285,7 +286,6 @@ button:hover {
     &:focus,
     &.focus {
         outline: 0;
-        box-shadow: $btn-focus-box-shadow;
     } // Disabled comes first so active can properly restyle
     &.disabled,
     &:disabled {
@@ -348,21 +348,54 @@ button:hover {
         font-size: $btn-red-fa-size;
     }
 }
+.fixed-table-container {
+    //top: rem(90px);
+}
+
+.table {
+    background-color: $white;
+}
+
+.fixed-table-toolbar > .columns {
+    //padding: rem(20px);
+}
 
 .whiteTools-wrapper {
     .dropdown-menu,
     .dropdown-menu[style] {
         position: $alt-dropdown-menu-position;
-        top: 40px !important;
-        left: 3px !important;
+        // top: rem(43px) !important;
+        left: 2px !important;
+        top: 49px;
         z-index: $alt-dropdown-menu-z-index;
         background-color: $alt-dropdown-menu-bg-color;
         border: $alt-dropdown-menu-border;
         border-radius: $alt-dropdown-menu-border-radius;
-        box-shadow: $alt-dropdown-menu-box-shadow;
         width: 1380px;
         width: 78rem;
         transform: none !important;
+        z-index: 1000;
+        box-shadow: $alt-dropdown-menu-box-shadow;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 3px;
+            top: -20px;
+            width: 0;
+            height: 0;
+            @include equilateral-triangle(up, 20px,$gray-500);
+            @include box-shadow($input-box-shadow);
+            @include transition($input-transition);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: -16px;
+            width: 0;
+            height: 0;
+            @include equilateral-triangle(up, 16px, $white);
+        }
         label {
             font-size: $font-size-sm;
             display: block !important;
@@ -370,7 +403,7 @@ button:hover {
         span {
             display: block;
         }
-        div.col-2.form-check {
+        .col-2.form-check {
             overflow-x: hidden;
         }
         .btn-default {
@@ -378,29 +411,55 @@ button:hover {
             background-color: $gray-600;
             border-color: $gray-600;
         }
+        // not yet used the callout box - the triangle is used on the dropdown menu
+        .callout {
+            position: relative;
+            margin: 18px 0;
+            padding: 18px 20px;
+            background-color: #eef4f9;
+            border-radius: 6px;
+        }
+        .callout .notch {
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            margin: 0;
+            border-top: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #eef4f9;
+            padding: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+    .fa .fa-refresh {
+        margin-top: rem(2px);
     }
     .btn-clearWhite {
+        background-color: $btn-clearWhite-bg-color;
         color: $btn-clearWhite-color;
-        font-size: $btn-clearWhite-font-sm !important;
+        font-size: $btn-clearWhite-font-size !important;
         text-transform: capitalize !important;
         vertical-align: $btn-clearWhite-fa-valign;
-        background-color: $white !important;
         padding: $btn-clearWhite-padding;
-        margin: 0 6px;
-        border: $btn-clearWhite-border;
-        border-radius: $btn-clearWhite-border-radius;
-        z-index: 1001;
+        border: $btn-clearWhite-border !important;
+        margin: 0;
+        border-radius: 0;
+        z-index: 1;
+
         &:hover {
             border: $btn-clearWhite-border-hover;
-            border-bottom-color: $gray-05 !important;
-            background-color: $gray-05;
-        }
-        &:focus {
-          z-index: 6000;
-          border-bottom-color: $white;
+            background-color: $btn-clearWhite-bg-color-hover;
+        } 
+        &:focus, 
+        &:active {
+            background-color: $white;
+            border: $btn-clearWhite-border;
         }
         .fa {
             font-size: $btn-clearWhite-fa-sm;
+            margin-right: rem(6px);
         }
       }
     
@@ -415,10 +474,12 @@ button:hover {
     .mobile-table-view {
       display: inline-flex;
       order: 3;
+      margin-right: rem(2px);
     }
     .search-advanced {
       display: inline-flex;
       order: 4;
+      margin-left: rem(2px);
     }
     .refresh-data {
       display: inline-flex;
@@ -865,7 +926,7 @@ option {
 
 //user profile
 .border-bottom {
-    border-bottom: $border-type-solid $border-width-1 $blue-025;
+    border-bottom: $border-type-solid $border-width-sm $blue-025;
 }
 
 .edit-col {
@@ -952,10 +1013,10 @@ form.dropzone {
 
 //bootstrap table
 thead {
+    font-size: $font-size-base;
     text-transform: uppercase;
     color: $white;
-    font-size: $font-size-xsm !important;
-    font-weight: $font-weight-normal !important; //border-bottom: $border-width-3 $border-type-solid $blue !important;
+    font-weight: $font-weight-normal !important; //border-bottom: $border-width-lg $border-type-solid $blue !important;
     th {
         background: $blue !important;
         text-align: center;
@@ -996,7 +1057,7 @@ thead.cpl {
         border-bottom: 10px solid $blue-400;
     }
     &:not(:last-child) {
-        border-right: $border-width-1 $border-type-solid $green;
+        border-right: $border-width-sm $border-type-solid $green;
     }
 }
 
@@ -1304,7 +1365,7 @@ thead.cpl {
 
 // borders
 .border-lightGrey-2s {
-    border: $border-width-2 solid $gray-400 !important;
+    border: $border-width-md solid $gray-400 !important;
 }
 
 // drag and drop
