@@ -9343,9 +9343,9 @@ thead th {
 }
 
 thead th:hover {
-  background: #2e69a3 !important;
-  border-top: solid 10px #2e69a3;
-  border-bottom: solid 10px #2e69a3;
+  background-color: #113f69 !important;
+  border-top: solid 10px #113f69;
+  border-bottom: solid 10px #113f69;
   cursor: pointer;
 }
 
@@ -9373,8 +9373,8 @@ thead.cpl th .th-inner {
 }
 
 .table thead th:hover {
-  border-top: 10px solid #2e69a3;
-  border-bottom: 10px solid #2e69a3;
+  border-top: 10px solid #113f69;
+  border-bottom: 10px solid #113f69;
 }
 
 .table thead th:not(:last-child) {
@@ -9811,6 +9811,15 @@ body {
   color: #fff;
 }
 
+.btn.btn-secondary.dropdown-toggle {
+  border-radius: 4px;
+  border-radius: 0.25rem;
+}
+
+.pagination-detail {
+  clear: both;
+}
+
 ul.dropdown-menu.bss-ddm-overide {
   padding: 3.375rem 1.25rem 1.25rem 1.25rem;
   -webkit-column-count: 6;
@@ -9828,6 +9837,29 @@ ul.dropdown-menu.bss-ddm-overide {
 .dd-label {
   font-size: 0.75rem;
   margin-left: 20px;
+}
+
+.page-list.dropdown .dropdown-menu {
+  width: 75px;
+  width: 4.6875rem;
+}
+
+.page-list.dropdown .dropdown-menu .dropdown-item {
+  color: #333;
+}
+
+.page-list.dropdown .dropdown-menu .dropdown-item:hover, .page-list.dropdown .dropdown-menu .dropdown-item:active {
+  color: #fff !important;
+}
+
+.page-list.dropdown .dropdown-menu .dropdown-item.active {
+  color: #fff !important;
+}
+
+.filter input[type="text"] {
+  color: #fff;
+  background-color: steelblue;
+  border: solid 1px #4990e2;
 }
 
 span.loading-icon {
