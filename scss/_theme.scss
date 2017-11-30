@@ -1484,8 +1484,11 @@ body {
     border: 1px solid $gray-500;
 }
 
-.btn-default.dropdown-toggle:focus,
-.btn-default.dropdown-toggle:active {
+.btn.dropdown-toggle:focus,
+.bss-btn.dropdown-toggle:focus,
+.btn.dropdown-toggle:active,
+.bss-btn.dropdown-toggle:active
+ {
     border: 1px solid $blue;
     background: $blue;
     color: $white;

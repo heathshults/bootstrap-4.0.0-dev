@@ -8742,6 +8742,10 @@ button:hover {
   height: 0;
 }
 
+.whiteTools-wrapper .fa .fa-refresh {
+  margin-top: 0.125rem;
+}
+
 .whiteTools-wrapper .btn-clearWhite {
   background-color: #fff;
   color: #333;
@@ -9798,8 +9802,10 @@ body {
   border: 1px solid #adb5bd;
 }
 
-.btn-default.dropdown-toggle:focus,
-.btn-default.dropdown-toggle:active {
+.btn.dropdown-toggle:focus,
+.bss-btn.dropdown-toggle:focus,
+.btn.dropdown-toggle:active,
+.bss-btn.dropdown-toggle:active {
   border: 1px solid #09254a;
   background: #09254a;
   color: #fff;
