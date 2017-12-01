@@ -8526,10 +8526,6 @@ a {
   text-transform: uppercase;
 }
 
-.btn:focus {
-  border-width: 1px !important;
-}
-
 button:hover {
   cursor: pointer;
 }
@@ -8747,7 +8743,7 @@ button:hover {
 }
 
 .whiteTools-wrapper .btn-clearWhite {
-  background-color: #fff;
+  background-color: #ededed;
   color: #333;
   font-size: 0.875rem !important;
   text-transform: capitalize !important;
@@ -8760,8 +8756,9 @@ button:hover {
 }
 
 .whiteTools-wrapper .btn-clearWhite:hover {
+  color: #fff;
   border: solid 0.125rem #adb5bd;
-  background-color: #ededed;
+  background-color: #26579C;
 }
 
 .whiteTools-wrapper .btn-clearWhite:focus, .whiteTools-wrapper .btn-clearWhite:active {
@@ -9806,7 +9803,7 @@ body {
 .bss-btn.dropdown-toggle:focus,
 .btn.dropdown-toggle:active,
 .bss-btn.dropdown-toggle:active {
-  border: 1px solid #09254a;
+  border: 2px solid #09254a;
   background: #09254a;
   color: #fff;
 }
@@ -9814,10 +9811,8 @@ body {
 .btn.btn-secondary.dropdown-toggle {
   border-radius: 4px;
   border-radius: 0.25rem;
-}
-
-.pagination-detail {
-  clear: both;
+  padding: 0 4px;
+  height: 22px;
 }
 
 ul.dropdown-menu.bss-ddm-overide {
@@ -9845,6 +9840,8 @@ ul.dropdown-menu.bss-ddm-overide {
 }
 
 .page-list.dropdown .dropdown-menu .dropdown-item {
+  width: 98%;
+  margin: auto;
   color: #333;
 }
 

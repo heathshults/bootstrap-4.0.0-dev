@@ -231,7 +231,6 @@ a {
 .btn {
     text-transform: uppercase;
     &:focus {
-        border-width: 1px !important;
     }
 }
 
@@ -449,6 +448,7 @@ button:hover {
         z-index: 1;
 
         &:hover {
+            color: $btn-clearWhite-color-hover;
             border: $btn-clearWhite-border-hover;
             background-color: $btn-clearWhite-bg-color-hover;
         } 
@@ -1489,7 +1489,7 @@ body {
 .btn.dropdown-toggle:active,
 .bss-btn.dropdown-toggle:active
  {
-    border: 1px solid $blue;
+    border: 2px solid $blue;
     background: $blue;
     color: $white;
 }
@@ -1497,11 +1497,10 @@ body {
 .btn.btn-secondary.dropdown-toggle {
     border-radius: 4px;
     border-radius: rem(4px);
+    padding: 0 4px;
+    height: 22px;
 }
 
-.pagination-detail {
-    clear: both;
-}
 
 ul.dropdown-menu.bss-ddm-overide {
     padding: rem(54px) rem(20px) rem(20px) rem(20px);
@@ -1530,6 +1529,8 @@ ul.dropdown-menu.bss-ddm-overide {
         width: 75px;
         width: rem(75px);
         .dropdown-item {
+            width: 98%;
+            margin: auto;
             color: $gray-850;
             &:hover,
             &:active {
