@@ -436,7 +436,7 @@ button:hover {
         margin-top: rem(2px);
     }
     .btn-clearWhite {
-        background-color: $btn-clearWhite-bg-color;
+        background-color: $btn-clearWhite-bg-grad;
         color: $btn-clearWhite-color;
         font-size: $btn-clearWhite-font-size !important;
         text-transform: capitalize !important;
@@ -449,13 +449,15 @@ button:hover {
 
         &:hover {
             color: $btn-clearWhite-color-hover;
+            background-color: $btn-clearWhite-bg-hover;
             border: $btn-clearWhite-border-hover;
-            background-color: $btn-clearWhite-bg-color-hover;
         } 
-        &:focus, 
+        &:focus,
+        &:visited,
         &:active {
-            background-color: $white;
-            border: $btn-clearWhite-border;
+            color: $btn-clearWhite-color-hover;
+            background-color: $btn-clearWhite-bg-hover;
+            border: $btn-clearWhite-border-hover;
         }
         .fa {
             font-size: $btn-clearWhite-fa-sm;
