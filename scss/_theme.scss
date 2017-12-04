@@ -347,147 +347,180 @@ button:hover {
         font-size: $btn-red-fa-size;
     }
 }
-.fixed-table-container {
-    //top: rem(90px);
+
+.btn-clearWhite {
+background: $btn-clearWhite-bg-grad;
+color: $btn-clearWhite-color;
+font-size: $btn-clearWhite-font-size !important;
+text-transform: capitalize !important;
+vertical-align: $btn-clearWhite-fa-valign;
+padding: $btn-clearWhite-padding;
+border: $btn-clearWhite-border !important;
+margin: 0;
+border-radius: 0;
+z-index: 1;
+
+&:hover {
+    color: $btn-clearWhite-color-hover;
+    background-color: $btn-clearWhite-bg-hover;
+    border: $btn-clearWhite-border-hover;
+} 
+&:focus,
+&:visited,
+&:active {
+    color: $btn-clearWhite-color-hover;
+    background-color: $btn-clearWhite-bg-hover;
+    border: $btn-clearWhite-border-hover;
+}
+.fa {
+    font-size: $btn-clearWhite-fa-sm;
+    margin-right: rem(6px);
+}
 }
 
-.table {
-    background-color: $white;
+.callout {
+    position: relative;
+    margin: 18px 0;
+    padding: 18px 20px;
+    background-color: #eef4f9;
+    border-radius: 6px;
+}
+.callout .notch {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    margin: 0;
+    border-top: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #eef4f9;
+    padding: 0;
+    width: 0;
+    height: 0;
 }
 
-.fixed-table-toolbar > .columns {
-    //padding: rem(20px);
-}
+// moved to boostrap-table.css
+// .fixed-table-container {
+//     //top: rem(90px);
+// }
 
-.whiteTools-wrapper {
-    .dropdown-menu,
-    .dropdown-menu[style] {
-        position: $alt-dropdown-menu-position;
-        // top: rem(43px) !important;
-        left: 2px !important;
-        top: 49px;
-        z-index: $alt-dropdown-menu-z-index;
-        background-color: $alt-dropdown-menu-bg-color;
-        border: $alt-dropdown-menu-border;
-        border-radius: $alt-dropdown-menu-border-radius;
-        width: 1380px;
-        width: 78rem;
-        transform: none !important;
-        z-index: 1000;
-        box-shadow: $alt-dropdown-menu-box-shadow;
-        &:before {
-            content: '';
-            position: absolute;
-            left: 3px;
-            top: -20px;
-            width: 0;
-            height: 0;
-            @include equilateral-triangle(up, 20px,$gray-500);
-            @include box-shadow($input-box-shadow);
-            @include transition($input-transition);
-        }
-        &:after {
-            content: '';
-            position: absolute;
-            left: 7px;
-            top: -16px;
-            width: 0;
-            height: 0;
-            @include equilateral-triangle(up, 16px, $white);
-        }
-        label {
-            font-size: $font-size-sm;
-            display: block !important;
-        }
-        span {
-            display: block;
-        }
-        .col-2.form-check {
-            overflow-x: hidden;
-        }
-        .btn-default {
-            color: $gray-850;
-            background-color: $gray-600;
-            border-color: $gray-600;
-        }
-        // not yet used the callout box - the triangle is used on the dropdown menu
-        .callout {
-            position: relative;
-            margin: 18px 0;
-            padding: 18px 20px;
-            background-color: #eef4f9;
-            border-radius: 6px;
-        }
-        .callout .notch {
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            margin: 0;
-            border-top: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 10px solid #eef4f9;
-            padding: 0;
-            width: 0;
-            height: 0;
-        }
-    }
-    .fa .fa-refresh {
-        margin-top: rem(2px);
-    }
-    .btn-clearWhite {
-        background-color: $btn-clearWhite-bg-grad;
-        color: $btn-clearWhite-color;
-        font-size: $btn-clearWhite-font-size !important;
-        text-transform: capitalize !important;
-        vertical-align: $btn-clearWhite-fa-valign;
-        padding: $btn-clearWhite-padding;
-        border: $btn-clearWhite-border !important;
-        margin: 0;
-        border-radius: 0;
-        z-index: 1;
+// .table {
+//     background-color: $white;
+// }
 
-        &:hover {
-            color: $btn-clearWhite-color-hover;
-            background-color: $btn-clearWhite-bg-hover;
-            border: $btn-clearWhite-border-hover;
-        } 
-        &:focus,
-        &:visited,
-        &:active {
-            color: $btn-clearWhite-color-hover;
-            background-color: $btn-clearWhite-bg-hover;
-            border: $btn-clearWhite-border-hover;
-        }
-        .fa {
-            font-size: $btn-clearWhite-fa-sm;
-            margin-right: rem(6px);
-        }
-      }
+// .fixed-table-toolbar > .columns {
+//     //padding: rem(20px);
+// }
+
+// .whiteTools-wrapper {
+//     .dropdown-menu,
+//     .dropdown-menu[style] {
+//         position: $alt-dropdown-menu-position;
+//         // top: rem(43px) !important;
+//         left: 2px !important;
+//         top: 49px;
+//         z-index: $alt-dropdown-menu-z-index;
+//         background-color: $alt-dropdown-menu-bg-color;
+//         border: $alt-dropdown-menu-border;
+//         border-radius: $alt-dropdown-menu-border-radius;
+//         width: 1380px;
+//         width: 78rem;
+//         transform: none !important;
+//         z-index: 1000;
+//         box-shadow: $alt-dropdown-menu-box-shadow;
+//         &:before {
+//             content: '';
+//             position: absolute;
+//             left: 3px;
+//             top: -20px;
+//             width: 0;
+//             height: 0;
+//             @include equilateral-triangle(up, 20px,$gray-500);
+//             @include box-shadow($input-box-shadow);
+//             @include transition($input-transition);
+//         }
+//         &:after {
+//             content: '';
+//             position: absolute;
+//             left: 7px;
+//             top: -16px;
+//             width: 0;
+//             height: 0;
+//             @include equilateral-triangle(up, 16px, $white);
+//         }
+//         label {
+//             font-size: $font-size-sm;
+//             display: block !important;
+//         }
+//         span {
+//             display: block;
+//         }
+//         .col-2.form-check {
+//             overflow-x: hidden;
+//         }
+//         .btn-default {
+//             color: $gray-850;
+//             background-color: $gray-600;
+//             border-color: $gray-600;
+//         }
+//         
+//     }
+//     .fa .fa-refresh {
+//         margin-top: rem(2px);
+//     }
+//     .btn-clearWhite {
+//         background: $btn-clearWhite-bg-grad;
+//         color: $btn-clearWhite-color;
+//         font-size: $btn-clearWhite-font-size !important;
+//         text-transform: capitalize !important;
+//         vertical-align: $btn-clearWhite-fa-valign;
+//         padding: $btn-clearWhite-padding;
+//         border: $btn-clearWhite-border !important;
+//         margin: 0;
+//         border-radius: 0;
+//         z-index: 1;
+
+//         &:hover {
+//             color: $btn-clearWhite-color-hover;
+//             background-color: $btn-clearWhite-bg-hover;
+//             border: $btn-clearWhite-border-hover;
+//         } 
+//         &:focus,
+//         &:visited,
+//         &:active {
+//             color: $btn-clearWhite-color-hover;
+//             background-color: $btn-clearWhite-bg-hover;
+//             border: $btn-clearWhite-border-hover;
+//         }
+//         .fa {
+//             font-size: $btn-clearWhite-fa-sm;
+//             margin-right: rem(6px);
+//         }
+//       }
     
-      .show-columns { 
-        display: inline-flex;
-        order: 1; 
-      }
-    .show-pagination {
-      display: inline-flex;
-      order: 2;
-    }
-    .mobile-table-view {
-      display: inline-flex;
-      order: 3;
-      margin-right: rem(2px);
-    }
-    .search-advanced {
-      display: inline-flex;
-      order: 4;
-      margin-left: rem(2px);
-    }
-    .refresh-data {
-      display: inline-flex;
-      order: 5;
-    }
-}
+//       .show-columns { 
+//         display: inline-flex;
+//         order: 1; 
+//       }
+//     .show-pagination {
+//       display: inline-flex;
+//       order: 2;
+//     }
+//     .mobile-table-view {
+//       display: inline-flex;
+//       order: 3;
+//       margin-right: rem(2px);
+//     }
+//     .search-advanced {
+//       display: inline-flex;
+//       order: 4;
+//       margin-left: rem(2px);
+//     }
+//     .refresh-data {
+//       display: inline-flex;
+//       order: 5;
+//     }
+// }
 
 .btn-green {
     color: $btn-green-color;
@@ -517,6 +550,12 @@ button:hover {
 .btn-primary-02 {
     font-size: $btn-red-font-size;
     padding: $btn-red-padding;
+}
+
+.btn-default {
+    color: #333;
+    background-color: $gray-400;
+    border: 1px solid $gray-500;
 }
 
 .actionBtn {
@@ -890,41 +929,41 @@ option {
 }
 
 //bootstrap-table
-.table-wrapper {
-    margin-right: auto;
-    margin-left: auto;
-    overflow-x: scroll;
-}
+// .table-wrapper {
+//     margin-right: auto;
+//     margin-left: auto;
+//     overflow-x: scroll;
+// }
 
-.fixed-table-container thead tr th {
-    min-width: rem(150px);
-    white-space: nowrap;
-    box-sizing: border-box;
-}
+// .fixed-table-container thead tr th {
+//     min-width: rem(150px);
+//     white-space: nowrap;
+//     box-sizing: border-box;
+// }
 
-.fixed-table-container thead th .sortable {
-    background-position: right -4px center;
-    background-repeat: no-repeat;
-    padding-right: 20px;
-    padding-left: 20px;
-}
+// .fixed-table-container thead th .sortable {
+//     background-position: right -4px center;
+//     background-repeat: no-repeat;
+//     padding-right: 20px;
+//     padding-left: 20px;
+// }
 
-.fixed-table-container thead th .desc:after .fixed-table-container thead.cpl td {
-    padding-left: rem(10px);
-}
+// .fixed-table-container thead th .desc:after .fixed-table-container thead.cpl td {
+//     padding-left: rem(10px);
+// }
 
-.fht-cell {
-    white-space: nowrap;
-    box-sizing: border-box;
-}
+// .fht-cell {
+//     white-space: nowrap;
+//     box-sizing: border-box;
+// }
 
-.fixed-table-header>table {
-    display: none;
-}
+// .fixed-table-header>table {
+//     display: none;
+// }
 
-.table-striped tbody tr:nth-of-type(2n+1) {
-    background-color: $blue-450-14;
-}
+// .table-striped tbody tr:nth-of-type(2n+1) {
+//     background-color: $blue-450-14;
+// }
 
 //user profile
 .border-bottom {
@@ -1460,96 +1499,99 @@ body {
     font-size: .95rem;
 }
 
-//table column menu
-.bss-ddm-overide {
-    .row>[class^=col-] {
-        white-space: pre;
-    }
-    .sectionTitle {
-        color: $blue-400;
-        white-space: nowrap;
-        padding-bottom: 4px;
-        margin: 10px 0 !important;
-        border-bottom: 1px solid $gray-500;
-        display: block;
-    }
-    .first-ddm-secTitle {
-        position: absolute;
-        top: 10px;
-    }
+
+// moved into bootstrap-table.css
+// //table column menu
+// .bss-ddm-overide {
+//     .row>[class^=col-] {
+//         white-space: pre;
+//     }
+//     .sectionTitle {
+//         color: $blue-400;
+//         white-space: nowrap;
+//         padding-bottom: 4px;
+//         margin: 10px 0 !important;
+//         border-bottom: 1px solid $gray-500;
+//         display: block;
+//     }
+//     .first-ddm-secTitle {
+//         position: absolute;
+//         top: 10px;
+//     }
     
-}
-
-.btn-default {
-    color: #333;
-    background-color: $gray-400;
-    border: 1px solid $gray-500;
-}
-
-.btn.dropdown-toggle:focus,
-.bss-btn.dropdown-toggle:focus,
-.btn.dropdown-toggle:active,
-.bss-btn.dropdown-toggle:active
- {
-    border: 2px solid $blue;
-    background: $blue;
-    color: $white;
-}
-
-.btn.btn-secondary.dropdown-toggle {
-    border-radius: 4px;
-    border-radius: rem(4px);
-    padding: 0 4px;
-    height: 22px;
-}
+// }  
+// moved into bootstrap-table.css
 
 
-ul.dropdown-menu.bss-ddm-overide {
-    padding: rem(54px) rem(20px) rem(20px) rem(20px);
-    -webkit-column-count: 6;
-    -moz-column-count: 6;
-    column-count: 6;
-}
 
-// ul.dropdown-menu.bss-ddm-overide.show {
-//   //
+// moved into bootstrap-table.css
+// .btn.dropdown-toggle:focus,
+// .bss-btn.dropdown-toggle:focus,
+// .btn.dropdown-toggle:active,
+// .bss-btn.dropdown-toggle:active
+//  {
+//     border: 2px solid $blue;
+//     background: $blue;
+//     color: $white;
 // }
-.dd-checkbox {
-    float: left;
-    margin-left: -20px;
-    margin-right: 7px;
-    border: 1px solid $gray-500;
-}
 
-.dd-label {
-    font-size: $font-size-xsm;
-    margin-left: 20px;
-}
+// .btn.btn-secondary.dropdown-toggle {
+//     border-radius: 4px;
+//     border-radius: rem(4px);
+//     padding: 0 4px;
+//     height: 22px;
+// }
 
-.page-list.dropdown {
-    .dropdown-menu {
-        width: 75px;
-        width: rem(75px);
-        .dropdown-item {
-            width: 98%;
-            margin: auto;
-            color: $gray-850;
-            &:hover,
-            &:active {
-                color: $white !important;
-            }
-        }
-        .dropdown-item.active {
-            color: $white !important;
-        }
-    }
-}
 
-.filter input[type="text"] {
-    color: $white;
-    background-color: steelblue;
-    border: solid 1px $blue-450;
-}
+// ul.dropdown-menu.bss-ddm-overide {
+//     padding: rem(54px) rem(20px) rem(20px) rem(20px);
+//     -webkit-column-count: 6;
+//     -moz-column-count: 6;
+//     column-count: 6;
+// }
+
+// // ul.dropdown-menu.bss-ddm-overide.show {
+// //   //
+// // }
+// .dd-checkbox {
+//     float: left;
+//     margin-left: -20px;
+//     margin-right: 7px;
+//     border: 1px solid $gray-500;
+// }
+
+// .dd-label {
+//     font-size: $font-size-xsm;
+//     margin-left: 20px;
+// }
+// moved into bootstrap-table.css
+
+// moved into bootstrap-table.css
+// .page-list.dropdown {
+//     .dropdown-menu {
+//         width: 75px;
+//         width: rem(75px);
+//         .dropdown-item {
+//             width: 98%;
+//             margin: auto;
+//             color: $gray-850;
+//             &:hover,
+//             &:active {
+//                 color: $white !important;
+//             }
+//         }
+//         .dropdown-item.active {
+//             color: $white !important;
+//         }
+//     }
+// }
+
+// .filter input[type="text"] {
+//     color: $white;
+//     background-color: steelblue;
+//     border: solid 1px $blue-450;
+// }
+// moved into bootstrap-table.css
  
 span.loading-icon {
     background: $loading-icon-spinner;
