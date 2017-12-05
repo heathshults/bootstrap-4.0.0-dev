@@ -399,21 +399,39 @@ z-index: 1;
     height: 0;
 }
 
-// moved to boostrap-table.css
-// .fixed-table-container {
-//     //top: rem(90px);
-// }
-
-// .table {
-//     background-color: $white;
-// }
-
-// .fixed-table-toolbar > .columns {
-//     //padding: rem(20px);
-// }
 
 // .whiteTools-wrapper {
-//     .dropdown-menu,
+//    .btn-clearWhite {
+//         background: $btn-clearWhite-bg-grad;
+//         color: $btn-clearWhite-color;
+//         font-size: $btn-clearWhite-font-size !important;
+//         text-transform: capitalize !important;
+//         vertical-align: $btn-clearWhite-fa-valign;
+//         padding: $btn-clearWhite-padding;
+//         border: $btn-clearWhite-border !important;
+//         margin: 0;
+//         border-radius: 0;
+//         z-index: 1;
+
+//         &:hover {
+//             color: $btn-clearWhite-color-hover;
+//             background-color: $btn-clearWhite-bg-hover;
+//             border: $btn-clearWhite-border-hover;
+//         } 
+//         &:focus,
+//         &:visited,
+//         &:active {
+//             color: $btn-clearWhite-color-hover;
+//             background-color: $btn-clearWhite-bg-hover;
+//             border: $btn-clearWhite-border-hover;
+//         }
+//         .fa {
+//             font-size: $btn-clearWhite-fa-sm;
+//             margin-right: rem(6px);
+//         }
+//       }
+//
+// .updrop.dropdown-menu,
 //     .dropdown-menu[style] {
 //         position: $alt-dropdown-menu-position;
 //         // top: rem(43px) !important;
@@ -468,35 +486,7 @@ z-index: 1;
 //     .fa .fa-refresh {
 //         margin-top: rem(2px);
 //     }
-//     .btn-clearWhite {
-//         background: $btn-clearWhite-bg-grad;
-//         color: $btn-clearWhite-color;
-//         font-size: $btn-clearWhite-font-size !important;
-//         text-transform: capitalize !important;
-//         vertical-align: $btn-clearWhite-fa-valign;
-//         padding: $btn-clearWhite-padding;
-//         border: $btn-clearWhite-border !important;
-//         margin: 0;
-//         border-radius: 0;
-//         z-index: 1;
-
-//         &:hover {
-//             color: $btn-clearWhite-color-hover;
-//             background-color: $btn-clearWhite-bg-hover;
-//             border: $btn-clearWhite-border-hover;
-//         } 
-//         &:focus,
-//         &:visited,
-//         &:active {
-//             color: $btn-clearWhite-color-hover;
-//             background-color: $btn-clearWhite-bg-hover;
-//             border: $btn-clearWhite-border-hover;
-//         }
-//         .fa {
-//             font-size: $btn-clearWhite-fa-sm;
-//             margin-right: rem(6px);
-//         }
-//       }
+//     
     
 //       .show-columns { 
 //         display: inline-flex;
