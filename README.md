@@ -52,10 +52,9 @@ this project works side by side with the npdb-usafb-template website. When compi
 
 simple structure:
 
-USAFB
->> npdb-usafb-templates
-    >> css
->> bootstrap.4.0.0-dev
+# USAFB
+## npdb-usafb-templates > css (compiled files end up here)
+## bootstrap.4.0.0-dev
 
 
 ## build it
