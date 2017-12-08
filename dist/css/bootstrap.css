@@ -8371,6 +8371,13 @@ body {
   }
 }
 
+.container-flexi-fluid {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
 .axis-column {
   display: flow-root;
   flex-direction: column;
