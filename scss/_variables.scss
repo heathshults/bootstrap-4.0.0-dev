@@ -296,8 +296,8 @@ $transition-collapse:    height .35s ease !default;
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
-$font-url--sans-serif:        '/css/web-fonts/liberation-mono/roboto.woff2' !default;
-$font-url--monospace:         '/css/web-fonts/liberation-mono/LiberationMono-Regular.ttf' !default;
+$font-url--sans-serif:        './css/web-fonts/liberation-mono/roboto.woff2' !default;
+$font-url--monospace:         './css/web-fonts/liberation-mono/LiberationMono-Regular.ttf' !default;
 
 $font-family-sans-serif: 'Roboto', Roboto, sans-serif !default;
 $font-family-monospace:  'RobotoMono-Regular', Roboto Mono, monospace !default;
@@ -632,9 +632,11 @@ $form-feedback-invalid-color: theme-color("danger") !default;
 // Dropdown menu container and contents.
 
 $dropdown-min-width:             10rem !default;
+
 $dropdown-padding-y:             .5rem !default;
 $dropdown-padding-x:             1rem !default;
-$dropdown-spacer:                .125rem !default;
+$dropdown-spacer:                .375rem !default;
+$dropdown-spacer-lg:             1.25 !default;
 $dropdown-bg:                    $blue-000 !default;
 $dropdown-border-color:          rgba($black,.15) !default;
 $dropdown-border-width:          $border-width !default;

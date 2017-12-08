@@ -34,6 +34,12 @@
     border: 0;
   }
 
+  .dropdown-menu-lg {
+    margin-top: 0;
+    margin-bottom: $dropdown-spacer-lg;
+    border: 0;
+  }
+
   .dropdown-toggle {
     &::after {
       border-top: 0;
@@ -52,12 +58,32 @@
   float: left;
   min-width: $dropdown-min-width;
   padding: $dropdown-padding-y 0;
-  margin: $dropdown-spacer -4px 0 0 0; // override default ul
+  margin: $dropdown-spacer ; // override default ul -4px 0 0 0
   font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
   color: $body-color;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
   background-color: $dropdown-bg;
+  background-clip: padding-box;
+  border-radius: $border-radius-bottom-lr;
+  width: 100%;
+}
+
+.dropdown-menu-lg {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  z-index: $zindex-dropdown;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  min-width: $dropdown-min-width;
+  padding: $dropdown-padding-y 0;
+  margin: $dropdown-spacer-lg ; // override default ul -4px 0 0 0
+  font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
+  color: $body-color;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  list-style: none;
+  background-color: $white;
   background-clip: padding-box;
   border-radius: $border-radius-bottom-lr;
   width: 100%;
@@ -115,7 +141,8 @@
   }
 }
 
-.dropdown-menu.show {
+.dropdown-menu.show,
+.dropdown-menu-lg.show {
   display: block;
 }
 
@@ -139,7 +166,7 @@
   float: left;
   min-width: $dropdown-min-width;
   padding: $dropdown-padding-y $dropdown-padding-x;
-  margin: $dropdown-spacer -4px 0 0 0; // override default ul
+  margin: $dropdown-spacer; // override default ul/div
   font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
   // color: $body-color;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)

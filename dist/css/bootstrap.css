@@ -2416,7 +2416,13 @@ tbody.collapse.show {
 
 .dropup .dropdown-menu {
   margin-top: 0;
-  margin-bottom: 0.125rem;
+  margin-bottom: 0.375rem;
+  border: 0;
+}
+
+.dropup .dropdown-menu-lg {
+  margin-top: 0;
+  margin-bottom: 1.25;
   border: 0;
 }
 
@@ -2434,12 +2440,32 @@ tbody.collapse.show {
   float: left;
   min-width: 10rem;
   padding: 0.5rem 0;
-  margin: 0.125rem -4px 0 0 0;
+  margin: 0.375rem;
   font-size: 1rem;
   color: #212529;
   text-align: left;
   list-style: none;
   background-color: #0d2240;
+  background-clip: padding-box;
+  border-radius: 0 0 0.25rem 0.25rem;
+  width: 100%;
+}
+
+.dropdown-menu-lg {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 1.25;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
   background-clip: padding-box;
   border-radius: 0 0 0.25rem 0.25rem;
   width: 100%;
@@ -2486,7 +2512,8 @@ tbody.collapse.show {
   outline: 0;
 }
 
-.dropdown-menu.show {
+.dropdown-menu.show,
+.dropdown-menu-lg.show {
   display: block;
 }
 
@@ -2511,7 +2538,7 @@ tbody.collapse.show {
   float: left;
   min-width: 10rem;
   padding: 0.5rem 1rem;
-  margin: 0.125rem -4px 0 0 0;
+  margin: 0.375rem;
   font-size: 1rem;
   text-align: left;
   list-style: none;
@@ -8769,7 +8796,7 @@ button:hover {
 }
 
 .fixed-table-pagination .pagination a {
-  padding: 4px 20px;
+  padding: 4px 15px;
 }
 
 .pagination > .active > a,
