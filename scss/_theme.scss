@@ -684,7 +684,7 @@ z-index: 1;
 .page-title-container {
     display: table-cell;
     vertical-align: middle;
-    padding-left: 0; //position: relative;
+    // padding-left: 0; //position: relative;
     //top: -75px;
     .page-title {
         display: inline-flex;
@@ -1052,7 +1052,7 @@ form.dropzone {
 
 //bootstrap table
 thead {
-    font-size: $font-size-base;
+    font-size: $font-size-sm;
     text-transform: uppercase;
     color: $white;
     font-weight: $font-weight-normal !important; //border-bottom: $border-width-lg $border-type-solid $blue !important;
@@ -1089,11 +1089,11 @@ thead.cpl {
     vertical-align: middle;
     border-bottom: 0;
     padding: 0;
-    border-top: 10px solid $blue;
-    border-bottom: 10px solid $blue;
+    border-top: 5px solid $blue;
+    border-bottom: 5px solid $blue;
     &:hover {
-        border-top: 10px solid $blue-350;
-        border-bottom: 10px solid $blue-350;
+        border-top: 5px solid $blue-350;
+        border-bottom: 5px solid $blue-350;
     }
     &:not(:last-child) {
         border-right: $border-width-sm $border-type-solid $green;
@@ -1621,8 +1621,8 @@ body.allDivs {
 }
 
 .row>[class^=col-] {
-    padding-bottom: .75rem;
-    padding-top: .75rem;
+    // padding-bottom: rem(10px);
+    padding-top: rem(10px);
 }
 
 .row {
