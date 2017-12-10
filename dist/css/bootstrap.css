@@ -9259,13 +9259,13 @@ thead.cpl th .th-inner {
   vertical-align: middle;
   border-bottom: 0;
   padding: 0;
-  border-top: 5px solid #09254a;
-  border-bottom: 5px solid #09254a;
+  border-top: 7px solid #09254a;
+  border-bottom: 7px solid #09254a;
 }
 
 .table thead th:hover {
-  border-top: 5px solid #113f69;
-  border-bottom: 5px solid #113f69;
+  border-top: 7px solid #113f69;
+  border-bottom: 7px solid #113f69;
 }
 
 .table thead th:not(:last-child) {

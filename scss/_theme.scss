@@ -682,12 +682,16 @@ z-index: 1;
 }
 
 .page-title-container {
-    display: table-cell;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
     vertical-align: middle;
     // padding-left: 0; //position: relative;
     //top: -75px;
     .page-title {
-        display: inline-flex;
+        -webkit-flex: 1 0 100%;
+        flex: 1 0 100%;
         color: $blue;
         font-family: $font-family-base;
         font-size: $h4-font-size;
@@ -1089,11 +1093,11 @@ thead.cpl {
     vertical-align: middle;
     border-bottom: 0;
     padding: 0;
-    border-top: 5px solid $blue;
-    border-bottom: 5px solid $blue;
+    border-top: 7px solid $blue;
+    border-bottom: 7px solid $blue;
     &:hover {
-        border-top: 5px solid $blue-350;
-        border-bottom: 5px solid $blue-350;
+        border-top: 7px solid $blue-350;
+        border-bottom: 7px solid $blue-350;
     }
     &:not(:last-child) {
         border-right: $border-width-sm $border-type-solid $green;
