@@ -8886,12 +8886,16 @@ button:hover {
 }
 
 .page-title-container {
-  display: table-cell;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
   vertical-align: middle;
 }
 
 .page-title-container .page-title {
-  display: inline-flex;
+  -webkit-flex: 1 0 100%;
+  flex: 1 0 100%;
   color: #09254a;
   font-family: "Roboto", Roboto, sans-serif;
   font-size: 1.25rem;
@@ -9690,6 +9694,26 @@ span.loading-icon svg rect {
 .modal-header button[type="button"] {
   position: absolute !important;
   right: 20px;
+}
+
+#footer-01 {
+  flex: 1 0 100%;
+  background: -moz-linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, 145deg, color-stop(35%, 9254A), color-stop(45%, 9254A), color-stop(0, FFFFFF), color-stop(50%, FFFFFF), color-stop(45%, AB0B33), color-stop(35%, AB0B33));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);
+  /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
+  /* for IE */
+  background: linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);
+  /* W3C */
+  min-height: 100px;
+  margin-top: 20px;
 }
 
 body.scaff .row > [class^=col-],
