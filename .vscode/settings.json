@@ -1,3 +1,12 @@
 {
-    "eslint.workingDirectories": ["build"]
+    "eslint.workingDirectories": [
+        "build"
+    ],
+    "editor.fontSize": 18,
+    "editor.find.autoFindInSelection": true,
+    "editor.formatOnPaste": true,
+    "editor.showFoldingControls": "always",
+    "editor.lightbulb.enabled": false,
+    "workbench.commandPalette.history": 150,
+    "stylelint.enable": false
 }

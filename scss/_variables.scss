@@ -183,6 +183,9 @@ $darkblue-gradient-reverse-50:      linear-gradient(to bottom, $blue-200-50, $bl
 $darkblue-gradient-reverse:         linear-gradient(to bottom, $blue-200, $blue-400) !default;
 $darkblue-button-gradient:          linear-gradient(to bottom, $blue, $blue-200) !default;
 
+$darkred-gradient-reverse: linear-gradient(to bottom, $red-000, $red) !default;
+
+
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these

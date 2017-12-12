@@ -8832,6 +8832,19 @@ button:hover {
   width: 100vw;
 }
 
+.full-screen-bg-profiles {
+  background-image: url("images/bg/usa-fb-bg.jpg");
+  background-color: #4B0508;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  object-fit: contain;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
 .full-screen-container {
   background-image: url("images/bg/USAF_introscreen-HeroBoy2.png");
   background-color: #0d2240;
@@ -9120,8 +9133,17 @@ option {
 }
 
 .footer-container {
+  display: flex;
+  flex-flow: row wrap;
   background-image: linear-gradient(to bottom, #09254a, #2e69a3);
   height: 236px;
+}
+
+.footer-container-red {
+  display: flex;
+  flex-flow: row wrap;
+  background: #4B0508;
+  min-height: 100px;
 }
 
 .text-field-email {
@@ -9696,8 +9718,7 @@ span.loading-icon svg rect {
   right: 20px;
 }
 
-#footer-01 {
-  flex: 1 0 100%;
+.gradient-trick {
   background: -moz-linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, 145deg, color-stop(35%, 9254A), color-stop(45%, 9254A), color-stop(0, FFFFFF), color-stop(50%, FFFFFF), color-stop(45%, AB0B33), color-stop(35%, AB0B33));
@@ -9712,8 +9733,6 @@ span.loading-icon svg rect {
   /* for IE */
   background: linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);
   /* W3C */
-  min-height: 100px;
-  margin-top: 20px;
 }
 
 body.scaff .row > [class^=col-],
