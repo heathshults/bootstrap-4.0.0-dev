@@ -62,6 +62,11 @@
       "problemMatcher": [
         "$eslint-stylish"
       ]
+    },
+    {
+      "type": "npm",
+      "script": "css-compile-themes",
+      "problemMatcher": []
     }
   ]
 }

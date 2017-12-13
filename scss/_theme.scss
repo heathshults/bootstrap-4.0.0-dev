@@ -1,4 +1,4 @@
-body {
+body  {
     opacity: 0;
     font-size: $font-size-base;
     font-weight: $font-weight-base;
@@ -47,11 +47,25 @@ body {
 }
 
  .container-flexi-fluid {
-    display: -webkit-flex;
 	display: flex;
-	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
  }
+
+ .container-flexi {
+	display: flex;
+    flex-flow: row wrap;
+    max-width: 1280px;
+ }
+
+ .flexi-container {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.flexi-item {
+	-webkit-flex: 1 auto;
+	flex: 1 auto;
+}
 
 .axis-column {
     display: flow-root;
@@ -630,21 +644,6 @@ z-index: 1;
     width: 100vw;
 }
 
-.full-screen-bg-profiles {
-    //@include make-container();
-    background-image: url('images/bg/usa-fb-bg.jpg');
-    background-color: $red-000;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-    background-attachment: fixed;
-    object-fit: contain;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-}
-
-
 .full-screen-container {
     //@include make-container();
     background-image: url('images/bg/USAF_introscreen-HeroBoy2.png');
@@ -937,14 +936,6 @@ option {
     background-image: $darkblue-gradient-reverse;
     height: 236px;
 }
-
-.footer-container-red {
-    display: flex;
-    flex-flow: row wrap;
-    background: $red-000;
-    min-height: 100px;
-}
-
 
 // forms
 .text-field-email {

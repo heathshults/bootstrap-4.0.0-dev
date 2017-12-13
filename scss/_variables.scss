@@ -91,6 +91,7 @@ $indigo:                #6610f2 !default;
 $purple:                #6f42c1 !default;
 $pink:                  #e83e8c !default;
 $light-pink:            #ed687c !default;
+$xtra-light-pink:       #ffd7de !default;
 $red:                   #9e0a0f !default;
 $red-000:               #4B0508 !default;
 $red-5:                 #eb3232 !default;
@@ -174,7 +175,7 @@ $enable-hover-media-query:          false !default;
 $enable-grid-classes:               true !default;
 $enable-print-styles:               true !default;
 
-//gradients
+// gradients
 $primary-gradient:                  linear-gradient(356deg, $blue-300, $black) !default;
 $secondary-gradient:                linear-gradient(to bottom, $blue-200, $blue-200, $red, $gray-10) !default;
 $darkblue-gradient:                 linear-gradient(to bottom, $blue-400, $blue-200) !default;
@@ -182,8 +183,7 @@ $darkblue-gradient-50:              linear-gradient(to bottom, $blue-200, $blue-
 $darkblue-gradient-reverse-50:      linear-gradient(to bottom, $blue-200-50, $blue-000-50) !default;
 $darkblue-gradient-reverse:         linear-gradient(to bottom, $blue-200, $blue-400) !default;
 $darkblue-button-gradient:          linear-gradient(to bottom, $blue, $blue-200) !default;
-
-$darkred-gradient-reverse: linear-gradient(to bottom, $red-000, $red) !default;
+$darkred-gradient-reverse:          linear-gradient(to bottom, $red-000, $red) !default;
 
 
 // Spacing
@@ -688,6 +688,7 @@ $nav-link-margin-y:             -20px;
 $nav-link-hover:                $white !default;
 
 $nav-item-divider-border:       ($border-width-md $blue-400 $border-type-solid) !default;
+$nav-item-divider-border-red:   ($border-width-md $red-100 $border-type-solid) !default;
 $nav-item-divider-transform:    skewX(-25deg) !default;
 $nav-item-skew:                 skewX(1deg) !default;
 $nav-item-divider-margin:       1rem .3rem 0 .3rem !default;
@@ -771,13 +772,15 @@ $jumbotron-bg:                   $gray-200 !default;
 
 // Cards
 
-$card-spacer-y:            .75rem !default;
-$card-spacer-x:            1.25rem !default;
-$card-border-width:        1px !default;
-$card-border-radius:       $border-radius !default;
-$card-border-color:        rgba($black,.125) !default;
-$card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}) !default;
-$card-cap-bg:              rgba($black, .03) !default;
+$card-spacer-y:               .75rem !default;
+$card-spacer-x:               1.25rem !default;
+$card-border-width:           1px !default;
+$card-border-radius:          $border-radius !default;
+$card-border-color:           rgba($black,.125) !default;
+$card-red-border-radius:      $border-radius !default;
+$card-red-border-color:       rgba($black,.125) !default;
+$card-inner-border-radius:    calc(#{$card-border-radius} - #{$card-border-width}) !default;
+$card-cap-bg:                 rgba($black, .03) !default;
 $card-bg:                  $white !default;
 
 $card-img-overlay-padding: 1.25rem !default;
@@ -1014,6 +1017,7 @@ $user-avatar-width:             40px !default;
 $user-avatar-height:            40px !default;
 $user-avatar-margin:            .375rem !default;
 $user-avatar-bg-color:          $blue-450 !default;
+$user-avatar-bg-color-red:      $red-5 !default;
 $user-avatar-border-width:      .25rem !default;
 $user-avatar-border-radius:     50% !default;
 
@@ -1044,7 +1048,9 @@ $blur-20:                               -1px -1px 20px 6px rgba(0,0,0,0.2) !defa
 $box-shadow-light-off-axis-y:           0px 3px 10px 5px rgba(0,0,0,0.16) !default;
 
 // text shadows
-$text-shadow-basic: -1px 1px 0 rgba(0,0,0,0.90) !default;
+$text-shadow-basic:                     -1px 1px 0 rgba(0,0,0,0.90) !default;
+$text-shadow-wide-spread:               -1px -1px 28px rgba(0,0,0,0.5) !default;
+$text-shadow-outer-glow:                -1px -1px 27px rgba(250,250,210,0.3) !default;;
 
 // charts
 //verticle column chart

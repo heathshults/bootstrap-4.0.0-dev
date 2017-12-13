@@ -648,7 +648,6 @@ pre code {
 }
 
 .container-fluid {
-  width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
@@ -8372,10 +8371,24 @@ body {
 }
 
 .container-flexi-fluid {
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
+}
+
+.container-flexi {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1280px;
+}
+
+.flexi-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flexi-item {
+  -webkit-flex: 1 auto;
+  flex: 1 auto;
 }
 
 .axis-column {
@@ -8832,19 +8845,6 @@ button:hover {
   width: 100vw;
 }
 
-.full-screen-bg-profiles {
-  background-image: url("images/bg/usa-fb-bg.jpg");
-  background-color: #4B0508;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: multiply;
-  background-attachment: fixed;
-  object-fit: contain;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
-}
-
 .full-screen-container {
   background-image: url("images/bg/USAF_introscreen-HeroBoy2.png");
   background-color: #0d2240;
@@ -9137,13 +9137,6 @@ option {
   flex-flow: row wrap;
   background-image: linear-gradient(to bottom, #09254a, #2e69a3);
   height: 236px;
-}
-
-.footer-container-red {
-  display: flex;
-  flex-flow: row wrap;
-  background: #4B0508;
-  min-height: 100px;
 }
 
 .text-field-email {
