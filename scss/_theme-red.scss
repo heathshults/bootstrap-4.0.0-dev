@@ -36,15 +36,27 @@
 }
 
 .section-main-content{
-    margin-top: auto;
+    margin-top: 110px;
+    &::after {
+        content: "";
+        height: 110px;
+        position: absolute;
+        top:0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.5);
+        filter: blur(3px);
+    }
 }
 
 // top navigation
 .red-theme {
     .top-nav {
         height: 110px;
-        background: $clear-black;
-        position: sticky;
+        //background-color: rgba(0, 0, 0, 0.5);
+        // background-color: rgba(33,0,4, 0.9);
+        background: linear-gradient(180deg, rgba(33, 0, 4, 1) 12%, rgba(33, 0, 4, 1) 33%, rgba(0, 0, 0, 0) 100%);
+        // filter: blur(13px);
+        position: fixed;
     }
     .navbar {
         position: relative;
@@ -379,13 +391,59 @@
         }
     }
 
+    .stats-container {
+        padding: 10px 20px 20px 20px;
+        // background-color: $clear-white;
+        .title-3 {
+            display: inline-flex;
+            color: rgba(255, 255 ,255, 0.75);
+            background-color: rgba(76, 4, 8, 0.75);
+            padding:10px 15px;
+            letter-spacing: rem(1.5px);
+            margin-bottom: 0;
+        }
+    }
+
+    .stats-wrapper {
+        background: $clear-black;
+        padding: 8px;
+    }
+
+    .current-stats {
+        white-space: nowrap;
+        padding-top: 0 !important;  
+        padding-left: 2px;
+        padding-right: 2px;
+        &:hover {
+            background-color: $clear-black; 
+        }    
+        .theme-red-badge {
+            display:block;
+            color: $blue-450;
+            background: $clear-black;
+            // border-radius: 500px;
+            margin:8px;
+        }
+        .stat-title {
+            &:hover {
+                background-color: $clear-black; 
+            }
+        }
+        &:not(:last-child) {
+            border-right: $border-width-sm $border-type-solid $blue-450;
+        }
+        span {
+            display: block;            
+        }
+    }
+
     .theme-red-badge {
-        font-size: 90%;
         color: $blue-450;
-        padding: 6px 10px 4px 10px;
-        background: $red-000;
-        //border-radius: 500px;
-        margin: 0 6px;
+        padding: 10px 20px;
+        background: $clear-black;
+        // border-radius: 500px;
+        margin:8px;
+        
     }
     .red-theme-title-2-container {
         padding: 10px 10px 0 0;
