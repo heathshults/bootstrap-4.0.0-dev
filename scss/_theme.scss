@@ -48,13 +48,15 @@ body {
 
  .container-flexi-fluid {
 	display: flex;
-	flex-flow: row wrap;
+    flex-flow: row wrap;
+    padding: 0;
  }
 
  .container-flexi {
 	display: flex;
     flex-flow: row wrap;
     max-width: 1280px;
+    padding: 20px 0;
  }
 
  .flexi-container {
@@ -320,6 +322,8 @@ button:hover {
 }
 
 .btn-primary-02 {
+    display: inline-flex;
+    align-items:unset !important;
     color: $btn-primary-02-color;
     font-size: $btn-primary-02-font-size;
     text-transform: uppercase;
@@ -340,11 +344,52 @@ button:hover {
     }
 }
 
+.btn-primary-02.-sm {
+    padding: $btn-primary-02-sm-padding;
+    margin: 1px;
+    width: 140px;
+    white-space: nowrap;
+}
+
+.icon-chevron-down {
+    &::after {
+        content: "\f078";
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        box-sizing: border-box;
+        text-align: right;
+        margin-left: 8px;
+    }
+}
+
+.icon-calendar {
+    &:after {
+        content: "\f073";
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        box-sizing: border-box;
+        text-align: right;
+        margin-left: 8px;
+    }
+}
+
 .btn-danger,
 .btn-primary,
 .btn-primary-02 {
     font-size: $btn-primary-02-font-size;
     padding: $btn-primary-02-padding;
+}
+
+.btn span {
+    margin: 0 auto;
 }
 
 .btn-red {
@@ -370,34 +415,33 @@ button:hover {
 }
 
 .btn-clearWhite {
-background: $btn-clearWhite-bg-grad;
-color: $btn-clearWhite-color;
-font-size: $btn-clearWhite-font-size !important;
-text-transform: capitalize !important;
-vertical-align: $btn-clearWhite-fa-valign;
-padding: $btn-clearWhite-padding;
-border: $btn-clearWhite-border !important;
-margin: 0;
-border-radius: 0;
-z-index: 1;
-
-&:hover {
-    color: $btn-clearWhite-color-hover;
-    background-color: $btn-clearWhite-bg-hover;
-    border: $btn-clearWhite-border-hover;
-} 
-&:focus,
-&:visited,
-&:active {
-    color: $btn-clearWhite-color-hover;
-    background-color: $btn-clearWhite-bg-hover;
-    border: $btn-clearWhite-border-hover;
-}
-.fa {
-    font-size: $btn-clearWhite-fa-size;
-    margin-right: rem(6px);
-    margin-top: 4px;
-}
+    background: $btn-clearWhite-bg-grad;
+    color: $btn-clearWhite-color;
+    font-size: $btn-clearWhite-font-size !important;
+    text-transform: capitalize !important;
+    vertical-align: $btn-clearWhite-fa-valign;
+    padding: $btn-clearWhite-padding;
+    border: $btn-clearWhite-border !important;
+    margin: 0;
+    border-radius: 0;
+    z-index: 1;
+    &:hover {
+        color: $btn-clearWhite-color-hover;
+        background-color: $btn-clearWhite-bg-hover;
+        border: $btn-clearWhite-border-hover;
+    } 
+    &:focus,
+    &:visited,
+    &:active {
+        color: $btn-clearWhite-color-hover;
+        background-color: $btn-clearWhite-bg-hover;
+        border: $btn-clearWhite-border-hover;
+    }
+    .fa {
+        font-size: $btn-clearWhite-fa-size;
+        margin-right: rem(6px);
+        margin-top: 4px;
+    }
 }
 
 .callout {
@@ -577,13 +621,14 @@ z-index: 1;
     min-height: rem(40px);
     border: 1px solid $cyan;
     align-self: center;
+    padding: 6px 10px;
     &:hover,
     &:active,
     &:focus {
         background-color: $blue-400;
         border: 1px solid $cyan !important;
         cursor: pointer;
-        transition: background-color 1s ease-in;
+        transition: background-color .3s ease-in;
     }
     .action-button-icon {
         margin: 0 4px;
@@ -1641,6 +1686,19 @@ span.loading-icon svg rect {
     background: -ms-linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);/* IE10+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
     background: linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);/* W3C */
+}
+
+// contextual font colors
+.color-corflower-blue {
+    color: $blue-450;
+}
+
+.bg-clear-white {
+    background-color: $clear-white;
+}
+
+.bg-clear-black {
+    background-color: $clear-black;
 }
 
 // ----------------- nothing below the following class --------------//

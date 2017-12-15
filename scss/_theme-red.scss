@@ -19,6 +19,7 @@
     display: flex;
     flex-flow: row wrap;
     min-height: 100px;
+    width:100%;
     background: $darkred-gradient-reverse;
     background-color: $red-000;
 } 
@@ -35,14 +36,15 @@
 }
 
 .section-main-content{
-    position: absolute;
-    top: 110px;
+    margin-top: auto;
 }
 
 // top navigation
 .red-theme {
     .top-nav {
         height: 110px;
+        background: $clear-black;
+        position: sticky;
     }
     .navbar {
         position: relative;
@@ -238,24 +240,55 @@
             color: $navbar-dark-color;
         }
     } //card red
+    
+    .card-red-header-special {
+        position: absolute; 
+        top:0px; 
+        right: 0px; 
+        left: 0px;
+        font-size: $font-size-base;
+        text-transform: uppercase;
+        letter-spacing: rem(2px);
+        color: $white;
+        padding: $card-spacer-red-top $card-spacer-red-x $card-spacer-red-bottom $card-spacer-red-x;
+        margin-bottom: 0; // Removes the default margin-bottom of <hN>
+        background-color: $blue;
+    }
+    
     .card-theme-red {
+        font-family: $font-family-light;
         .card-red {
             position: relative;
             display: flex;
             flex-direction: column;
             min-width: 0;
             word-wrap: break-word;
-            background-color: $red;
             background-clip: border-box;
-            border: $card-border-width solid $red-000;
             color: $white; //@include border-radius($card-border-radius);
+        }
+        .card-red-mspacing-top {
+            margin-top: 28px;
+        }
+        .card-red-header-positioning {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        .card-red-pspacing-top {
+            padding-top: 0.625rem;
         }
         .card-red-header {
             font-size: $font-size-base;
-            padding: $card-spacer-y $card-spacer-x;
+            text-transform: uppercase;
+            letter-spacing: rem(2px);
+            color: $white;
+            padding: $card-spacer-red-top $card-spacer-red-x $card-spacer-red-bottom $card-spacer-red-x;
             margin-bottom: 0; // Removes the default margin-bottom of <hN>
             background-color: $blue;
-            border-bottom: $card-border-width solid $card-red-border-color;
+            // border-bottom: $card-border-width solid $card-red-border-color;
             &:first-child {
                 //@include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
             }
@@ -264,7 +297,10 @@
             // Enable `flex-grow: 1` for decks and groups so that card blocks take up
             // as much space as possible, ensuring footers are aligned to the bottom.
             flex: 1 1 auto;
+            background-color: rgba(0, 0, 0, 0.25); //rgba(76, 4, 8, 0.5);
             padding: $card-spacer-x;
+            margin-top: 10px;
+            // border: $card-border-width solid $red-000;
         }
         .card-red-title {
             margin-bottom: $card-spacer-y;
@@ -277,7 +313,9 @@
             margin-bottom: 0;
         }
         .card-red-link {
-            @include hover {
+            color: $blue-450;
+            &:hover {
+                color: lightgoldenrodyellow;
                 text-decoration: none;
             }
             +.card-red-link {
@@ -285,45 +323,105 @@
             }
         }
         .card-red {
-            >.list-group-red:first-child {
+            >.list-group:first-child {
                 .list-group-item:first-child {
                     @include border-top-radius($card-border-radius);
                 }
             }
-            >.list-group-red:last-child {
-                .list-group-item-red:last-child {
+            >.list-group:last-child {
+                .list-group-item:last-child {
                     @include border-bottom-radius($card-border-radius);
                 }
             }
         }
     }
-}
 
-.user-avatar-red {
-    background-color: $user-avatar-bg-color;
-    width: $user-avatar-width;
-    max-width: 100%;
-    margin: $user-avatar-margin;
-    border: $user-avatar-border-width $border-type-solid $blue-400;
-    border-radius: $user-avatar-border-radius;
-}
 
-.user-avatar-red-md {
-    background-color: $user-avatar-md-bg-color;
-    width: $user-avatar-md-width;
-    max-width: 100%;
-    margin: $user-avatar-md-margin;
-    border: $user-avatar-md-border-width $border-type-solid $blue-400;
-    border-radius: $user-avatar-md-border-radius;
-}
+    .user-avatar-red {
+        background-color: $user-avatar-bg-color;
+        width: $user-avatar-width;
+        max-width: 100%;
+        margin: $user-avatar-margin;
+        border: $user-avatar-border-width $border-type-solid $red-100;
+        border-radius: $user-avatar-border-radius;
+    }
 
-.user-avatar-red-lg {
-    background-color: $user-avatar-lg-bg-color;
-    width: $user-avatar-lg-width;
-    width: $user-avatar-lg-height;
-    max-width: 100%;
-    max-height: 100%;
-    margin: $user-avatar-lg-margin;
-    border: $user-avatar-lg-border-width $border-type-solid $blue-400;
-    border-radius: $user-avatar-lg-border-radius;
+    .user-avatar-red-md {
+        background-color: $user-avatar-red-md-bg-color;
+        width: $user-avatar-md-width;
+        max-width: 100%;
+        margin: $user-avatar-md-margin;
+        border: $user-avatar-md-border-width $border-type-solid $red-100;
+        border-radius: $user-avatar-md-border-radius;
+    }
+
+    .user-avatar-red-lg {
+        background-color: $user-avatar-lg-bg-color;
+        width: $user-avatar-lg-width;
+        width: $user-avatar-lg-height;
+        max-width: 100%;
+        max-height: 100%;
+        margin: $user-avatar-lg-margin;
+        border: $user-avatar-lg-border-width $border-type-solid $red-100;
+        border-radius: $user-avatar-lg-border-radius;
+    }
+
+    .player-info {
+        padding-top: 0.625rem;
+        .theme-red-title {
+            text-transform: uppercase;
+            font-size: $font-size-lg;
+            color: $blue-450;
+        }
+        .theme-red-padded-line {
+            color: $xtra-light-pink;
+            margin: 10px 0;
+        }
+    }
+
+    .theme-red-badge {
+        font-size: 90%;
+        color: $blue-450;
+        padding: 6px 10px 4px 10px;
+        background: $red-000;
+        //border-radius: 500px;
+        margin: 0 6px;
+    }
+    .red-theme-title-2-container {
+        padding: 10px 10px 0 0;
+        margin-right: 20px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .red-theme-title-2 {
+        display: block;
+        padding: 6px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        position: relative;
+        &::after {
+            content: "";
+            flex: 1 1 90%;
+            border: 3px solid $blue-450;
+            margin-left: 10px;
+            width: 100%;
+            position: absolute;
+            top: 42%;
+        }
+    }
+    
+    // .red-theme-title-2.span {
+    //     &::after {
+    //         content: "";
+    //         background: $blue-450;
+    //         // width: 100%;
+    //         padding-left: 10px;
+    //         width: 80%;
+    //         position: absolute;
+    //         top: 46%;
+    //         //left: 56%;
+    //     }
+    // }
+
 }

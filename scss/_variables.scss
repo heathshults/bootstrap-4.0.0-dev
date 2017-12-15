@@ -53,7 +53,7 @@
 // Color system
 //
 
-$clearWhite:    rgba(255, 255, 255, 0.30) !default;
+
 $white:    #fff !default;
 $gray-05:  #ededed !default;
 $gray-10:  #d8d8d8 !default;
@@ -70,6 +70,9 @@ $gray-800: #343a40 !default;
 $gray-850: #333    !default;
 $gray-900: #212529 !default;
 $black:    #000    !default;
+
+$clear-white:    rgba(255, 255, 255, 0.03) !default;
+$clear-black:    rgba(0, 0, 0, 0.25) !default;
 
 $grays: (
   10:  $gray-10,
@@ -93,7 +96,7 @@ $pink:                  #e83e8c !default;
 $light-pink:            #ed687c !default;
 $xtra-light-pink:       #ffd7de !default;
 $red:                   #9e0a0f !default;
-$red-000:               #4B0508 !default;
+$red-000:               #4c0408 !default;
 $red-5:                 #eb3232 !default;
 $red-10:                #c90c12 !default;
 $red-20:                #9e0a0f !default;
@@ -302,9 +305,11 @@ $transition-collapse:    height .35s ease !default;
 $font-url--sans-serif:        './css/web-fonts/liberation-mono/roboto.woff2' !default;
 $font-url--monospace:         './css/web-fonts/liberation-mono/LiberationMono-Regular.ttf' !default;
 
-$font-family-sans-serif: 'Roboto', Roboto, sans-serif !default;
-$font-family-monospace:  'RobotoMono-Regular', Roboto Mono, monospace !default;
-$font-family-base:       $font-family-sans-serif !default;
+$font-family-sans-serif:  'Roboto', Roboto, sans-serif !default;
+$font-family-base:        $font-family-sans-serif !default;
+$font-family-bold:        'Roboto-Bold', Roboto-Bold, sans-serif !default;
+$font-family-light:       'Roboto-Light', Roboto Light, sans-sarif !default;
+$font-family-monospace:   'RobotoMono-Regular', Roboto-Mono, monospace !default;
 
 $font-size-sm:    .875rem !default;
 $font-size-xsm:   rem(12px) !default;
@@ -417,6 +422,7 @@ $btn-primary-02-font-size:      rem(12px) !default;
 $btn-primary-02-fa-size:        rem(16px) !default;
 $btn-primary-02-color:          $white !default;
 $btn-primary-02-padding:        rem(10px) rem(40px) !default;
+$btn-primary-02-sm-padding:     rem(10px) rem(20px) !default;
 $btn-primary-02-bg-grad:        linear-gradient(180deg, $blue 65%, $blue-350, 90%, $blue--01)!default;
 $btn-primary-02-border:         solid rem(3px) $blue-000 !default;
 $btn-primary-02-border-radius:  rem(4px) !default;
@@ -688,7 +694,7 @@ $nav-link-margin-y:             -20px;
 $nav-link-hover:                $white !default;
 
 $nav-item-divider-border:       ($border-width-md $blue-400 $border-type-solid) !default;
-$nav-item-divider-border-red:   ($border-width-md $red-100 $border-type-solid) !default;
+$nav-item-divider-border-red:   ($border-width-md $xtra-light-pink $border-type-solid) !default;
 $nav-item-divider-transform:    skewX(-25deg) !default;
 $nav-item-skew:                 skewX(1deg) !default;
 $nav-item-divider-margin:       1rem .3rem 0 .3rem !default;
@@ -773,7 +779,11 @@ $jumbotron-bg:                   $gray-200 !default;
 // Cards
 
 $card-spacer-y:               .75rem !default;
+$card-spacer-red-y:           rem(8px) !default;
+$card-spacer-red-top:         rem(8px) !default;
+$card-spacer-red-bottom:      rem(6px) !default;
 $card-spacer-x:               1.25rem !default;
+$card-spacer-red-x:           rem(20px) !default;
 $card-border-width:           1px !default;
 $card-border-radius:          $border-radius !default;
 $card-border-color:           rgba($black,.125) !default;
@@ -781,7 +791,7 @@ $card-red-border-radius:      $border-radius !default;
 $card-red-border-color:       rgba($black,.125) !default;
 $card-inner-border-radius:    calc(#{$card-border-radius} - #{$card-border-width}) !default;
 $card-cap-bg:                 rgba($black, .03) !default;
-$card-bg:                  $white !default;
+$card-bg:                     $white !default;
 
 $card-img-overlay-padding: 1.25rem !default;
 
@@ -1017,7 +1027,7 @@ $user-avatar-width:             40px !default;
 $user-avatar-height:            40px !default;
 $user-avatar-margin:            .375rem !default;
 $user-avatar-bg-color:          $blue-450 !default;
-$user-avatar-bg-color-red:      $red-5 !default;
+$user-avatar-red-bg-color:      $red-20 !default;
 $user-avatar-border-width:      .25rem !default;
 $user-avatar-border-radius:     50% !default;
 
@@ -1025,13 +1035,15 @@ $user-avatar-md-width:          100px !default;
 $user-avatar-md-height:         100px !default;
 $user-avatar-md-margin:         .180rem !default;
 $user-avatar-md-bg-color:       $blue-450 !default;
+$user-avatar-red-md-bg-color:   $red-20 !default;
 $user-avatar-md-border-width:   .25rem !default;
 $user-avatar-md-border-radius:  50% !default;
 
 $user-avatar-lg-width:          rem(140px) !default; //9.375rem 11.56rem 
-$user-avatar-lg-height:         rem(14 0px) !default;
+$user-avatar-lg-height:         rem(140px) !default;
 $user-avatar-lg-margin:         .375rem !default;
 $user-avatar-lg-bg-color:       $blue-450 !default;
+$user-avatar-red-lg-bg-color:   $red-20 !default;
 $user-avatar-lg-border-width:   .25rem !default;
 $user-avatar-lg-border-radius:  50% !default;
 

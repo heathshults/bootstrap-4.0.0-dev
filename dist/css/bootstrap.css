@@ -5,24 +5,36 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 @font-face {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  src: local("Roboto"), local("Roboto-Regular"), url("/css/web-fonts/roboto/roboto-regular.woff2") format("woff2");
+}
+
+@font-face {
   font-family: 'Roboto';
   font-style: normal;
-  src: local("Roboto"), local("Roboto-Regular"), url("/css/web-fonts/roboto/roboto-regular") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url(/css/web-fonts/roboto/Roboto-light-300.woff2) format("woff2");
 }
 
 @font-face {
   font-family: 'Roboto Condensed';
   font-style: normal;
   src: local("Roboto Condensed"), local("RobotoCondensed-Regular"), url("/css/web-fonts/roboto/roboto-condensed.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url(/css/web-fonts/roboto/Roboto-bold-700.woff2) format("woff2");
 }
 
 @font-face {
   font-family: 'Roboto Mono';
   font-style: normal;
   src: local("Roboto Mono"), local("RobotoMono-Regular"), url("/css/web-fonts/roboto/roboto-mono.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
 @media print {
@@ -563,7 +575,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: "RobotoMono-Regular", Roboto Mono, monospace;
+  font-family: "RobotoMono-Regular", Roboto-Mono, monospace;
 }
 
 code {
@@ -8373,12 +8385,14 @@ body {
 .container-flexi-fluid {
   display: flex;
   flex-flow: row wrap;
+  padding: 0;
 }
 
 .container-flexi {
   display: flex;
   flex-flow: row wrap;
   max-width: 1280px;
+  padding: 20px 0;
 }
 
 .flexi-container {
@@ -8634,6 +8648,8 @@ button:hover {
 }
 
 .btn-primary-02 {
+  display: inline-flex;
+  align-items: unset !important;
   color: #fff;
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -8654,11 +8670,48 @@ button:hover {
   font-size: 1rem;
 }
 
+.btn-primary-02.-sm {
+  padding: 0.625rem 1.25rem;
+  margin: 1px;
+  width: 140px;
+  white-space: nowrap;
+}
+
+.icon-chevron-down::after {
+  content: "\f078";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  text-align: right;
+  margin-left: 8px;
+}
+
+.icon-calendar:after {
+  content: "\f073";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  text-align: right;
+  margin-left: 8px;
+}
+
 .btn-danger,
 .btn-primary,
 .btn-primary-02 {
   font-size: 0.75rem;
   padding: 0.625rem 2.5rem;
+}
+
+.btn span {
+  margin: 0 auto;
 }
 
 .btn-red {
@@ -8779,13 +8832,14 @@ button:hover {
   min-height: 2.5rem;
   border: 1px solid #0288d5;
   align-self: center;
+  padding: 6px 10px;
 }
 
 .actionBtn:hover, .actionBtn:active, .actionBtn:focus {
   background-color: #2e69a3;
   border: 1px solid #0288d5 !important;
   cursor: pointer;
-  transition: background-color 1s ease-in;
+  transition: background-color .3s ease-in;
 }
 
 .actionBtn .action-button-icon {
@@ -9110,7 +9164,7 @@ option {
 .user-avatar-lg {
   background-color: #4990e2;
   width: 8.75rem;
-  width: 14 0rem;
+  width: 8.75rem;
   max-width: 100%;
   max-height: 100%;
   margin: 0.375rem;
@@ -9726,6 +9780,18 @@ span.loading-icon svg rect {
   /* for IE */
   background: linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);
   /* W3C */
+}
+
+.color-corflower-blue {
+  color: #4990e2;
+}
+
+.bg-clear-white {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.bg-clear-black {
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 body.scaff .row > [class^=col-],
