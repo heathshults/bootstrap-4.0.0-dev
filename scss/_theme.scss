@@ -107,6 +107,17 @@ form {
 //   -webkit-box-shadow: none;
 //   transition: none;
 // }
+strong {
+    font-weight: 700;
+}
+small {
+    font-weight: 300;
+}
+
+.font-weight-light {
+    font-weight: 300;
+}
+
 .tg-list {
     text-align: center;
     display: flex;
@@ -239,9 +250,36 @@ form {
     height: 2px;
 }
 
+// aspect ratios
+
+.are-21by9 {
+    &::before {
+      padding-top: percentage(9 / 21);
+    }
+  }
+  
+  .ar-16by9 {
+    &::before {
+      padding-top: percentage(9 / 16);
+    }
+  }
+  
+  .ar-4by3 {
+    &::before {
+      padding-top: percentage(3 / 4);
+    }
+  }
+  
+  .ar-1by1 {
+    &::before {
+      padding-top: percentage(1 / 1);
+    }
+  }
+
 // a links
 a {
-    outline-color: transparent;
+    outline: none;
+    outline-width: 0px;
 }
 
 .alert-success {
@@ -1570,6 +1608,19 @@ body {
     font-size: .95rem;
 }
 
+.icon-wrapper-32 {
+    width: 32px;
+    height: 32px;
+}
+
+.icon-wrapper-42 {
+    width: 42px;
+    height: 42px;
+}
+
+.svg-color-black {
+    background-color: $black;
+}
 
 // moved into bootstrap-table.css
 // //table column menu

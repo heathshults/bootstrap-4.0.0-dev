@@ -19,29 +19,28 @@
     display: flex;
     flex-flow: row wrap;
     min-height: 100px;
-    width:100%;
+    width: 100%;
     background: $darkred-gradient-reverse;
     background-color: $red-000;
-} 
-
+}
 
 .flexi-container-red {
-	display: flex;
-	flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .flexi-item-red {
-	-webkit-flex: 1 auto;
-	flex: 1 auto;
+    -webkit-flex: 1 auto;
+    flex: 1 auto;
 }
 
-.section-main-content{
+.section-main-content {
     margin-top: 110px;
     &::after {
         content: "";
         height: 110px;
         position: absolute;
-        top:0px;
+        top: 0px;
         left: 0px;
         background-color: rgba(0, 0, 0, 0.5);
         filter: blur(3px);
@@ -51,11 +50,9 @@
 // top navigation
 .red-theme {
     .top-nav {
-        height: 110px;
-        //background-color: rgba(0, 0, 0, 0.5);
+        height: 110px; //background-color: rgba(0, 0, 0, 0.5);
         // background-color: rgba(33,0,4, 0.9);
-        background: linear-gradient(180deg, rgba(33, 0, 4, 1) 12%, rgba(33, 0, 4, 1) 33%, rgba(0, 0, 0, 0) 100%);
-        // filter: blur(13px);
+        background: linear-gradient(180deg, rgba(33, 0, 4, 1) 12%, rgba(33, 0, 4, 1) 33%, rgba(0, 0, 0, 0) 100%); // filter: blur(13px);
         position: fixed;
     }
     .navbar {
@@ -252,11 +249,10 @@
             color: $navbar-dark-color;
         }
     } //card red
-    
     .card-red-header-special {
-        position: absolute; 
-        top:0px; 
-        right: 0px; 
+        position: absolute;
+        top: 0px;
+        right: 0px;
         left: 0px;
         font-size: $font-size-base;
         text-transform: uppercase;
@@ -266,9 +262,9 @@
         margin-bottom: 0; // Removes the default margin-bottom of <hN>
         background-color: $blue;
     }
-    
     .card-theme-red {
-        font-family: $font-family-light;
+        font-family: $font-family-base;
+        font-weight: 300;
         .card-red {
             position: relative;
             display: flex;
@@ -288,7 +284,6 @@
             bottom: 0px;
             left: 0px;
         }
-
         .card-red-pspacing-top {
             padding-top: 0.625rem;
         }
@@ -299,8 +294,7 @@
             color: $white;
             padding: $card-spacer-red-top $card-spacer-red-x $card-spacer-red-bottom $card-spacer-red-x;
             margin-bottom: 0; // Removes the default margin-bottom of <hN>
-            background-color: $blue;
-            // border-bottom: $card-border-width solid $card-red-border-color;
+            background-color: $blue; // border-bottom: $card-border-width solid $card-red-border-color;
             &:first-child {
                 //@include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
             }
@@ -311,8 +305,7 @@
             flex: 1 1 auto;
             background-color: rgba(0, 0, 0, 0.25); //rgba(76, 4, 8, 0.5);
             padding: $card-spacer-x;
-            margin-top: 10px;
-            // border: $card-border-width solid $red-000;
+            margin-top: 10px; // border: $card-border-width solid $red-000;
         }
         .card-red-title {
             margin-bottom: $card-spacer-y;
@@ -347,8 +340,6 @@
             }
         }
     }
-
-
     .user-avatar-red {
         background-color: $user-avatar-bg-color;
         width: $user-avatar-width;
@@ -357,7 +348,6 @@
         border: $user-avatar-border-width $border-type-solid $red-100;
         border-radius: $user-avatar-border-radius;
     }
-
     .user-avatar-red-md {
         background-color: $user-avatar-red-md-bg-color;
         width: $user-avatar-md-width;
@@ -366,7 +356,6 @@
         border: $user-avatar-md-border-width $border-type-solid $red-100;
         border-radius: $user-avatar-md-border-radius;
     }
-
     .user-avatar-red-lg {
         background-color: $user-avatar-lg-bg-color;
         width: $user-avatar-lg-width;
@@ -377,7 +366,6 @@
         border: $user-avatar-lg-border-width $border-type-solid $red-100;
         border-radius: $user-avatar-lg-border-radius;
     }
-
     .player-info {
         padding-top: 0.625rem;
         .theme-red-title {
@@ -390,96 +378,119 @@
             margin: 10px 0;
         }
     }
-
     .stats-container {
-        padding: 10px 20px 20px 20px;
-        // background-color: $clear-white;
+        padding: 10px 20px 20px 20px; // background-color: $clear-white;
         .title-3 {
             display: inline-flex;
-            color: rgba(255, 255 ,255, 0.75);
+            color: rgba(255, 255, 255, 0.75);
             background-color: rgba(76, 4, 8, 0.75);
-            padding:10px 15px;
+            padding: 10px 15px;
             letter-spacing: rem(1.5px);
             margin-bottom: 0;
         }
     }
-
     .stats-wrapper {
         background: $clear-black;
         padding: 8px;
     }
-
     .current-stats {
         white-space: nowrap;
-        padding-top: 0 !important;  
+        padding-top: 0 !important;
         padding-left: 2px;
         padding-right: 2px;
         &:hover {
-            background-color: $clear-black; 
-        }    
+            background-color: $clear-black;
+        }
         .theme-red-badge {
-            display:block;
+            display: block;
             color: $blue-450;
-            background: $clear-black;
-            // border-radius: 500px;
-            margin:8px;
+            background: $clear-black; // border-radius: 500px;
+            margin: 8px;
         }
         .stat-title {
-            &:hover {
-                background-color: $clear-black; 
+            background-image: url('./images/icons/football/american-football-player.png') middle;
+            text-transform: uppercase; // &:hover {
+            //     background-color: $clear-black; 
+            // }
+            .badge-grade {
+                position: absolute;
+                display: inline-flex;
+                flex-flow: column;
+                align-items: center;
+                top: -40px;
+                left: -6px;
+                font-size: 80%;
+                font-weight: 400;
+                color: $light-yellow;
+                line-height: 1;
+                background-color: $green-000-40;
+                padding: 8px;
+                white-space: nowrap;
+                width: rem(35px);
+                height: rem(35px);
+                max-width: 100%;
+                margin: $user-avatar-margin;
+                border-radius: $user-avatar-border-radius;
+                transform: rotate(340deg);
+                &::before {
+                    padding-top: percentage(1 / 1);
+                }
             }
         }
         &:not(:last-child) {
-            border-right: $border-width-sm $border-type-solid $blue-450;
+            border-right: $border-width-sm $border-type-solid $clear-white-md;
         }
-        span {
-            display: block;            
-        }
+    }
+    .font-75 {
+        font-size: 75%;
+    }
+    .font-50 {
+        font-size: 50%;
+    }
+    .stat-title-position {
+        background-image: url('./images/icons/football/american-football-player.png') middle;
     }
 
-    .theme-red-badge {
-        color: $blue-450;
-        padding: 10px 20px;
-        background: $clear-black;
-        // border-radius: 500px;
-        margin:8px;
-        
-    }
-    .red-theme-title-2-container {
-        padding: 10px 10px 0 0;
-        margin-right: 20px;
+.theme-red-badge {
+    color: $blue-450;
+    padding: 10px 20px;
+    background: $clear-black; // border-radius: 500px;
+    margin: 8px;
+}
+
+.red-theme-title-2-container {
+    padding: 10px 10px 0 0;
+    margin-right: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.red-theme-title-2 {
+    display: block;
+    padding: 6px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    position: relative;
+    &::after {
+        content: "";
+        flex: 1 1 90%;
+        border: 3px solid $blue-450;
+        margin-left: 10px;
         width: 100%;
-        overflow: hidden;
+        position: absolute;
+        top: 42%;
     }
-
-    .red-theme-title-2 {
-        display: block;
-        padding: 6px;
-        font-size: 1rem;
-        text-transform: uppercase;
-        position: relative;
-        &::after {
-            content: "";
-            flex: 1 1 90%;
-            border: 3px solid $blue-450;
-            margin-left: 10px;
-            width: 100%;
-            position: absolute;
-            top: 42%;
-        }
-    }
-    
-    // .red-theme-title-2.span {
-    //     &::after {
-    //         content: "";
-    //         background: $blue-450;
-    //         // width: 100%;
-    //         padding-left: 10px;
-    //         width: 80%;
-    //         position: absolute;
-    //         top: 46%;
-    //         //left: 56%;
-    //     }
-    // }
+} // .red-theme-title-2.span {
+//     &::after {
+//         content: "";
+//         background: $blue-450;
+//         // width: 100%;
+//         padding-left: 10px;
+//         width: 80%;
+//         position: absolute;
+//         top: 46%;
+//         //left: 56%;
+//     }
+// }
 
 }

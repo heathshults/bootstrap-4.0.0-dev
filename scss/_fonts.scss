@@ -9,15 +9,15 @@
 @font-face {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: 200;
-  src: local('Roboto'), local('Roboto-Regular'), url('/css/web-fonts/roboto/roboto-regular.woff2') format('woff2');
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url('https://fonts.gstatic.com/s/roboto/v18/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  src: local('Roboto Light'), local('Roboto-Light'), url(/css/web-fonts/roboto/Roboto-light-300.woff2) format('woff2');
+  src: local('Roboto Light'), local('Roboto-Light'), url('https://fonts.gstatic.com/s/roboto/v18/Hgo13k-tfSpn0qi1SFdUfZBw1xU1rKptJj_0jans920.woff2') format('woff2');
 }
 
 @font-face {
@@ -30,7 +30,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url(/css/web-fonts/roboto/Roboto-bold-700.woff2) format('woff2');
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('https://fonts.gstatic.com/s/roboto/v18/d-6IYplOFocCacKzxwXSOJBw1xU1rKptJj_0jans920.woff2') format('woff2');
 }
 
 // Monospace font

@@ -71,8 +71,14 @@ $gray-850: #333    !default;
 $gray-900: #212529 !default;
 $black:    #000    !default;
 
-$clear-white:    rgba(255, 255, 255, 0.03) !default;
-$clear-black:    rgba(0, 0, 0, 0.25) !default;
+// clear shaders
+$clear-white:           rgba(255, 255, 255, 0.03) !default;
+$clear-white-md:        rgba(255, 255, 255, 0.5) !default;
+$clear-white-dark:      rgba(255, 255, 255, 0.75) !default;
+
+$clear-black:           rgba(0, 0, 0, 0.25) !default;
+$clear-black-md:        rgba(0, 0, 0, 0.5) !default;
+$clear-black-dark:      rgba(0, 0, 0, 0.75) !default;
 
 $grays: (
   10:  $gray-10,
@@ -289,7 +295,7 @@ $border-radius-bottom-lr:   0 0 .25rem .25rem !default;
 
 $border-wireframe: $gray-10 .5px solid;
 
-$component-active-color: $white !default;
+$component-active-color: $white !default !default;
 $component-active-bg:    theme-color("primary") !default;
 
 $caret-width:            .3em !default;
@@ -307,8 +313,6 @@ $font-url--monospace:         './css/web-fonts/liberation-mono/LiberationMono-Re
 
 $font-family-sans-serif:  'Roboto', Roboto, sans-serif !default;
 $font-family-base:        $font-family-sans-serif !default;
-$font-family-bold:        'Roboto-Bold', Roboto-Bold, sans-serif !default;
-$font-family-light:       'Roboto-Light', Roboto Light, sans-sarif !default;
 $font-family-monospace:   'RobotoMono-Regular', Roboto-Mono, monospace !default;
 
 $font-size-sm:    .875rem !default;
@@ -694,7 +698,7 @@ $nav-link-margin-y:             -20px;
 $nav-link-hover:                $white !default;
 
 $nav-item-divider-border:       ($border-width-md $blue-400 $border-type-solid) !default;
-$nav-item-divider-border-red:   ($border-width-md $xtra-light-pink $border-type-solid) !default;
+$nav-item-divider-border-red:   ($border-width-md $clear-white-md $border-type-solid) !default;
 $nav-item-divider-transform:    skewX(-25deg) !default;
 $nav-item-skew:                 skewX(1deg) !default;
 $nav-item-divider-margin:       1rem .3rem 0 .3rem !default;
