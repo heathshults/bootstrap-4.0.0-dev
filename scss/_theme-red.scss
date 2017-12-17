@@ -451,46 +451,41 @@
         background-image: url('./images/icons/football/american-football-player.png') middle;
     }
 
-.theme-red-badge {
-    color: $blue-450;
-    padding: 10px 20px;
-    background: $clear-black; // border-radius: 500px;
-    margin: 8px;
-}
-
-.red-theme-title-2-container {
-    padding: 10px 10px 0 0;
-    margin-right: 20px;
-    width: 100%;
-    overflow: hidden;
-}
-
-.red-theme-title-2 {
-    display: block;
-    padding: 6px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    position: relative;
-    &::after {
-        content: "";
-        flex: 1 1 90%;
-        border: 3px solid $blue-450;
-        margin-left: 10px;
-        width: 100%;
-        position: absolute;
-        top: 42%;
+    .theme-red-badge {
+        color: $blue-450;
+        padding: 10px 20px;
+        background: $clear-black; // border-radius: 500px;
+        margin: 8px;
     }
-} // .red-theme-title-2.span {
-//     &::after {
-//         content: "";
-//         background: $blue-450;
-//         // width: 100%;
-//         padding-left: 10px;
-//         width: 80%;
-//         position: absolute;
-//         top: 46%;
-//         //left: 56%;
-//     }
-// }
+
+    .red-theme-title-2-container {
+        padding: 10px 10px 0 0;
+        margin-right: 20px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .red-theme-title-2 {
+        display: block;
+        padding: 6px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        position: relative;
+        &::after {
+            content: "";
+            flex: 1 1 90%;
+            border: 3px solid $blue-450;
+            margin-left: 10px;
+            width: 100%;
+            position: absolute;
+            top: 42%;
+        }
+    }
+    .icon-helmet-1-bgnew {
+        enable-background: new 0 0 32 32;
+    }
+    .icon-helmet-1-fill {
+        fill: $white;
+    }
 
 }
