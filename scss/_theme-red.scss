@@ -266,10 +266,9 @@
         font-family: $font-family-base;
         font-weight: 300;
         .card-red {
-            position: relative;
+            //position: relative;
             display: flex;
             flex-direction: column;
-            min-width: 0;
             word-wrap: break-word;
             background-clip: border-box;
             color: $white; //@include border-radius($card-border-radius);
@@ -307,6 +306,9 @@
             padding: $card-spacer-x;
             margin-top: 10px; // border: $card-border-width solid $red-000;
         }
+        strong {
+            color: lightgoldenrodyellow;
+        }
         .card-red-title {
             margin-bottom: $card-spacer-y;
         }
@@ -327,6 +329,16 @@
                 margin-left: $card-spacer-x;
             }
         }
+        .card-red-link-inverted {
+            color: lightgoldenrodyellow;
+            &:hover {
+                color: $blue-450;
+                text-decoration: none;
+            }
+            +.card-red-link-inverted {
+                margin-left: $card-spacer-x;
+            }
+        }
         .card-red {
             >.list-group:first-child {
                 .list-group-item:first-child {
@@ -338,6 +350,7 @@
                     @include border-bottom-radius($card-border-radius);
                 }
             }
+            
         }
     }
     .user-avatar-red {
@@ -384,32 +397,52 @@
             display: inline-flex;
             color: rgba(255, 255, 255, 0.75);
             background-color: rgba(76, 4, 8, 0.75);
-            padding: 10px 15px;
+            background-image: $helmet-1-right;
+            fill: $clear-white-md;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            background-size: 24px 24px;
+            padding: 15px 15px 15px 40px;
             letter-spacing: rem(1.5px);
             margin-bottom: 0;
         }
     }
-    .stats-wrapper {
-        background: $clear-black;
-        padding: 8px;
+    .stats-wrapper .row{
+        visibility: visible;
+    }
+    .divider-br {
+        border-right: $border-width-sm $border-type-solid $clear-white-md;
+    }
+    .whiteTools-wrapper .col-3 {
+        background-color: $clear-black;
+        height: 50px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            background-color: $clear-black-md;
+        }
+        .current-stats {
+            
+            align-items: center;
+        }
     }
     .current-stats {
         white-space: nowrap;
         padding-top: 0 !important;
         padding-left: 2px;
         padding-right: 2px;
-        &:hover {
-            background-color: $clear-black;
-        }
+        // 
+        
         .theme-red-badge {
             display: block;
             color: $blue-450;
-            background: $clear-black; // border-radius: 500px;
+            background: $clear-black-md; // border-radius: 500px;
             margin: 8px;
         }
         .stat-title {
-            background-image: url('./images/icons/football/american-football-player.png') middle;
-            text-transform: uppercase; // &:hover {
+            text-transform: uppercase; 
+            padding: 0 !important;
+            margin-top: 15px;
+            // &:hover {
             //     background-color: $clear-black; 
             // }
             .badge-grade {
@@ -417,7 +450,7 @@
                 display: inline-flex;
                 flex-flow: column;
                 align-items: center;
-                top: -40px;
+                top: -20px;
                 left: -6px;
                 font-size: 80%;
                 font-weight: 400;
@@ -432,14 +465,15 @@
                 margin: $user-avatar-margin;
                 border-radius: $user-avatar-border-radius;
                 transform: rotate(340deg);
-                &::before {
-                    padding-top: percentage(1 / 1);
-                }
+                // &::before {
+                //     padding-top: percentage(1 / 1);
+                // }
             }
+            // &:not(:last-child) {
+            // border-right: $border-width-sm $border-type-solid $clear-white-md;
+            // }
         }
-        &:not(:last-child) {
-            border-right: $border-width-sm $border-type-solid $clear-white-md;
-        }
+        
     }
     .font-75 {
         font-size: 75%;
@@ -481,10 +515,10 @@
             top: 42%;
         }
     }
-    .icon-helmet-1-bgnew {
-        enable-background: new 0 0 32 32;
-    }
     .icon-helmet-1-fill {
+        fill: $white;
+    }
+    .icon-fill-white {
         fill: $white;
     }
 
