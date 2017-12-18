@@ -8472,6 +8472,306 @@ form {
   max-width: 100%;
 }
 
+/* -------------------- Select Box Styles: bavotasan.com Method (with special adaptations by ericrasch.com) */
+/* -------------------- Source: http://bavotasan.com/2011/style-select-box-using-only-css/ */
+.styled-select {
+  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+  height: 29px;
+  overflow: hidden;
+  width: 240px;
+}
+
+.styled-select select {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  height: 29px;
+  padding: 5px;
+  /* If you add too much padding here, the options won't show in IE */
+  width: 268px;
+}
+
+.styled-select.slate {
+  background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+  height: 34px;
+  width: 240px;
+}
+
+.styled-select.slate select {
+  border: 1px solid #ccc;
+  font-size: 16px;
+  height: 34px;
+  width: 268px;
+}
+
+.ui-datepicker-month,
+.ui-datepicker-year {
+  margin: 2px;
+}
+
+/* -------------------- Rounded Corners */
+.rounded {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.semi-square {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* -------------------- Colors: Background */
+.slate {
+  background-color: #d8d8d8;
+}
+
+.green {
+  background-color: #26963c;
+}
+
+.blue {
+  background-color: #0288d5;
+}
+
+.yellow {
+  background-color: #eec111;
+}
+
+.black {
+  background-color: #000;
+}
+
+/* -------------------- Colors: Text */
+.slate select {
+  color: #000;
+}
+
+.green select {
+  color: #fff;
+}
+
+.blue select {
+  color: #fff;
+}
+
+.yellow select {
+  color: #000;
+}
+
+.black select {
+  color: #fff;
+}
+
+/* -------------------- Select Box Styles: danielneumann.com Method */
+/* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+#mainselection select {
+  border: 0;
+  color: #e9ecef;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 2px 10px;
+  width: 378px;
+  *width: 350px;
+  *background: #5cb85c;
+  -webkit-appearance: none;
+}
+
+#mainselection {
+  overflow: hidden;
+  width: 350px;
+  -moz-border-radius: 9px 9px 9px 9px;
+  -webkit-border-radius: 9px 9px 9px 9px;
+  border-radius: 9px 9px 9px 9px;
+  box-shadow: 1px 1px 11px #333;
+  background: url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+}
+
+.styled-select {
+  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+  height: 29px;
+  overflow: hidden;
+  width: 240px;
+}
+
+.styled-select select {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  height: 29px;
+  padding: 5px;
+  /* If you add too much padding here, the options won't show in IE */
+  width: 268px;
+}
+
+.styled-select.slate {
+  background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+  height: 34px;
+  width: 240px;
+}
+
+.styled-select.slate select {
+  border: 1px solid #d8d8d8;
+  font-size: 16px;
+  height: 34px;
+  width: 268px;
+}
+
+/* -------------------- Rounded Corners */
+.rounded {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.semi-square {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* -------------------- Colors: Background */
+.slate {
+  background-color: #d8d8d8;
+}
+
+.green {
+  background-color: #26963c;
+}
+
+.blue {
+  background-color: #0288d5;
+}
+
+.yellow {
+  background-color: #ffc107;
+}
+
+.black {
+  background-color: #000;
+}
+
+/* -------------------- Colors: Text */
+.slate select {
+  color: #000;
+}
+
+.green select {
+  color: #fff;
+}
+
+.blue select {
+  color: #fff;
+}
+
+.yellow select {
+  color: #000;
+}
+
+.black select {
+  color: #fff;
+}
+
+/* -------------------- Select Box Styles: danielneumann.com Method */
+/* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+#mainselection select {
+  border: 0;
+  color: #ededed;
+  background: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 2px 10px;
+  width: 378px;
+  *width: 350px;
+  *background: #5cb85c;
+  -webkit-appearance: none;
+}
+
+#mainselection {
+  overflow: hidden;
+  width: 350px;
+  -moz-border-radius: 9px 9px 9px 9px;
+  -webkit-border-radius: 9px 9px 9px 9px;
+  border-radius: 9px 9px 9px 9px;
+  box-shadow: 1px 1px 11px #330033;
+  background: #5cb85c url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+}
+
+/* -------------------- Select Box Styles: stackoverflow.com Method */
+/* -------------------- */
+.select#soflow, select#soflow-color {
+  -webkit-appearance: button;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  user-select: none;
+  -webkit-user-select: none;
+  background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#d8d8d8, #f8f9fa 40%, #e9ecef);
+  background-position: 97% center;
+  background-repeat: no-repeat;
+  border: 1px solid #868e96;
+  color: #495057;
+  font-size: inherit;
+  margin: 20px;
+  overflow: hidden;
+  padding: 5px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px;
+}
+
+select#soflow-color {
+  color: #fff;
+  background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
+  background-color: #5cb85c;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  padding-left: 15px;
+}
+
+/* -------------------- Select Box Styles: stackoverflow.com Method */
+/* -------------------- Source: http://stackoverflow.com/a/5809186 */
+select#soflow,
+select#soflow-color {
+  border-radius: 2px;
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  user-select: none;
+  -webkit-user-select: none;
+  background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: 97% center;
+  background-repeat: no-repeat;
+  border: 1px solid #f8f9fa;
+  color: #495057;
+  font-size: inherit;
+  margin: 20px;
+  overflow: hidden;
+  padding: 5px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px;
+}
+
+select#soflow-color {
+  color: #fff;
+  background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
+  background-color: #5cb85c;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  padding-left: 15px;
+}
+
 strong {
   font-weight: 700;
 }
@@ -8619,7 +8919,7 @@ small {
 }
 
 .pace .pace-progress {
-  background: #2299dd;
+  background: #2e69a3;
   position: fixed;
   z-index: 2000;
   top: 0;
@@ -8717,6 +9017,14 @@ button:hover {
 
 .bss-btn:active, .bss-btn.active {
   background-image: none;
+}
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+  width: 40%;
+  padding-left: 10px;
+  margin-right: 2px;
+  margin-left: 2px;
 }
 
 .btn-primary-02 {
@@ -9382,14 +9690,11 @@ thead {
 }
 
 thead th {
-  background: #09254a !important;
   text-align: center;
 }
 
 thead th:hover {
-  background-color: #113f69 !important;
-  border-top: solid 10px #113f69;
-  border-bottom: solid 10px #113f69;
+  position: relative;
   cursor: pointer;
 }
 
@@ -9406,19 +9711,22 @@ thead.cpl th .th-inner {
   padding: 0 20px;
   padding: 0 1.25rem 0 0.625rem;
   margin: 0;
+  font-size: 200%;
 }
 
 .table thead th {
+  background-color: #09254a;
   vertical-align: middle;
   border-bottom: 0;
   padding: 0;
-  border-top: 7px solid #09254a;
-  border-bottom: 7px solid #09254a;
+  border-top: 10px solid #09254a;
+  border-bottom: 10px solid #09254a;
 }
 
 .table thead th:hover {
-  border-top: 7px solid #113f69;
-  border-bottom: 7px solid #113f69;
+  border-top: 10px solid #113f69;
+  border-bottom: 10px solid #113f69;
+  background-color: #113f69 !important;
 }
 
 .table thead th:not(:last-child) {
@@ -9860,19 +10168,19 @@ span.loading-icon svg rect {
 }
 
 .gradient-trick {
-  background: -moz-linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);
+  background: -moz-linear-gradient(145deg, #09254a 35%, #09254a 45%, #fff 0, #fff 50%, #330033 45%, #330033 35%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, 145deg, color-stop(35%, 9254A), color-stop(45%, 9254A), color-stop(0, FFFFFF), color-stop(50%, FFFFFF), color-stop(45%, AB0B33), color-stop(35%, AB0B33));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);
+  background: -webkit-linear-gradient(145deg, #09254a 35%, #09254a 45%, #fff 0, #fff 50%, #330033 45%, #330033 35%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);
+  background: -o-linear-gradient(145deg, #09254a 35%, #09254a 45%, #fff 0, #fff 50%, #330033 45%, #330033 35%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);
+  background: -ms-linear-gradient(145deg, #09254a 35%, #09254a 45%, #fff 0, #fff 50%, #330033 45%, #330033 35%);
   /* IE10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$gray-1000', endColorstr='$gray-00', GradientType='1');
   /* for IE */
-  background: linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);
+  background: linear-gradient(145deg, #09254a 35%, #09254a 45%, #fff 0, #fff 50%, #330033 45%, #330033 35%);
   /* W3C */
 }
 

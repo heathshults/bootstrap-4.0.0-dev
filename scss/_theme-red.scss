@@ -273,6 +273,8 @@
             background-clip: border-box;
             color: $white; //@include border-radius($card-border-radius);
         }
+       
+        
         .card-red-mspacing-top {
             margin-top: 28px;
         }
@@ -353,6 +355,10 @@
             
         }
     }
+    .card-theme-red thead th {
+        background: #5c090c !important;
+        text-align: center;
+    }
     .user-avatar-red {
         background-color: $user-avatar-bg-color;
         width: $user-avatar-width;
@@ -402,7 +408,7 @@
             background-repeat: no-repeat;
             background-position: 10px center;
             background-size: 24px 24px;
-            padding: 15px 15px 15px 40px;
+            padding: 15px 15px 15px 46px;
             letter-spacing: rem(1.5px);
             margin-bottom: 0;
         }
@@ -475,6 +481,25 @@
         }
         
     }
+    .prev,
+    .next,
+    .datepicker-switch,
+    .dow {
+        background-color: $red-100 !important;
+        border-radius: 0 !important;
+    }
+    .datepicker-days, .datepicker-days[style] {
+        display: inline-block;
+    }
+    .datepicker-months, .datepicker-months[style] {
+        display: inline-block;
+    }
+    .datepicker-years, .datepicker-years[style] {
+        display: inline-block;
+    }
+
+
+
     .font-75 {
         font-size: 75%;
     }
@@ -520,6 +545,23 @@
     }
     .icon-fill-white {
         fill: $white;
+    }
+    .ui-datepicker .ui-datepicker-calendar .theadcalendar,
+	.ui-datepicker .ui-datepicker-calendar .thcalendar  {
+        background: $blue;
+        border-top: solid 0px $blue;
+        border-bottom: solid 0px $blue;
+        &:hover {
+            background-color: $blue-400;
+            border-top: solid 0px $blue-400;
+            border-bottom: solid 0px $blue-400;
+            cursor: pointer;
+        }
+        .ui-datepicker-month select option,
+        .ui-datepicker-year select option {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
 }

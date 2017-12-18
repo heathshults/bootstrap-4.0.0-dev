@@ -55,6 +55,7 @@
 
 
 $white:    #fff !default;
+$gray-00:  #f5f5f5 !default;
 $gray-05:  #ededed !default;
 $gray-10:  #d8d8d8 !default;
 $gray-20:  #ddd  !default;
@@ -69,6 +70,7 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-850: #333    !default;
 $gray-900: #212529 !default;
+$gray-950: #151515 !default;
 $black:    #000    !default;
 
 // clear shaders
@@ -98,9 +100,11 @@ $grays: (
 $blue:                  #09254a !default;
 $indigo:                #6610f2 !default;
 $purple:                #6f42c1 !default;
+$purple-dark:           #330033 !default;
 $pink:                  #e83e8c !default;
-$light-pink:            #ed687c !default;
 $xtra-light-pink:       #ffd7de !default;
+$light-pink:            #ed687c !default;
+$pink-dark:             #AB0B33 !default;
 $red:                   #9e0a0f !default;
 $red-000:               #4c0408 !default;
 $red-5:                 #eb3232 !default;
@@ -108,8 +112,9 @@ $red-10:                #c90c12 !default;
 $red-20:                #9e0a0f !default;
 $red-100:               #5c090c !default;
 $orange:                #fd7e14 !default;
-$yellow:                #ffc107 !default;
 $light-yellow:          #fafad2 !default;
+$yellow:                #ffc107 !default;
+$yellow-md:             #eec111 !default;
 $green:                 #28a745 !default;
 $green-00:              #1d7530 !default;
 $green-05:              #26963c !default;
