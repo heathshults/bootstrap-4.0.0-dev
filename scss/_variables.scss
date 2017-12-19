@@ -320,15 +320,17 @@ $font-family-sans-serif:  'Roboto', Roboto, sans-serif !default;
 $font-family-base:        $font-family-sans-serif !default;
 $font-family-monospace:   'RobotoMono-Regular', Roboto-Mono, monospace !default;
 
-$font-size-sm:    .875rem !default;
-$font-size-xsm:   rem(12px) !default;
+$font-size-xsm:   .75 !default;  // 12px
+$font-size-sm:    .875rem !default; // 14px
 $font-size-base:  1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg:    1.25rem !default;
+$font-size-md:  1.25rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:    1.50rem !default;
 $font-size-xlg:   2rem !default;
 
-$font-size-base-vw: .87vw !default; // Assumes the browser default, typically `16px`
-$font-size-lg-vw:   1.12vw !default;
 $font-size-sm-vw:   .862vw !default;
+$font-size-base-vw: .87vw !default; // Assumes the browser default, typically `16px`
+$font-size-md-vw:   1.12vw !default;
+$font-size-lg-vw:   1.25vw !default;
 
 
 $font-weight-normal: normal !default;
@@ -427,16 +429,17 @@ $input-btn-padding-y-lg:       .5rem !default;
 $input-btn-padding-x-lg:       1rem !default;
 $input-btn-line-height-lg:     1.5 !default;
 
-$btn-primary-02-font-size:      rem(12px) !default;
+$btn-primary-02-font-sm:      rem(12px) !default;
+$btn-primary-02-font-base:      1rem !default;
 $btn-primary-02-fa-size:        rem(16px) !default;
-$btn-primary-02-color:          $white !default;
+$btn-primary-02-color:          rgba(255, 255, 255, 1) !default;
 $btn-primary-02-padding:        rem(10px) rem(40px) !default;
-$btn-primary-02-sm-padding:     rem(10px) rem(20px) !default;
+$btn-primary-02-padding-sm:     rem(10px) rem(20px) !default;
 $btn-primary-02-bg-grad:        linear-gradient(180deg, $blue 65%, $blue-350, 90%, $blue--01)!default;
 $btn-primary-02-border:         solid rem(3px) $blue-000 !default;
 $btn-primary-02-border-radius:  rem(4px) !default;
 $btn-primary-02-border-hover:   rem(3px) solid $cyan !default;
-$btn-primary-02-trans-bgcolor:  background-color 1s ease-in !default;
+$btn-primary-02-trans-bgcolor:  background 1s ease-in !default;
 
 $btn-red-font-size:      rem(12px) !default;
 $btn-red-fa-size:        rem(16px) !default;
@@ -447,7 +450,7 @@ $btn-red-bg-grad:        linear-gradient(180deg, $red-20 65%, $red-10, 90%, $red
 $btn-red-border:         solid rem(3px) $red !default;
 $btn-red-border-radius:  rem(4px) !default;
 $btn-red-border-hover:   rem(3px) solid $light-pink !default;
-$btn-red-trans-bgcolor:  background-color 1s ease-in !default;
+$btn-red-trans-bgcolor:  background 1s ease-in !default;
 
 $btn-clearWhite-font-size:                  rem(14px) !default;
 $btn-clearWhite-font-sm:                    rem(12px) !default;
@@ -478,7 +481,7 @@ $btn-green-bg-grad:        linear-gradient(180deg, $green-00 65%, $green-05, 90%
 $btn-green-border:         solid rem(3px) $green-00 !default;
 $btn-green-border-radius:  rem(4px) !default;
 $btn-green-border-hover:   rem(3px) solid $green !default;
-$btn-green-trans-bgcolor:  background-color 1s ease-in !default;
+$btn-green-trans-bgcolor:  background 1s ease-in !default;
 
 $btn-font-weight:                $font-weight-normal !default;
 $btn-box-shadow:                 inset 0 rem(1px) 0 rgba($white,.15), 0 rem(1px) rem(1px) rgba($black,.075) !default;
