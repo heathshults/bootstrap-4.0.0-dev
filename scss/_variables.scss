@@ -106,6 +106,7 @@ $xtra-light-pink:       #ffd7de !default;
 $light-pink:            #ed687c !default;
 $pink-dark:             #AB0B33 !default;
 $red:                   #9e0a0f !default;
+$red-001:               #2c0104 !default;
 $red-000:               #4c0408 !default;
 $red-5:                 #eb3232 !default;
 $red-10:                #c90c12 !default;
@@ -155,7 +156,6 @@ $colors: (
   lightgoldenrodyellow: $light-yellow,
   green: $green,
   teal: $teal,
-  cyan: $cyan,
   white: $white,
   gray: $gray-600,
   gray-dark: $gray-800,
@@ -320,7 +320,7 @@ $font-family-sans-serif:  'Roboto', Roboto, sans-serif !default;
 $font-family-base:        $font-family-sans-serif !default;
 $font-family-monospace:   'RobotoMono-Regular', Roboto-Mono, monospace !default;
 
-$font-size-xsm:   .75 !default;  // 12px
+$font-size-xsm:   .75rem !default;  // 12px
 $font-size-sm:    .875rem !default; // 14px
 $font-size-base:  1rem !default; // Assumes the browser default, typically `16px`
 $font-size-md:  1.25rem !default; // Assumes the browser default, typically `16px`
@@ -334,7 +334,7 @@ $font-size-lg-vw:   1.25vw !default;
 
 
 $font-weight-normal: normal !default;
-$font-weight-bold: bold !default;
+$font-weight-bold: 700 !default;
 
 $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.5 !default;
@@ -434,12 +434,24 @@ $btn-primary-02-font-base:      1rem !default;
 $btn-primary-02-fa-size:        rem(16px) !default;
 $btn-primary-02-color:          rgba(255, 255, 255, 1) !default;
 $btn-primary-02-padding:        rem(10px) rem(40px) !default;
-$btn-primary-02-padding-sm:     rem(10px) rem(20px) !default;
+$btn-primary-02-padding-sm:     rem(10px) !default;
 $btn-primary-02-bg-grad:        linear-gradient(180deg, $blue 65%, $blue-350, 90%, $blue--01)!default;
 $btn-primary-02-border:         solid rem(3px) $blue-000 !default;
 $btn-primary-02-border-radius:  rem(4px) !default;
-$btn-primary-02-border-hover:   rem(3px) solid $cyan !default;
-$btn-primary-02-trans-bgcolor:  background 1s ease-in !default;
+$btn-primary-02-border-hover:   rem(3px) solid $blue-375 !default;
+$btn-primary-02-trans-bgcolor:  all .15s ease-in !default;
+
+$btn-primary-03-font-sm:      rem(12px) !default;
+$btn-primary-03-font-base:      1rem !default;
+$btn-primary-03-fa-size:        rem(16px) !default;
+$btn-primary-02-color:          rgba(255, 255, 255, 1) !default;
+$btn-primary-03-padding:        rem(10px) rem(40px) !default;
+$btn-primary-03-padding-sm:     rem(10px) !default;
+$btn-primary-03-bg-grad:        linear-gradient(180deg, $blue 65%, $blue-350, 90%, $blue--01)!default;
+$btn-primary-03-border:         solid rem(3px) $blue-000 !default;
+$btn-primary-03-border-radius:  rem(4px) !default;
+$btn-primary-03-border-hover:   rem(3px) solid $blue-375 !default;
+$btn-primary-03-trans-bgcolor:  all .15s ease-in !default;
 
 $btn-red-font-size:      rem(12px) !default;
 $btn-red-fa-size:        rem(16px) !default;
@@ -450,7 +462,7 @@ $btn-red-bg-grad:        linear-gradient(180deg, $red-20 65%, $red-10, 90%, $red
 $btn-red-border:         solid rem(3px) $red !default;
 $btn-red-border-radius:  rem(4px) !default;
 $btn-red-border-hover:   rem(3px) solid $light-pink !default;
-$btn-red-trans-bgcolor:  background 1s ease-in !default;
+$btn-red-trans-bgcolor:  all .15s ease-in !default;
 
 $btn-clearWhite-font-size:                  rem(14px) !default;
 $btn-clearWhite-font-sm:                    rem(12px) !default;
@@ -481,7 +493,7 @@ $btn-green-bg-grad:        linear-gradient(180deg, $green-00 65%, $green-05, 90%
 $btn-green-border:         solid rem(3px) $green-00 !default;
 $btn-green-border-radius:  rem(4px) !default;
 $btn-green-border-hover:   rem(3px) solid $green !default;
-$btn-green-trans-bgcolor:  background 1s ease-in !default;
+$btn-green-trans-bgcolor:  background .3s ease-in !default;
 
 $btn-font-weight:                $font-weight-normal !default;
 $btn-box-shadow:                 inset 0 rem(1px) 0 rgba($white,.15), 0 rem(1px) rem(1px) rgba($black,.075) !default;
@@ -553,7 +565,7 @@ $form-check-inline-margin-x:   .75rem !default;
 
 $form-group-margin-bottom:     1rem !default;
 
-$form-label-font-color:        #ccc !default;
+$form-label-font-color:        $gray-600 !default;
 
 $input-group-addon-bg:           $gray-200 !default;
 $input-group-addon-border-color: $input-border-color !default;

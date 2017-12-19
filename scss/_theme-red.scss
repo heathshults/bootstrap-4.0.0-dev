@@ -3,8 +3,7 @@
 // containers
 .full-screen-bg-profiles-red {
     display: flex;
-    background-image: url('images/bg/usa-fb-bg.jpg');
-    background: #4B0508;
+    background: #4B0508 url('images/bg/usa-fb-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
@@ -332,14 +331,21 @@
             }
         }
         .card-red-link-inverted {
+            display: block;
             color: lightgoldenrodyellow;
+            background: $clear-black;
+            padding: 6px 10px;
             &:hover {
-                color: $blue-450;
+                color: $white;
                 text-decoration: none;
             }
             +.card-red-link-inverted {
                 margin-left: $card-spacer-x;
             }
+        }
+        div.collapse.indent {
+            padding-left: 20px;
+            transition: $transition-base;
         }
         .card-red {
             >.list-group:first-child {
@@ -402,6 +408,7 @@
         .title-3 {
             display: inline-flex;
             color: rgba(255, 255, 255, 0.75);
+            font-weight: 600;
             background: rgba(76, 4, 8, 0.75);
             background-image: $helmet-1-right;
             fill: $clear-white-md;
@@ -431,14 +438,33 @@
             align-items: center;
         }
     }
-    .btn-primary-02 {
+    .formField {
+        padding: $btn-primary-02-padding-sm;
+        font-size: $font-size-xsm;
+        vertical-align: middle;
+        color: $white;
+        width: 100%;
+        margin: 1px;
+        display: flex;
+        border: solid 1px $red-100;
+        background: $red-001;
+        transition: all 0.2s ease, border 0.2s ease;
+        -webkit-transition: all 0.2s ease, border 0.2s ease;
+        &:disabled {
+            background: transparent;
+            border: 1px solid transparent;
+        }
+    }
+    .btn-primary-03 {
         display: inline-flex;
         align-items: unset !important;
         color: $btn-primary-02-color;
-        font-size: $btn-primary-02-font-base;
+        font-size: $btn-primary-02-font-sm;
         text-transform: uppercase;
         background-image: $btn-primary-02-bg-grad;
-        padding: $btn-primary-02-padding;
+        background-color: $blue;
+        padding: $btn-primary-02-padding-sm;
+        margin: 1px;
         border: $btn-primary-02-border;
         border-radius: $btn-primary-02-border-radius;
         &:hover,
@@ -447,7 +473,7 @@
             color: $btn-primary-02-color;
             background: $blue-400;
             border: $btn-primary-02-border-hover !important;
-            transition: $btn-primary-02-trans-bgcolor;
+            //transition: $btn-primary-02-trans-bgcolor;
             cursor: pointer;
         }
         .fa {
@@ -455,7 +481,7 @@
         }
     }
 
-    .btn-primary-02-sm {
+    .btn-primary-03-sm {
         display: inline-flex;
         align-items: unset !important;
         color: $btn-primary-02-color;
@@ -465,7 +491,6 @@
         padding: $btn-primary-02-padding-sm;
         border: $btn-primary-02-border;
         border-radius: $btn-primary-02-border-radius;
-        width: 140px;
         &:hover,
         &:active,
         &:focus {
@@ -482,7 +507,7 @@
     
     .icon-chevron-down {
         color: $btn-primary-02-color;
-        &::after {
+        &:after {
             content: "\f078";
             display: inline-block;
             font-family: normal normal normal 14px/1 'FontAwesome';
@@ -525,8 +550,9 @@
         
         .theme-red-badge {
             display: block;
-            color: $blue-450;
-            background: $clear-black-md; // border-radius: 500px;
+            color: lightgoldenrodyellow;
+            letter-spacing: 5px;
+            background: $clear-black-dark; // border-radius: 500px;
             margin: 8px;
         }
         .stat-title {
@@ -537,6 +563,7 @@
             //     background: $clear-black; 
             // }
             .badge-grade {
+                visibility: hidden;
                 position: absolute;
                 display: inline-flex;
                 flex-flow: column;
@@ -583,7 +610,9 @@
         display: inline-block;
     }
 
-
+    .fa-edit{
+        display: none;
+    }
 
     .font-75 {
         font-size: 75%;
@@ -596,10 +625,11 @@
     }
 
     .theme-red-badge {
-        color: $blue-450;
-        padding: 10px 20px;
+        color: lightgoldenrodyellow;
+        letter-spacing: rem(2px);
+        text-align: center;
+        padding: 10px;
         background: $clear-black; // border-radius: 500px;
-        margin: 8px;
     }
 
     .red-theme-title-2-container {
