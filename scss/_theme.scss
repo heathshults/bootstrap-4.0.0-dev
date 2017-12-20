@@ -64,6 +64,11 @@ body {
 	flex-flow: row wrap;
 }
 
+.flexi-inline-col-container {
+	display: inline-flex;
+	flex-flow: column wrap;
+}
+
 .flexi-item {
 	-webkit-flex: 1 auto;
 	flex: 1 auto;
@@ -93,20 +98,252 @@ form {
     max-width: 100%;
 }
 
-// Change autocomplete styles in WebKit  
-// input:-webkit-autofill,
-// input:-webkit-autofill:hover,
-// input:-webkit-autofill:focus input:-webkit-autofill,
-// textarea:-webkit-autofill,
-// textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
-// select:-webkit-autofill,
-// select:-webkit-autofill:hover,
-// select:-webkit-autofill:focus {
-//   border: none;
-//   -webkit-text-fill-color: none;
-//   -webkit-box-shadow: none;
-//   transition: none;
-// }
+/* -------------------- Select Box Styles: bavotasan.com Method (with special adaptations by ericrasch.com) */
+/* -------------------- Source: http://bavotasan.com/2011/style-select-box-using-only-css/ */
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+}
+
+.styled-select.slate {
+   background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+   height: 34px;
+   width: 240px;
+}
+
+.styled-select.slate select {
+   border: 1px solid #ccc;
+   font-size: 16px;
+   height: 34px;
+   width: 268px;
+}
+
+.ui-datepicker-month,
+.ui-datepicker-year {
+    margin: 2px;
+}
+
+/* -------------------- Rounded Corners */
+.rounded {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+}
+
+.semi-square {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
+
+/* -------------------- Colors: Background */
+.slate   { background: $gray-10; }
+.green   { background: $green-05; }
+.blue    { background: $cyan; }
+.yellow  { background: $yellow-md; }
+.black   { background: $black; }
+
+/* -------------------- Colors: Text */
+.slate select   { color: $black; }
+.green select   { color: $white; }
+.blue select    { color: $white; }
+.yellow select  { color: $black; }
+.black select   { color: $white; }
+
+
+/* -------------------- Select Box Styles: danielneumann.com Method */
+/* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+#mainselection select {
+   border: 0;
+   color: $gray-200;
+   background: transparent;
+   font-size: 20px;
+   font-weight: 700;
+   padding: 2px 10px;
+   width: 378px;
+   *width: 350px;
+   *background: $green-10;
+   -webkit-appearance: none;
+}
+
+#mainselection {
+   overflow:hidden;
+   width:350px;
+   -moz-border-radius: 9px 9px 9px 9px;
+   -webkit-border-radius: 9px 9px 9px 9px;
+   border-radius: 9px 9px 9px 9px;
+   box-shadow: 1px 1px 11px $gray-850;
+   background:  url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+}
+
+.styled-select {
+    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+    height: 29px;
+    overflow: hidden;
+    width: 240px;
+ }
+
+ .styled-select select {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+    width: 268px;
+ }
+
+ .styled-select.slate {
+    background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+    height: 34px;
+    width: 240px;
+ }
+
+ .styled-select.slate select {
+    border: 1px solid $gray-10;
+    font-size: 16px;
+    height: 34px;
+    width: 268px;
+ }
+
+ /* -------------------- Rounded Corners */
+ .rounded {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+ }
+
+ .semi-square {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+ }
+
+ /* -------------------- Colors: Background */
+ .slate   { background: $gray-10; }
+ .green   { background: $green-05; }
+ .blue    { background: $cyan; }
+ .yellow  { background: $yellow; }
+ .black   { background: $black; }
+
+ /* -------------------- Colors: Text */
+ .slate select   { color: $black; }
+ .green select   { color: $white; }
+ .blue select    { color: $white; }
+ .yellow select  { color: $black; }
+ .black select   { color: $white; }
+
+
+ /* -------------------- Select Box Styles: danielneumann.com Method */
+ /* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+ #mainselection select {
+    border: 0;
+    color: $gray-05;
+    background: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px 10px;
+    width: 378px;
+    *width: 350px;
+    *background: $green-10;
+    -webkit-appearance: none;
+ }
+
+ #mainselection {
+    overflow: hidden;
+    width: 350px;
+    -moz-border-radius: 9px 9px 9px 9px;
+    -webkit-border-radius: 9px 9px 9px 9px;
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 1px 1px 11px $purple-dark;
+    background: $green-10 url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+ }
+
+
+ /* -------------------- Select Box Styles: stackoverflow.com Method */
+ /* -------------------- */
+ .select#soflow, select#soflow-color {
+    -webkit-appearance: button;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    user-select: none;
+    -webkit-user-select: none;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient($gray-10, $gray-100 40%, $gray-200);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    border: 1px solid $gray-600;
+    color: $gray-700;
+    font-size: inherit;
+    margin: 20px;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+ }
+
+ select#soflow-color {
+    color: $white;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
+    background: $green-10;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding-left: 15px;
+ }
+
+
+/* -------------------- Select Box Styles: stackoverflow.com Method */
+/* -------------------- Source: http://stackoverflow.com/a/5809186 */
+select#soflow, 
+select#soflow-color {
+    border-radius: 2px;
+    -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   user-select: none;
+   -webkit-user-select: none;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid $gray-100;
+   color: $gray-700;
+   font-size: inherit;
+   margin: 20px;
+   overflow: hidden;
+   padding: 5px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 300px;
+}
+
+select#soflow-color {
+   color: $white;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
+   background: $green-10;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   padding-left: 15px;
+}
+
 strong {
     font-weight: 700;
 }
@@ -188,7 +425,7 @@ small {
             position: absolute;
             line-height: 2em;
             font-weight: bold;
-            color: #fff;
+            color: $white;
             text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
         }
         &:after {
@@ -241,7 +478,7 @@ small {
 }
 
 .pace .pace-progress {
-    background: #2299dd;
+    background: $blue-400;
     position: fixed;
     z-index: 2000;
     top: 0;
@@ -284,7 +521,7 @@ a {
 
 .alert-success {
     color: $gray-900;
-    background-color: #8fd19e;
+    background: #8fd19e;
     border: 2px solid #74c184;
 }
 
@@ -308,7 +545,7 @@ button:hover {
 .btn-skewed {
     outline: 0;
     display: inline-block;
-    background-color: $blue;
+    background: $blue;
     color: $white; //width: 7rem;
     height: 1.8rem;
     padding-left: 20px;
@@ -318,7 +555,7 @@ button:hover {
     top: 0;
     transform: skew(-10deg);
     &:hover {
-        background-color: $blue-375;
+        background: $blue-375;
         color: $white;
         text-decoration: none;
     }
@@ -359,11 +596,28 @@ button:hover {
     }
 }
 
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+    width: 40%;
+    padding-left: 10px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+input[type="text"].btn.btn-primary-02 {
+    color: $btn-primary-02-color !important;
+}
+input[type="text"].btn.btn-primary-02::placeholder,
+input[type="text"].btn.btn-primary-02::-moz-placeholder,
+input[type="text"].btn.btn-primary-02::-webkit-input-placeholder {
+    color: $white;
+    opacity: 1;
+}
 .btn-primary-02 {
     display: inline-flex;
-    align-items:unset !important;
+    align-items: unset !important;
     color: $btn-primary-02-color;
-    font-size: $btn-primary-02-font-size;
+    font-size: $btn-primary-02-font-sm;
     text-transform: uppercase;
     background-image: $btn-primary-02-bg-grad;
     padding: $btn-primary-02-padding;
@@ -373,28 +627,31 @@ button:hover {
     &:active,
     &:focus {
         color: $btn-primary-02-color;
-        background-color: $blue-400;
+        background: $blue-400;
         border: $btn-primary-02-border-hover !important;
         transition: $btn-primary-02-trans-bgcolor;
+        cursor: pointer;
     }
     .fa {
         font-size: $btn-primary-02-fa-size;
     }
 }
 
-.btn-primary-02.-sm {
-    padding: $btn-primary-02-sm-padding;
+.btn-primary-02-sm {
+    padding: $btn-primary-02-padding-sm;
     margin: 1px;
     width: 140px;
     white-space: nowrap;
 }
 
+
 .icon-chevron-down {
+    color: $btn-primary-02-color;
     &::after {
         content: "\f078";
         display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
+        font-family: normal normal normal 14px/1 'FontAwesome';
+        font-size: $font-family-base;
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -405,24 +662,31 @@ button:hover {
 }
 
 .icon-calendar {
-    &:after {
+    color: $btn-primary-02-color;
+    &::after {
         content: "\f073";
         display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
+        position: absolute;
+        right: 30px;
+        top: 15px;
+        z-index: 3000;
+        font-family: normal normal normal 14px/1 'FontAwesome';
+        font-size: $font-family-base;
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         box-sizing: border-box;
         text-align: right;
         margin-left: 8px;
+        opacity: 1;
     }
 }
 
 .btn-danger,
 .btn-primary,
 .btn-primary-02 {
-    font-size: $btn-primary-02-font-size;
+    color: $btn-primary-02-color !important;
+    font-size: $btn-primary-02-font-sm;
     padding: $btn-primary-02-padding;
 }
 
@@ -443,7 +707,7 @@ button:hover {
     &:active,
     &:focus {
         color: $btn-red-color;
-        background-color: $red;
+        background: $red;
         border: $btn-red-border-hover !important;
         transition: $btn-red-trans-bgcolor;
     }
@@ -465,14 +729,14 @@ button:hover {
     z-index: 1;
     &:hover {
         color: $btn-clearWhite-color-hover;
-        background-color: $btn-clearWhite-bg-hover;
+        background: $btn-clearWhite-bg-hover;
         border: $btn-clearWhite-border-hover;
     } 
     &:focus,
     &:visited,
     &:active {
         color: $btn-clearWhite-color-hover;
-        background-color: $btn-clearWhite-bg-hover;
+        background: $btn-clearWhite-bg-hover;
         border: $btn-clearWhite-border-hover;
     }
     .fa {
@@ -486,7 +750,7 @@ button:hover {
     position: relative;
     margin: 18px 0;
     padding: 18px 20px;
-    background-color: #eef4f9;
+    background: #eef4f9;
     border-radius: 6px;
 }
 .callout .notch {
@@ -519,14 +783,14 @@ button:hover {
 
 //         &:hover {
 //             color: $btn-clearWhite-color-hover;
-//             background-color: $btn-clearWhite-bg-hover;
+//             background: $btn-clearWhite-bg-hover;
 //             border: $btn-clearWhite-border-hover;
 //         } 
 //         &:focus,
 //         &:visited,
 //         &:active {
 //             color: $btn-clearWhite-color-hover;
-//             background-color: $btn-clearWhite-bg-hover;
+//             background: $btn-clearWhite-bg-hover;
 //             border: $btn-clearWhite-border-hover;
 //         }
 //         .fa {
@@ -542,7 +806,7 @@ button:hover {
 //         left: 2px !important;
 //         top: 49px;
 //         z-index: $alt-dropdown-menu-z-index;
-//         background-color: $alt-dropdown-menu-bg-color;
+//         background: $alt-dropdown-menu-bg-color;
 //         border: $alt-dropdown-menu-border;
 //         border-radius: $alt-dropdown-menu-border-radius;
 //         width: 1380px;
@@ -582,7 +846,7 @@ button:hover {
 //         }
 //         .btn-default {
 //             color: $gray-850;
-//             background-color: $gray-600;
+//             background: $gray-600;
 //             border-color: $gray-600;
 //         }
 //         
@@ -629,7 +893,7 @@ button:hover {
     &:active,
     &:focus {
         color: $btn-green-color;
-        background-color: $green;
+        background: $green;
         border: $btn-green-border-hover !important;
         transition: $btn-green-trans-bgcolor;
     }
@@ -648,13 +912,13 @@ button:hover {
 
 .btn-default {
     color: #333;
-    background-color: $gray-400;
+    background: $gray-400;
     border: 1px solid $gray-500;
 }
 
 .actionBtn {
     text-align: center;
-    background-color: $blue;
+    background: $blue;
     min-width: rem(80px);
     min-height: rem(40px);
     border: 1px solid $cyan;
@@ -663,10 +927,10 @@ button:hover {
     &:hover,
     &:active,
     &:focus {
-        background-color: $blue-400;
+        background: $blue-400;
         border: 1px solid $cyan !important;
         cursor: pointer;
-        transition: background-color .3s ease-in;
+        transition: background .3s ease-in;
     }
     .action-button-icon {
         margin: 0 4px;
@@ -692,7 +956,7 @@ button:hover {
     line-height: 1.42857143;
     color: $gray-850;
     text-decoration: none;
-    background-color: $white;
+    background: $white;
     border: 1px solid $gray-20;
 }
 
@@ -709,14 +973,14 @@ button:hover {
     z-index: 2;
     color: $white;
     cursor: default;
-    background-color: $blue-350;
+    background: $blue-350;
     border-color: $blue-300;
 }
 
 .full-screen-bg-landing-page {
     //@include make-container();
     background-image: url('images/bg/usa-fb-bg.jpg');
-    background-color: $blue-450-50;
+    background: $blue-450-50;
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
@@ -730,7 +994,7 @@ button:hover {
 .full-screen-container {
     //@include make-container();
     background-image: url('images/bg/USAF_introscreen-HeroBoy2.png');
-    background-color: $blue-000;
+    background: $blue-000;
     background-size: 100%;
     background-repeat: no-repeat;
     bottom: 0;
@@ -818,7 +1082,7 @@ button:hover {
 }
 
 .header-content-divider {
-    background-color: $blue;
+    background: $blue;
     color: $white;
     height: 20px;
     width: 100%;
@@ -881,7 +1145,7 @@ button:hover {
 
 .editMode .formField {
     border: 1px solid $cyan;
-    background-color: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.35);
     transition: background 0.4s ease, border 0.4s ease;
     -webkit-transition: background 0.4s ease, border 0.4s ease;
 }
@@ -893,7 +1157,7 @@ option {
     // To gain control over the appearance on and Trident (IE)
     // Note that it also works on Gecko and has partial effects on WebKit 
     background: none;
-    background-color: transparent;
+    background: transparent;
 }
 
 .profile-data {
@@ -948,7 +1212,7 @@ option {
     &:disabled {
         background: none;
         background-image: $custom-select-indicator-2 !important;
-        background-color: transparent;
+        background: transparent;
         color: $white;
         border: 1px solid transparent;
     }
@@ -971,7 +1235,7 @@ option {
 }
 
 .user-avatar {
-    background-color: $user-avatar-bg-color;
+    background: $user-avatar-bg-color;
     width: $user-avatar-width;
     max-width: 100%;
     margin: $user-avatar-margin;
@@ -980,7 +1244,7 @@ option {
 }
 
 .user-avatar-md {
-    background-color: $user-avatar-md-bg-color;
+    background: $user-avatar-md-bg-color;
     width: $user-avatar-md-width;
     max-width: 100%;
     margin: $user-avatar-md-margin;
@@ -989,7 +1253,7 @@ option {
 }
 
 .user-avatar-lg {
-    background-color: $user-avatar-lg-bg-color;
+    background: $user-avatar-lg-bg-color;
     width: $user-avatar-lg-width;
     width: $user-avatar-lg-height;
     max-width: 100%;
@@ -1071,7 +1335,7 @@ option {
 // }
 
 // .table-striped tbody tr:nth-of-type(2n+1) {
-//     background-color: $blue-450-14;
+//     background: $blue-450-14;
 // }
 
 //user profile
@@ -1149,10 +1413,10 @@ option {
 }
 
 .userData .form-control {
-    background-color: transparent;
+    background: transparent;
     &:focus {
         color: $white;
-        background-color: transparent; //border-color: #175ebc;
+        background: transparent; //border-color: #175ebc;
         outline: none;
     }
 }
@@ -1163,17 +1427,20 @@ form.dropzone {
 
 //bootstrap table
 thead {
+    
     font-size: $font-size-sm;
     text-transform: uppercase;
     color: $white;
-    font-weight: $font-weight-normal !important; //border-bottom: $border-width-lg $border-type-solid $blue !important;
+    font-weight: $font-weight-normal !important; 
     th {
-        background: $blue !important;
         text-align: center;
+        background: $blue;
+        border-top: solid 0px $blue;
+        border-bottom: solid 0px $blue;
         &:hover {
-            background-color: $blue-350 !important;
-            border-top: solid 10px $blue-350;
-            border-bottom: solid 10px $blue-350;
+            background: $blue-400;
+            border-top: solid 0px $blue-400;
+            border-bottom: solid 0px $blue-400;
             cursor: pointer;
         }
     }
@@ -1190,21 +1457,24 @@ thead.cpl {
             width: 100%;
             padding: 0 20px;
             padding: 0 rem(20px) 0 rem(10px);
-            margin: 0; // margin: 10px 0;
-            // margin: rem(10px) 0;
+            margin: 0; 
+            font-size: 200%;
+            
         }
     }
 }
 
 .table thead th {
+    background: $blue;
     vertical-align: middle;
     border-bottom: 0;
     padding: 0;
-    border-top: 7px solid $blue;
-    border-bottom: 7px solid $blue;
+    border-top: 10px solid $blue;
+    border-bottom: 10px solid $blue;
     &:hover {
-        border-top: 7px solid $blue-350;
-        border-bottom: 7px solid $blue-350;
+        border-top: 10px solid $blue-350;
+        border-bottom: 10px solid $blue-350;
+        background: $blue-350 !important;
     }
     &:not(:last-child) {
         border-right: $border-width-sm $border-type-solid $green;
@@ -1293,7 +1563,7 @@ thead.cpl {
 .mc-container {
     position: relative;
     background-image: url(images/bg/usa-fb-bg.jpg);
-    background-color: $blue-450-50;
+    background: $blue-450-50;
     background-blend-mode: multiply;
     object-fit: contain;
     display: flex;
@@ -1323,7 +1593,7 @@ thead.cpl {
 .profile-container {
     margin: 0 auto;
     background: rgba(73, 144, 226, 0.25);
-    border-radius: 2px; // background-color: #000;
+    border-radius: 2px; // background: $black;
     //border: solid 1px rgba(73, 144, 226, 0.25);
     .titlebar {
         background: $red;
@@ -1360,7 +1630,7 @@ thead.cpl {
         flex-direction: column;
         min-width: 0;
         word-wrap: break-word;
-        background-color: rgba(9, 37, 74, 0.5);
+        background: rgba(9, 37, 74, 0.5);
         background-clip: border-box;
         border: $card-border-width solid $blue-300;
         color: $white; //@include border-radius($card-border-radius);
@@ -1368,7 +1638,7 @@ thead.cpl {
     .card-header {
         padding: $card-spacer-y $card-spacer-x;
         margin-bottom: 0; // Removes the default margin-bottom of <hN>
-        background-color: $blue-000;
+        background: $blue-000;
         border-bottom: $card-border-width solid $card-border-color;
         &:first-child {
             //@include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
@@ -1439,6 +1709,12 @@ thead.cpl {
     top: rem(-6px)
 }
 
+.offset-top--4 {
+    position: relative;
+    top: -4px;
+    top: rem(-4px)
+}
+
 .offset-top-8 {
     position: relative;
     top: 18px;
@@ -1470,7 +1746,7 @@ thead.cpl {
     text-transform: uppercase;
     .close {
         color: $white;
-        text-shadow: 0 1px 0 #000;
+        text-shadow: 0 1px 0 $black;
     }
 }
 
@@ -1619,7 +1895,7 @@ body {
 }
 
 .svg-color-black {
-    background-color: $black;
+    background: $black;
 }
 
 // moved into bootstrap-table.css
@@ -1710,7 +1986,7 @@ body {
 
 // .filter input[type="text"] {
 //     color: $white;
-//     background-color: steelblue;
+//     background: steelblue;
 //     border: solid 1px $blue-450;
 // }
 // moved into bootstrap-table.css
@@ -1738,13 +2014,13 @@ span.loading-icon svg rect {
     right: 20px;
 }
 .gradient-trick {
-    background: -moz-linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);/* FF3.6+ */
+    background: -moz-linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);/* FF3.6+ */
     background: -webkit-gradient(linear, 145deg, color-stop(35%, 09254A), color-stop(45%, 09254A), color-stop(0, FFFFFF), color-stop(50%, FFFFFF), color-stop(45%, AB0B33), color-stop(35%, AB0B33));/* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);/* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);/* Opera 11.10+ */
-    background: -ms-linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);/* IE10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
-    background: linear-gradient(145deg, #09254A 35%, #09254A 45%, #FFFFFF 0, #FFFFFF 50%, #AB0B33 45%, #AB0B33 35%);/* W3C */
+    background: -webkit-linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);/* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);/* Opera 11.10+ */
+    background: -ms-linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);/* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$gray-1000', endColorstr='$gray-00', GradientType='1'); /* for IE */
+    background: linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);/* W3C */
 }
 
 // contextual font colors
@@ -1753,11 +2029,28 @@ span.loading-icon svg rect {
 }
 
 .bg-clear-white {
-    background-color: $clear-white;
+    background: $clear-white;
 }
 
 .bg-clear-black {
-    background-color: $clear-black;
+    background: $clear-black;
+}
+
+.badge-01 {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-size: $font-size-sm;
+    font-weight: 400;
+    color: $light-yellow;
+    line-height: rem(48px);
+    // padding: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 2px;
+    width: 100%;
+    height: 100%;
+    // border-radius: $user-avatar-border-radius;
 }
 
 // ----------------- nothing below the following class --------------//

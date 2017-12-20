@@ -3,8 +3,7 @@
 // containers
 .full-screen-bg-profiles-red {
     display: flex;
-    background-image: url('images/bg/usa-fb-bg.jpg');
-    background-color: #4B0508;
+    background: #4B0508 url('images/bg/usa-fb-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
@@ -21,7 +20,7 @@
     min-height: 100px;
     width: 100%;
     background: $darkred-gradient-reverse;
-    background-color: $red-000;
+    background: $red-000;
 }
 
 .flexi-container-red {
@@ -42,7 +41,7 @@
         position: absolute;
         top: 0px;
         left: 0px;
-        background-color: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.5);
         filter: blur(3px);
     }
 }
@@ -50,8 +49,8 @@
 // top navigation
 .red-theme {
     .top-nav {
-        height: 110px; //background-color: rgba(0, 0, 0, 0.5);
-        // background-color: rgba(33,0,4, 0.9);
+        height: 110px; //background: rgba(0, 0, 0, 0.5);
+        // background: rgba(33,0,4, 0.9);
         background: linear-gradient(180deg, rgba(33, 0, 4, 1) 12%, rgba(33, 0, 4, 1) 33%, rgba(0, 0, 0, 0) 100%); // filter: blur(13px);
         position: fixed;
     }
@@ -260,20 +259,21 @@
         color: $white;
         padding: $card-spacer-red-top $card-spacer-red-x $card-spacer-red-bottom $card-spacer-red-x;
         margin-bottom: 0; // Removes the default margin-bottom of <hN>
-        background-color: $blue;
+        background: $blue;
     }
     .card-theme-red {
         font-family: $font-family-base;
         font-weight: 300;
         .card-red {
-            position: relative;
+            //position: relative;
             display: flex;
             flex-direction: column;
-            min-width: 0;
             word-wrap: break-word;
             background-clip: border-box;
             color: $white; //@include border-radius($card-border-radius);
         }
+       
+        
         .card-red-mspacing-top {
             margin-top: 28px;
         }
@@ -294,7 +294,7 @@
             color: $white;
             padding: $card-spacer-red-top $card-spacer-red-x $card-spacer-red-bottom $card-spacer-red-x;
             margin-bottom: 0; // Removes the default margin-bottom of <hN>
-            background-color: $blue; // border-bottom: $card-border-width solid $card-red-border-color;
+            background: $blue; // border-bottom: $card-border-width solid $card-red-border-color;
             &:first-child {
                 //@include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
             }
@@ -303,9 +303,12 @@
             // Enable `flex-grow: 1` for decks and groups so that card blocks take up
             // as much space as possible, ensuring footers are aligned to the bottom.
             flex: 1 1 auto;
-            background-color: rgba(0, 0, 0, 0.25); //rgba(76, 4, 8, 0.5);
+            background: rgba(0, 0, 0, 0.25); //rgba(76, 4, 8, 0.5);
             padding: $card-spacer-x;
             margin-top: 10px; // border: $card-border-width solid $red-000;
+        }
+        strong {
+            color: lightgoldenrodyellow;
         }
         .card-red-title {
             margin-bottom: $card-spacer-y;
@@ -327,6 +330,23 @@
                 margin-left: $card-spacer-x;
             }
         }
+        .card-red-link-inverted {
+            display: block;
+            color: lightgoldenrodyellow;
+            background: $clear-black;
+            padding: 6px 10px;
+            &:hover {
+                color: $white;
+                text-decoration: none;
+            }
+            +.card-red-link-inverted {
+                margin-left: $card-spacer-x;
+            }
+        }
+        div.collapse.indent {
+            padding-left: 20px;
+            transition: $transition-base;
+        }
         .card-red {
             >.list-group:first-child {
                 .list-group-item:first-child {
@@ -338,10 +358,15 @@
                     @include border-bottom-radius($card-border-radius);
                 }
             }
+            
         }
     }
+    .card-theme-red thead th {
+        background: #5c090c !important;
+        text-align: center;
+    }
     .user-avatar-red {
-        background-color: $user-avatar-bg-color;
+        background: $user-avatar-bg-color;
         width: $user-avatar-width;
         max-width: 100%;
         margin: $user-avatar-margin;
@@ -349,7 +374,7 @@
         border-radius: $user-avatar-border-radius;
     }
     .user-avatar-red-md {
-        background-color: $user-avatar-red-md-bg-color;
+        background: $user-avatar-red-md-bg-color;
         width: $user-avatar-md-width;
         max-width: 100%;
         margin: $user-avatar-md-margin;
@@ -357,7 +382,7 @@
         border-radius: $user-avatar-md-border-radius;
     }
     .user-avatar-red-lg {
-        background-color: $user-avatar-lg-bg-color;
+        background: $user-avatar-lg-bg-color;
         width: $user-avatar-lg-width;
         width: $user-avatar-lg-height;
         max-width: 100%;
@@ -379,51 +404,177 @@
         }
     }
     .stats-container {
-        padding: 10px 20px 20px 20px; // background-color: $clear-white;
+        padding: 10px 20px 20px 20px; // background: $clear-white;
         .title-3 {
             display: inline-flex;
             color: rgba(255, 255, 255, 0.75);
-            background-color: rgba(76, 4, 8, 0.75);
-            padding: 10px 15px;
+            font-weight: 600;
+            background: rgba(76, 4, 8, 0.75);
+            background-image: $helmet-1-right;
+            fill: $clear-white-md;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            background-size: 24px 24px;
+            padding: 15px 15px 15px 46px;
             letter-spacing: rem(1.5px);
             margin-bottom: 0;
         }
     }
-    .stats-wrapper {
+    .stats-wrapper .row{
+        visibility: visible;
+    }
+    .divider-br {
+        border-right: $border-width-sm $border-type-solid $clear-white-md;
+    }
+    .whiteTools-wrapper .col-3 {
         background: $clear-black;
-        padding: 8px;
+        height: 50px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            background: $clear-black-md;
+        }
+        .current-stats {
+            
+            align-items: center;
+        }
+    }
+    .formField {
+        padding: $btn-primary-02-padding-sm;
+        font-size: $font-size-xsm;
+        vertical-align: middle;
+        color: $white;
+        width: 100%;
+        margin: 1px;
+        display: flex;
+        border: solid 1px $red-100;
+        background: $red-001;
+        transition: all 0.2s ease, border 0.2s ease;
+        -webkit-transition: all 0.2s ease, border 0.2s ease;
+        &:disabled {
+            background: transparent;
+            border: 1px solid transparent;
+        }
+    }
+    .btn-primary-03 {
+        display: inline-flex;
+        align-items: unset !important;
+        color: $btn-primary-02-color;
+        font-size: $btn-primary-02-font-sm;
+        text-transform: uppercase;
+        background-image: $btn-primary-02-bg-grad;
+        background-color: $blue;
+        padding: $btn-primary-02-padding-sm;
+        margin: 1px;
+        border: $btn-primary-02-border;
+        border-radius: $btn-primary-02-border-radius;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $btn-primary-02-color;
+            background: $blue-400;
+            border: $btn-primary-02-border-hover !important;
+            //transition: $btn-primary-02-trans-bgcolor;
+            cursor: pointer;
+        }
+        .fa {
+            font-size: $btn-primary-02-fa-size;
+        }
+    }
+
+    .btn-primary-03-sm {
+        display: inline-flex;
+        align-items: unset !important;
+        color: $btn-primary-02-color;
+        font-size: $btn-primary-02-font-base;
+        text-transform: uppercase;
+        background-image: $btn-primary-02-bg-grad;
+        padding: $btn-primary-02-padding-sm;
+        border: $btn-primary-02-border;
+        border-radius: $btn-primary-02-border-radius;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $btn-primary-02-color;
+            background: $blue-400;
+            border: $btn-primary-02-border-hover !important;
+            transition: $btn-primary-02-trans-bgcolor;
+            cursor: pointer;
+        }
+        .fa {
+            font-size: $btn-primary-02-fa-size;
+        }
+    }    
+    
+    .icon-chevron-down {
+        color: $btn-primary-02-color;
+        &:after {
+            content: "\f078";
+            display: inline-block;
+            font-family: normal normal normal 14px/1 FontAwesome;
+            font-size: $font-family-base;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            box-sizing: border-box;
+            text-align: right;
+            margin-left: 8px;
+        }
+    }
+    
+    .icon-calendar {
+        color: $btn-primary-02-color;
+        &::after {
+            content: "\f073";
+            display: inline-block;
+            position: absolute;
+            right: 30px;
+            top: 15px;
+            z-index: 3000;
+            font-family: normal normal normal 14px/1 FontAwesome;
+            font-size: $font-family-base;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            box-sizing: border-box;
+            text-align: right;
+            margin-left: 8px;
+            opacity: 1;
+        }
     }
     .current-stats {
         white-space: nowrap;
         padding-top: 0 !important;
         padding-left: 2px;
         padding-right: 2px;
-        &:hover {
-            background-color: $clear-black;
-        }
+        // 
+        
         .theme-red-badge {
             display: block;
-            color: $blue-450;
-            background: $clear-black; // border-radius: 500px;
+            color: lightgoldenrodyellow;
+            letter-spacing: 5px;
+            background: $clear-black-dark; // border-radius: 500px;
             margin: 8px;
         }
         .stat-title {
-            background-image: url("./images/icons/football/american-football-player.png") middle;
-            text-transform: uppercase; // &:hover {
-            //     background-color: $clear-black; 
+            text-transform: uppercase; 
+            padding: 0 !important;
+            margin-top: 15px;
+            // &:hover {
+            //     background: $clear-black; 
             // }
             .badge-grade {
+                visibility: hidden;
                 position: absolute;
                 display: inline-flex;
                 flex-flow: column;
                 align-items: center;
-                top: -40px;
+                top: -20px;
                 left: -6px;
                 font-size: 80%;
                 font-weight: 400;
                 color: $light-yellow;
                 line-height: 1;
-                background-color: $green-000-40;
+                background: $green-000-40;
                 padding: 8px;
                 white-space: nowrap;
                 width: rem(35px);
@@ -432,15 +583,37 @@
                 margin: $user-avatar-margin;
                 border-radius: $user-avatar-border-radius;
                 transform: rotate(340deg);
-                &::before {
-                    padding-top: percentage(1 / 1);
-                }
+                // &::before {
+                //     padding-top: percentage(1 / 1);
+                // }
             }
+            // &:not(:last-child) {
+            // border-right: $border-width-sm $border-type-solid $clear-white-md;
+            // }
         }
-        &:not(:last-child) {
-            border-right: $border-width-sm $border-type-solid $clear-white-md;
-        }
+        
     }
+    .prev,
+    .next,
+    .datepicker-switch,
+    .dow {
+        background: $red-100 !important;
+        border-radius: 0 !important;
+    }
+    .datepicker-days, .datepicker-days[style] {
+        display: inline-block;
+    }
+    .datepicker-months, .datepicker-months[style] {
+        display: inline-block;
+    }
+    .datepicker-years, .datepicker-years[style] {
+        display: inline-block;
+    }
+
+    .fa-edit{
+        display: none;
+    }
+
     .font-75 {
         font-size: 75%;
     }
@@ -452,10 +625,11 @@
     }
 
     .theme-red-badge {
-        color: $blue-450;
-        padding: 10px 20px;
+        color: lightgoldenrodyellow;
+        letter-spacing: rem(2px);
+        text-align: center;
+        padding: 10px;
         background: $clear-black; // border-radius: 500px;
-        margin: 8px;
     }
 
     .red-theme-title-2-container {
@@ -481,13 +655,10 @@
             border: 3px solid $blue-450;
         }
     }
-    .icon-helmet-1-bgnew {
-        enable-background: new 0 0 32 32;
-    }
     .icon-helmet-1-fill {
         fill: $white;
     }
-    .icon-player-receiver-1 {
+    .icon-fill-white {
         fill: $white;
     }
 
