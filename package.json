@@ -103,6 +103,7 @@
     "sass-graph": "^2.2.4",
     "semver": "^5.4.1",
     "standard": "^10.0.3",
+    "stylefmt": "^6.0.0",
     "stylelint-config-recommended": "^2.0.0"
   },
   "peerDependencies": {
