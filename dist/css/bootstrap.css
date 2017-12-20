@@ -8443,6 +8443,11 @@ body {
   flex-flow: row wrap;
 }
 
+.flexi-inline-col-container {
+  display: inline-flex;
+  flex-flow: column wrap;
+}
+
 .flexi-item {
   -webkit-flex: 1 auto;
   flex: 1 auto;
@@ -10231,6 +10236,21 @@ span.loading-icon svg rect {
 
 .bg-clear-black {
   background: rgba(0, 0, 0, 0.25);
+}
+
+.badge-01 {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #fafad2;
+  line-height: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 2px;
+  width: 100%;
+  height: 100%;
 }
 
 body.scaff .row > [class^=col-],
