@@ -408,7 +408,7 @@
             margin: 8px;
         }
         .stat-title {
-            background-image: url('./images/icons/football/american-football-player.png') middle;
+            background-image: url("./images/icons/football/american-football-player.png") middle;
             text-transform: uppercase; // &:hover {
             //     background-color: $clear-black; 
             // }
@@ -448,7 +448,7 @@
         font-size: 50%;
     }
     .stat-title-position {
-        background-image: url('./images/icons/football/american-football-player.png') middle;
+        background-image: url("./images/icons/football/american-football-player.png") middle;
     }
 
     .theme-red-badge {
@@ -472,13 +472,13 @@
         text-transform: uppercase;
         position: relative;
         &::after {
-            content: "";
-            flex: 1 1 90%;
-            border: 3px solid $blue-450;
-            margin-left: 10px;
-            width: 100%;
             position: absolute;
             top: 42%;
+            flex: 1 1 90%;
+            width: 100%;
+            margin-left: 10px;
+            content: "";
+            border: 3px solid $blue-450;
         }
     }
     .icon-helmet-1-bgnew {
