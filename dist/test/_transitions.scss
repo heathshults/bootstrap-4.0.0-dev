@@ -1,0 +1,39 @@
+.fade {
+  @include transition($transition-fade);
+  opacity: 0;
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+.collapse {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+
+tr {
+  &.collapse.show {
+    display: table-row;
+  }
+}
+
+tbody {
+  &.collapse.show {
+    display: table-row-group;
+  }
+}
+
+.collapsing {
+  @include transition($transition-collapse);
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+
+
+
