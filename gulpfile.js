@@ -9,6 +9,8 @@ const postcss = require('gulp-postcss')
 const sourcemaps = require('gulp-sourcemaps')
 const autoprefixer = require('autoprefixer')
 const pkg = require('./package.json')
+const stylefmt = require('gulp-stylefmt')
+
 
 // Set the banner content
 const banner = ['/*!\n',
@@ -87,20 +89,20 @@ gulp.task('minify-js', () => {
 // Copy vendor libraries from /node_modules into /vendor
 gulp.task('copy', () => {
   gulp.src(['./dist/css/*.css', './dist/css/*.map'])
-        .pipe(gulp.dest('../http/css'))
+        .pipe(gulp.dest('../npdb-usafb-templates/css'))
 
   gulp.src(['./dist/js/*.js'])
-        .pipe(gulp.dest('../http/js'))
+        .pipe(gulp.dest('../npdb-usafb-templates/js'))
 
-  // gulp.src(['./dist/css/*.css', './dist/css/*.map'
-    // 'node_modules/font-awesome/css/**',
-    // '!node_modules/font-awesome/**/*.map',
-    // '!node_modules/font-awesome/.npmignore'
-    // '!node_modules/font-awesome/*.txt',
-    // '!node_modules/font-awesome/*.md',
-    // '!node_modules/font-awesome/*.json'
-    // ])
-    // .pipe(gulp.dest('../http/css'))
+  gulp.src(['./dist/css/*.css', './dist/css/*.map',
+    'node_modules/font-awesome/css/**',
+    '!node_modules/font-awesome/**/*.map',
+    '!node_modules/font-awesome/.npmignore',
+    '!node_modules/font-awesome/*.txt',
+    '!node_modules/font-awesome/*.md',
+    '!node_modules/font-awesome/*.json'
+    ])
+    .pipe(gulp.dest('../npdb-usafb-templates/css/vendor/font-awesome'))
 })
 
 // autoprefix vendor browsers where necessary
@@ -110,8 +112,14 @@ gulp.task('autoprefixme', function () {
       .pipe(postcss([ autoprefixer() ]))
       .pipe(sourcemaps.write('.'))
       .pipe(rename({prefix: 'usafb-'}))
-      .pipe(gulp.dest('../USAFB/http/css/'))
+      .pipe(gulp.dest('../USAFB/npdb-usafb-templates/css/'))
 })
+
+gulp.task('stylefmt', function () {
+  return gulp.src('scss/*.scss') 
+    .pipe(stylefmt())
+    .pipe(gulp.dest('dist/test'));
+});
 
 // Run everything
 gulp.task('default', ['sass', 'autoprefixme', 'minify-css', 'minify-js'])
