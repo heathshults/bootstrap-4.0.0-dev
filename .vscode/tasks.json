@@ -11,8 +11,22 @@
       ]
     },
     {
+      "type": "npm",
+      "script": "css-package-up",
+      "problemMatcher": [
+        "$eslint-stylish"
+      ]
+    },
+    {
       "type": "gulp",
       "task": "autoprefixme",
+      "problemMatcher": [
+        "$eslint-stylish"
+      ]
+    },
+    {
+      "type": "gulp",
+      "task": "stylefmt",
       "problemMatcher": [
         "$eslint-stylish"
       ]
@@ -70,7 +84,11 @@
     },
     {
       "type": "npm",
+<<<<<<< HEAD
       "script": "watch-css",
+=======
+      "script": "css-compile-v2",
+>>>>>>> ee1456f5aa89300c026aa81cd85d01d207386db9
       "problemMatcher": []
     }
   ]
