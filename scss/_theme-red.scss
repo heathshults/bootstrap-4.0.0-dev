@@ -268,7 +268,7 @@
             //position: relative;
             display: flex;
             flex-direction: column;
-            word-wrap: break-word;
+            // word-wrap: break-word;
             background-clip: border-box;
             color: $white; //@include border-radius($card-border-radius);
         }
@@ -343,9 +343,14 @@
                 margin-left: $card-spacer-x;
             }
         }
-        div.collapse.indent {
+        div.collapse.indent .collapse {
             padding-left: 20px;
             transition: $transition-base;
+        }
+        div.collapse.indent.show {
+            padding-left: 20px;
+            transition: $transition-base;
+            visibility: visible;
         }
         .card-red {
             >.list-group:first-child {
@@ -434,10 +439,10 @@
             background: $clear-black-md;
         }
         .current-stats {
-            
             align-items: center;
         }
     }
+    
     .formField {
         padding: $btn-primary-02-padding-sm;
         font-size: $font-size-xsm;
@@ -614,12 +619,7 @@
         display: none;
     }
 
-    .font-75 {
-        font-size: 75%;
-    }
-    .font-50 {
-        font-size: 50%;
-    }
+    
     .stat-title-position {
         background-image: url("./images/icons/football/american-football-player.png") middle;
     }

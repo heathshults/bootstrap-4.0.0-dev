@@ -58,7 +58,7 @@ $white:    #fff !default;
 $gray-00:  #f5f5f5 !default;
 $gray-05:  #ededed !default;
 $gray-10:  #d8d8d8 !default;
-$gray-20:  #ddd  !default;
+$gray-20:  #dddddd  !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -66,12 +66,13 @@ $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #868e96 !default;
 $gray-650: #767d84 !default;
-$gray-700: #495057 !default;
+$gray-710: #495057 !default;
+$gray-700: #44484b !default;
 $gray-800: #343a40 !default;
-$gray-850: #333    !default;
+$gray-850: #333333    !default;
 $gray-900: #212529 !default;
 $gray-950: #151515 !default;
-$black:    #000    !default;
+$black:    #000000    !default;
 
 // clear shaders
 $clear-white:           rgba(255, 255, 255, 0.03) !default;
@@ -114,7 +115,7 @@ $red-20:                #9e0a0f !default;
 $red-100:               #5c090c !default;
 $orange:                #fd7e14 !default;
 $light-yellow:          #fafad2 !default;
-$yellow:                #ffc107 !default;
+$yellow:                #fdba04 !default;
 $yellow-md:             #eec111 !default;
 $green:                 #28a745 !default;
 $green-00:              #1d7530 !default;
@@ -313,10 +314,10 @@ $transition-collapse:    height .35s ease !default;
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
-$font-url--sans-serif:        './css/web-fonts/liberation-mono/roboto.woff2' !default;
-$font-url--monospace:         './css/web-fonts/liberation-mono/LiberationMono-Regular.ttf' !default;
+$font-url--sans-serif:        './css/web-fonts/roboto/roboto-regular.woff2' !default;
+$font-url--monospace:         './css/web-fonts/LiberationMono-Regular.ttf' !default;
 
-$font-family-sans-serif:  'Roboto', Roboto, sans-serif !default;
+$font-family-sans-serif:  'Roboto' !default;
 $font-family-base:        $font-family-sans-serif !default;
 $font-family-monospace:   'RobotoMono-Regular', Roboto-Mono, monospace !default;
 
@@ -333,7 +334,7 @@ $font-size-md-vw:   1.12vw !default;
 $font-size-lg-vw:   1.25vw !default;
 
 
-$font-weight-normal: normal !default;
+$font-weight-normal: 300 !default;
 $font-weight-bold: 700 !default;
 
 $font-weight-base: $font-weight-normal !default;

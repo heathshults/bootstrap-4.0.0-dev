@@ -1,4 +1,4 @@
-body  {
+body {
     opacity: 0;
     font-size: $font-size-base;
     font-weight: $font-weight-base;
@@ -46,32 +46,32 @@ body {
     }
 }
 
- .container-flexi-fluid {
-	display: flex;
+.container-flexi-fluid {
+    display: flex;
     flex-flow: row wrap;
     padding: 0;
- }
+}
 
- .container-flexi {
-	display: flex;
+.container-flexi {
+    display: flex;
     flex-flow: row wrap;
     max-width: 1280px;
     padding: 20px 0 0 0;
- }
+}
 
- .flexi-container {
-	display: flex;
-	flex-flow: row wrap;
+.flexi-container {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .flexi-inline-col-container {
-	display: inline-flex;
-	flex-flow: column wrap;
+    display: inline-flex;
+    flex-flow: column wrap;
 }
 
 .flexi-item {
-	-webkit-flex: 1 auto;
-	flex: 1 auto;
+    -webkit-flex: 1 auto;
+    flex: 1 auto;
 }
 
 .axis-column {
@@ -98,35 +98,40 @@ form {
     max-width: 100%;
 }
 
+
 /* -------------------- Select Box Styles: bavotasan.com Method (with special adaptations by ericrasch.com) */
+
+
 /* -------------------- Source: http://bavotasan.com/2011/style-select-box-using-only-css/ */
+
 .styled-select {
-   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
-   height: 29px;
-   overflow: hidden;
-   width: 240px;
+    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+    height: 29px;
+    overflow: hidden;
+    width: 240px;
 }
 
 .styled-select select {
-   background: transparent;
-   border: none;
-   font-size: 14px;
-   height: 29px;
-   padding: 5px; /* If you add too much padding here, the options won't show in IE */
-   width: 268px;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px;
+    /* If you add too much padding here, the options won't show in IE */
+    width: 268px;
 }
 
 .styled-select.slate {
-   background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
-   height: 34px;
-   width: 240px;
+    background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+    height: 34px;
+    width: 240px;
 }
 
 .styled-select.slate select {
-   border: 1px solid #ccc;
-   font-size: 16px;
-   height: 34px;
-   width: 268px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    height: 34px;
+    width: 268px;
 }
 
 .ui-datepicker-month,
@@ -134,57 +139,94 @@ form {
     margin: 2px;
 }
 
+
 /* -------------------- Rounded Corners */
+
 .rounded {
-   -webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
 }
 
 .semi-square {
-   -webkit-border-radius: 5px;
-   -moz-border-radius: 5px;
-   border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
+
 /* -------------------- Colors: Background */
-.slate   { background: $gray-10; }
-.green   { background: $green-05; }
-.blue    { background: $cyan; }
-.yellow  { background: $yellow-md; }
-.black   { background: $black; }
+
+.slate {
+    background: $gray-10;
+}
+
+.green {
+    background: $green-05;
+}
+
+.blue {
+    background: $cyan;
+}
+
+.yellow {
+    background: $yellow-md;
+}
+
+.black {
+    background: $black;
+}
+
 
 /* -------------------- Colors: Text */
-.slate select   { color: $black; }
-.green select   { color: $white; }
-.blue select    { color: $white; }
-.yellow select  { color: $black; }
-.black select   { color: $white; }
+
+.slate select {
+    color: $black;
+}
+
+.green select {
+    color: $white;
+}
+
+.blue select {
+    color: $white;
+}
+
+.yellow select {
+    color: $black;
+}
+
+.black select {
+    color: $white;
+}
 
 
 /* -------------------- Select Box Styles: danielneumann.com Method */
+
+
 /* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+
 #mainselection select {
-   border: 0;
-   color: $gray-200;
-   background: transparent;
-   font-size: 20px;
-   font-weight: 700;
-   padding: 2px 10px;
-   width: 378px;
-   *width: 350px;
-   *background: $green-10;
-   -webkit-appearance: none;
+    border: 0;
+    color: $gray-200;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 2px 10px;
+    width: 378px;
+    *width: 350px;
+    *background: $green-10;
+    -webkit-appearance: none;
 }
 
 #mainselection {
-   overflow:hidden;
-   width:350px;
-   -moz-border-radius: 9px 9px 9px 9px;
-   -webkit-border-radius: 9px 9px 9px 9px;
-   border-radius: 9px 9px 9px 9px;
-   box-shadow: 1px 1px 11px $gray-850;
-   background:  url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
+    overflow: hidden;
+    width: 350px;
+    -moz-border-radius: 9px 9px 9px 9px;
+    -webkit-border-radius: 9px 9px 9px 9px;
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 1px 1px 11px $gray-850;
+    background: url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
 }
 
 .styled-select {
@@ -192,61 +234,99 @@ form {
     height: 29px;
     overflow: hidden;
     width: 240px;
- }
+}
 
- .styled-select select {
+.styled-select select {
     background: transparent;
     border: none;
     font-size: 14px;
     height: 29px;
-    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+    padding: 5px;
+    /* If you add too much padding here, the options won't show in IE */
     width: 268px;
- }
+}
 
- .styled-select.slate {
+.styled-select.slate {
     background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
     height: 34px;
     width: 240px;
- }
+}
 
- .styled-select.slate select {
+.styled-select.slate select {
     border: 1px solid $gray-10;
     font-size: 16px;
     height: 34px;
     width: 268px;
- }
+}
 
- /* -------------------- Rounded Corners */
- .rounded {
+
+/* -------------------- Rounded Corners */
+
+.rounded {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
- }
+}
 
- .semi-square {
+.semi-square {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
- }
-
- /* -------------------- Colors: Background */
- .slate   { background: $gray-10; }
- .green   { background: $green-05; }
- .blue    { background: $cyan; }
- .yellow  { background: $yellow; }
- .black   { background: $black; }
-
- /* -------------------- Colors: Text */
- .slate select   { color: $black; }
- .green select   { color: $white; }
- .blue select    { color: $white; }
- .yellow select  { color: $black; }
- .black select   { color: $white; }
+}
 
 
- /* -------------------- Select Box Styles: danielneumann.com Method */
- /* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
- #mainselection select {
+/* -------------------- Colors: Background */
+
+.slate {
+    background: $gray-10;
+}
+
+.green {
+    background: $green-05;
+}
+
+.blue {
+    background: $cyan;
+}
+
+.yellow {
+    background: $yellow;
+}
+
+.black {
+    background: $black;
+}
+
+
+/* -------------------- Colors: Text */
+
+.slate select {
+    color: $black;
+}
+
+.green select {
+    color: $white;
+}
+
+.blue select {
+    color: $white;
+}
+
+.yellow select {
+    color: $black;
+}
+
+.black select {
+    color: $white;
+}
+
+
+/* -------------------- Select Box Styles: danielneumann.com Method */
+
+
+/* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+
+#mainselection select {
     border: 0;
     color: $gray-05;
     background: transparent;
@@ -257,9 +337,9 @@ form {
     *width: 350px;
     *background: $green-10;
     -webkit-appearance: none;
- }
+}
 
- #mainselection {
+#mainselection {
     overflow: hidden;
     width: 350px;
     -moz-border-radius: 9px 9px 9px 9px;
@@ -267,12 +347,13 @@ form {
     border-radius: 9px 9px 9px 9px;
     box-shadow: 1px 1px 11px $purple-dark;
     background: $green-10 url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
- }
+}
 
 
- /* -------------------- Select Box Styles: stackoverflow.com Method */
- /* -------------------- */
- .select#soflow, select#soflow-color {
+/* -------------------- Dropdown Select Input Box Styles:  */
+
+.select#soflow-green,
+select#soflow-color-green {
     -webkit-appearance: button;
     border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -282,7 +363,7 @@ form {
     -webkit-padding-start: 2px;
     user-select: none;
     -webkit-user-select: none;
-    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient($gray-10, $gray-100 40%, $gray-200);
+    background-image: -webkit-linear-gradient($gray-10, $gray-100 40%, $gray-200);
     background-position: 97% center;
     background-repeat: no-repeat;
     border: 1px solid $gray-600;
@@ -294,59 +375,108 @@ form {
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 300px;
- }
+    &:after {
+        content: "\f078";
+        display: inline-block;
+        font-family: normal normal normal 14px/1 FontAwesome;
+        font-size: $font-family-base;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        box-sizing: border-box;
+        text-align: right;
+        margin-left: 8px;
+    }
+}
 
- select#soflow-color {
+select#soflow-color-green {
     color: $white;
-    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
+    background-image: -webkit-linear-gradient(#779126, #779126 40%, #779126);
     background: $green-10;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
     padding-left: 15px;
- }
-
-
-/* -------------------- Select Box Styles: stackoverflow.com Method */
-/* -------------------- Source: http://stackoverflow.com/a/5809186 */
-select#soflow, 
-select#soflow-color {
-    border-radius: 2px;
-    -webkit-appearance: button;
-   -webkit-border-radius: 2px;
-   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-   -webkit-padding-end: 20px;
-   -webkit-padding-start: 2px;
-   user-select: none;
-   -webkit-user-select: none;
-   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
-   background-position: 97% center;
-   background-repeat: no-repeat;
-   border: 1px solid $gray-100;
-   color: $gray-700;
-   font-size: inherit;
-   margin: 20px;
-   overflow: hidden;
-   padding: 5px 10px;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-   width: 300px;
+    &:after {
+        content: "\f078";
+        display: inline-block;
+        font-family: normal normal normal 14px/1 FontAwesome;
+        font-size: $font-family-base;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        box-sizing: border-box;
+        text-align: right;
+        margin-left: 8px;
+    }
 }
 
-select#soflow-color {
-   color: $white;
-   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
-   background: $green-10;
-   -webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   padding-left: 15px;
+
+/* -------------------- Dropdown Select Input Box Styles:  */
+
+select#soflow-white,
+select#soflow-color-white {
+    border-radius: 2px;
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    user-select: none;
+    -webkit-user-select: none;
+    background-image: -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    border: 1px solid $gray-100;
+    color: $gray-700;
+    font-size: inherit;
+    margin: 20px;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+    &:after {
+        content: "\f078";
+        display: inline-block;
+        font-family: normal normal normal 14px/1 FontAwesome;
+        font-size: $font-family-base;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        box-sizing: border-box;
+        text-align: right;
+        margin-left: 8px;
+    }
+}
+
+select#soflow-color-white {
+    color: $white;
+    background-image: -webkit-linear-gradient(#779126, #779126 40%, #779126);
+    background: $green-10;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding-left: 15px;
+    after {
+        content: "\f078";
+        display: inline-block;
+        font-family: normal normal normal 14px/1 FontAwesome;
+        font-size: $font-family-base;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        box-sizing: border-box;
+        text-align: right;
+        margin-left: 8px;
+    }
 }
 
 strong {
     font-weight: 700;
 }
+
 small {
     font-weight: 300;
 }
@@ -488,30 +618,29 @@ small {
 }
 
 // aspect ratios
-
 .are-21by9 {
     &::before {
-      padding-top: percentage(9 / 21);
+        padding-top: percentage(9 / 21);
     }
-  }
-  
-  .ar-16by9 {
+}
+
+.ar-16by9 {
     &::before {
-      padding-top: percentage(9 / 16);
+        padding-top: percentage(9 / 16);
     }
-  }
-  
-  .ar-4by3 {
+}
+
+.ar-4by3 {
     &::before {
-      padding-top: percentage(3 / 4);
+        padding-top: percentage(3 / 4);
     }
-  }
-  
-  .ar-1by1 {
+}
+
+.ar-1by1 {
     &::before {
-      padding-top: percentage(1 / 1);
+        padding-top: percentage(1 / 1);
     }
-  }
+}
 
 // a links
 a {
@@ -528,8 +657,7 @@ a {
 // buttons ---------------------------
 .btn {
     text-transform: uppercase;
-    &:focus {
-    }
+    &:focus {}
 }
 
 button:hover {
@@ -574,8 +702,7 @@ button:hover {
     vertical-align: middle;
     user-select: none;
     border: $input-btn-border-width solid transparent;
-    margin: rem(3px);
-    // @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
+    margin: rem(3px); // @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
     @include transition($btn-transition); // Share hover and focus styles
     @include hover-focus {
         text-decoration: none;
@@ -592,7 +719,8 @@ button:hover {
     &:active,
     &.active {
         background-image: none;
-        @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+        @include box-shadow($btn-focus-box-shadow,
+        $btn-active-box-shadow);
     }
 }
 
@@ -604,22 +732,13 @@ button:hover {
     margin-left: 2px;
 }
 
-input[type="text"].btn.btn-primary-02 {
-    color: $btn-primary-02-color !important;
-}
-input[type="text"].btn.btn-primary-02::placeholder,
-input[type="text"].btn.btn-primary-02::-moz-placeholder,
-input[type="text"].btn.btn-primary-02::-webkit-input-placeholder {
-    color: $white;
-    opacity: 1;
-}
 .btn-primary-02 {
     display: inline-flex;
     align-items: unset !important;
     color: $btn-primary-02-color;
     font-size: $btn-primary-02-font-sm;
     text-transform: uppercase;
-    background-image: $btn-primary-02-bg-grad;
+    background: $blue $btn-primary-02-bg-grad;
     padding: $btn-primary-02-padding;
     border: $btn-primary-02-border;
     border-radius: $btn-primary-02-border-radius;
@@ -643,7 +762,6 @@ input[type="text"].btn.btn-primary-02::-webkit-input-placeholder {
     width: 140px;
     white-space: nowrap;
 }
-
 
 .icon-chevron-down {
     color: $btn-primary-02-color;
@@ -695,21 +813,25 @@ input[type="text"].btn.btn-primary-02::-webkit-input-placeholder {
 }
 
 .btn-red {
+    display: inline-flex;
+    align-items: unset !important;
     color: $btn-red-color;
     font-size: $btn-red-font-size;
     text-transform: uppercase;
+    background: $red-100 $btn-red-bg-grad;
     vertical-align: $btn-red-fa-valign;
-    background-image: $btn-red-bg-grad;
     padding: $btn-red-padding;
     border: $btn-red-border;
     border-radius: $btn-red-border-radius;
-    &:hover,
-    &:active,
-    &:focus {
-        color: $btn-red-color;
-        background: $red;
+    &:hover {
+        background: $red-100;
         border: $btn-red-border-hover !important;
         transition: $btn-red-trans-bgcolor;
+    }
+    &:active,
+    &:focus {
+        background: $red-10;
+        border: $btn-red-border-hover !important;
     }
     .fa {
         font-size: $btn-red-fa-size;
@@ -731,7 +853,7 @@ input[type="text"].btn.btn-primary-02::-webkit-input-placeholder {
         color: $btn-clearWhite-color-hover;
         background: $btn-clearWhite-bg-hover;
         border: $btn-clearWhite-border-hover;
-    } 
+    }
     &:focus,
     &:visited,
     &:active {
@@ -753,6 +875,7 @@ input[type="text"].btn.btn-primary-02::-webkit-input-placeholder {
     background: #eef4f9;
     border-radius: 6px;
 }
+
 .callout .notch {
     position: absolute;
     top: -10px;
@@ -767,7 +890,6 @@ input[type="text"].btn.btn-primary-02::-webkit-input-placeholder {
     height: 0;
 }
 
-
 // .whiteTools-wrapper {
 //    .btn-clearWhite {
 //         background: $btn-clearWhite-bg-grad;
@@ -780,7 +902,6 @@ input[type="text"].btn.btn-primary-02::-webkit-input-placeholder {
 //         margin: 0;
 //         border-radius: 0;
 //         z-index: 1;
-
 //         &:hover {
 //             color: $btn-clearWhite-color-hover;
 //             background: $btn-clearWhite-bg-hover;
@@ -855,7 +976,6 @@ input[type="text"].btn.btn-primary-02::-webkit-input-placeholder {
 //         margin-top: rem(2px);
 //     }
 //     
-    
 //       .show-columns { 
 //         display: inline-flex;
 //         order: 1; 
@@ -879,7 +999,6 @@ input[type="text"].btn.btn-primary-02::-webkit-input-placeholder {
 //       order: 5;
 //     }
 // }
-
 .btn-green {
     color: $btn-green-color;
     font-size: $btn-green-font-size;
@@ -960,8 +1079,19 @@ input[type="text"].btn.btn-primary-02::-webkit-input-placeholder {
     border: 1px solid $gray-20;
 }
 
-.fixed-table-pagination .pagination a {
-    padding: 4px 15px;
+.table-hover {
+    tbody {
+        tr:hover {
+            background: $blue-400;
+            color: $white;
+        }
+    }
+}
+
+.fixed-table-pagination {
+    .pagination a {
+        padding: 4px 15px;
+    }
 }
 
 .pagination>.active>a,
@@ -979,8 +1109,7 @@ input[type="text"].btn.btn-primary-02::-webkit-input-placeholder {
 
 .full-screen-bg-landing-page {
     //@include make-container();
-    background-image: url('images/bg/usa-fb-bg.jpg');
-    background: $blue-450-50;
+    background: $blue-450-50 url('images/bg/usa-fb-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
@@ -1046,9 +1175,8 @@ input[type="text"].btn.btn-primary-02::-webkit-input-placeholder {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
-    vertical-align: middle;
-    // padding-left: 0; //position: relative;
+    flex-flow: row wrap;
+    vertical-align: middle; // padding-left: 0; //position: relative;
     //top: -75px;
     .page-title {
         -webkit-flex: 1 0 100%;
@@ -1179,6 +1307,22 @@ option {
     }
 }
 
+.font-95 {
+    font-size: 95%;
+}
+
+.font-85 {
+    font-size: 85%;
+}
+
+.font-75 {
+    font-size: 75%;
+}
+
+.font-50 {
+    font-size: 50%;
+}
+
 .text-small {
     font-size: $font-size-sm;
 }
@@ -1263,11 +1407,15 @@ option {
     border-radius: $user-avatar-lg-border-radius;
 }
 
-.show .dropdown-toggle, .show .nav-link.dropdown-toggle {
+.show .dropdown-toggle,
+.show .nav-link.dropdown-toggle {
     color: $gray-850 !important;
 }
 
-.btn.dropdown-toggle:focus, .bss-btn.dropdown-toggle:focus, .btn.dropdown-toggle:active, .bss-btn.dropdown-toggle:active {
+.btn.dropdown-toggle:focus,
+.bss-btn.dropdown-toggle:focus,
+.btn.dropdown-toggle:active,
+.bss-btn.dropdown-toggle:active {
     color: $gray-850;
 }
 
@@ -1307,37 +1455,30 @@ option {
 //     margin-left: auto;
 //     overflow-x: scroll;
 // }
-
 // .fixed-table-container thead tr th {
 //     min-width: rem(150px);
 //     white-space: nowrap;
 //     box-sizing: border-box;
 // }
-
 // .fixed-table-container thead th .sortable {
 //     background-position: right -4px center;
 //     background-repeat: no-repeat;
 //     padding-right: 20px;
 //     padding-left: 20px;
 // }
-
 // .fixed-table-container thead th .desc:after .fixed-table-container thead.cpl td {
 //     padding-left: rem(10px);
 // }
-
 // .fht-cell {
 //     white-space: nowrap;
 //     box-sizing: border-box;
 // }
-
 // .fixed-table-header>table {
 //     display: none;
 // }
-
 // .table-striped tbody tr:nth-of-type(2n+1) {
 //     background: $blue-450-14;
 // }
-
 //user profile
 .border-bottom {
     border-bottom: $border-type-solid $border-width-sm $blue-025;
@@ -1427,11 +1568,10 @@ form.dropzone {
 
 //bootstrap table
 thead {
-    
     font-size: $font-size-sm;
     text-transform: uppercase;
     color: $white;
-    font-weight: $font-weight-normal !important; 
+    font-weight: $font-weight-normal !important;
     th {
         text-align: center;
         background: $blue;
@@ -1457,9 +1597,8 @@ thead.cpl {
             width: 100%;
             padding: 0 20px;
             padding: 0 rem(20px) 0 rem(10px);
-            margin: 0; 
+            margin: 0;
             font-size: 200%;
-            
         }
     }
 }
@@ -1823,30 +1962,197 @@ form.dropzone {
 }
 
 // progress bars
-.progress-auto-grow {
-    @include animateWidth(0%,
-    100%);
-    animation: growHorizontal 1.5s linear 1;
-    width: 100%;
-}
-
-.progressbar-inmodal {
-    height: 5px;
-    min-width: 286px;
-    max-width: 100%;
-    margin: rem(10px) auto;
-    .progressbar-bg {
-        height: 5px;
-        min-width: 286px;
-        max-width: 100%;
-        margin: 0;
+.progress {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background: none;
+    margin: 0 auto;
+    box-shadow: none;
+    position: relative;
+    &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 12px solid $white;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    >span {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+    .progress-left {
+        left: 0;
+    }
+    .progress-bar {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border-width: 12px;
+        border-style: solid;
+        position: absolute;
+        top: 0;
+    }
+    .progress-left {
+        .progress-bar {
+            left: 100%;
+            border-top-right-radius: 80px;
+            border-bottom-right-radius: 80px;
+            border-left: 0;
+            -webkit-transform-origin: center left;
+            transform-origin: center left;
+        }
+    }
+    .progress-right {
+        right: 0;
+        .progress-bar {
+            left: -100%;
+            border-top-left-radius: 80px;
+            border-bottom-left-radius: 80px;
+            border-right: 0;
+            -webkit-transform-origin: center right;
+            transform-origin: center right;
+            animation: loading-1 1.8s linear forwards;
+        }
+    }
+    .progress-value {
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        background: $gray-700;
+        font-size: 24px;
+        color: $white;
+        line-height: 135px;
+        text-align: center;
+        position: absolute;
+        top: 5%;
+        left: 5%;
     }
 }
 
-// making sure the base font weight is normal - DELETE BEFORE RELEASE
-body {
-    font-size: $font-size-base;
-    font-weight: $font-weight-base;
+.progress.blue {
+    .progress-bar {
+        border-color: $light-cyan;
+    }
+    .progress-left {
+        .progress-bar {
+            animation: loading-2 1.5s linear forwards 1.8s;
+        }
+    }
+}
+
+.progress.yellow {
+    .progress-bar {
+        border-color: $yellow;
+    }
+    .progress-left {
+        .progress-bar {
+            animation: loading-3 1s linear forwards 1.8s;
+        }
+    }
+}
+
+.progress.pink {
+    .progress-bar {
+        border-color: $light-pink;
+    }
+    .progress-left {
+        .progress-bar {
+            animation: loading-4 0.4s linear forwards 1.8s;
+        }
+    }
+}
+
+.progress.green {
+    .progress-bar {
+        border-color: $teal;
+    }
+    .progress-left {
+        .progress-bar {
+            animation: loading-5 1.2s linear forwards 1.8s;
+        }
+    }
+}
+
+@keyframes loading-1 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes loading-2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(144deg);
+        transform: rotate(144deg);
+    }
+}
+
+@keyframes loading-3 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes loading-4 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(36deg);
+        transform: rotate(36deg);
+    }
+}
+
+@keyframes loading-5 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(126deg);
+        transform: rotate(126deg);
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .progress {
+        margin-bottom: 20px;
+    }
+}
+.mbx,
+.mbx01,
+#mbx,
+#mbx01 {
+    font-size: $font-family-sm;
+    width: 90%;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mbx-icon {
+    font-size: 3rem;
 }
 
 // notify box
@@ -1916,12 +2222,8 @@ body {
 //         position: absolute;
 //         top: 10px;
 //     }
-    
 // }  
 // moved into bootstrap-table.css
-
-
-
 // moved into bootstrap-table.css
 // .btn.dropdown-toggle:focus,
 // .bss-btn.dropdown-toggle:focus,
@@ -1932,22 +2234,18 @@ body {
 //     background: $blue;
 //     color: $white;
 // }
-
 // .btn.btn-secondary.dropdown-toggle {
 //     border-radius: 4px;
 //     border-radius: rem(4px);
 //     padding: 0 4px;
 //     height: 22px;
 // }
-
-
 // ul.dropdown-menu.bss-ddm-overide {
 //     padding: rem(54px) rem(20px) rem(20px) rem(20px);
 //     -webkit-column-count: 6;
 //     -moz-column-count: 6;
 //     column-count: 6;
 // }
-
 // // ul.dropdown-menu.bss-ddm-overide.show {
 // //   //
 // // }
@@ -1957,13 +2255,11 @@ body {
 //     margin-right: 7px;
 //     border: 1px solid $gray-500;
 // }
-
 // .dd-label {
 //     font-size: $font-size-xsm;
 //     margin-left: 20px;
 // }
 // moved into bootstrap-table.css
-
 // moved into bootstrap-table.css
 // .page-list.dropdown {
 //     .dropdown-menu {
@@ -1983,14 +2279,12 @@ body {
 //         }
 //     }
 // }
-
 // .filter input[type="text"] {
 //     color: $white;
 //     background: steelblue;
 //     border: solid 1px $blue-450;
 // }
 // moved into bootstrap-table.css
- 
 span.loading-icon {
     background: $loading-icon-spinner;
     margin: 0 0 2em;
@@ -2013,14 +2307,22 @@ span.loading-icon svg rect {
     position: absolute !important;
     right: 20px;
 }
+
 .gradient-trick {
-    background: -moz-linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);/* FF3.6+ */
-    background: -webkit-gradient(linear, 145deg, color-stop(35%, 09254A), color-stop(45%, 09254A), color-stop(0, FFFFFF), color-stop(50%, FFFFFF), color-stop(45%, AB0B33), color-stop(35%, AB0B33));/* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);/* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);/* Opera 11.10+ */
-    background: -ms-linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);/* IE10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$gray-1000', endColorstr='$gray-00', GradientType='1'); /* for IE */
-    background: linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);/* W3C */
+    background: -moz-linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, 145deg, color-stop(35%, 09254A), color-stop(45%, 09254A), color-stop(0, FFFFFF), color-stop(50%, FFFFFF), color-stop(45%, AB0B33), color-stop(35%, AB0B33));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);
+    /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$gray-1000', endColorstr='$gray-00', GradientType='1');
+    /* for IE */
+    background: linear-gradient(145deg, $blue 35%, $blue 45%, $white 0, $white 50%, $purple-dark 45%, $purple-dark 35%);
+    /* W3C */
 }
 
 // contextual font colors
@@ -2036,6 +2338,11 @@ span.loading-icon svg rect {
     background: $clear-black;
 }
 
+.badge-darkgreen {
+    background: rgba(23, 85, 26, 0.76);
+    background-blend-mode: multiply; // border: 1px solid $green-00;
+}
+
 .badge-01 {
     display: inline-block;
     text-align: center;
@@ -2043,14 +2350,31 @@ span.loading-icon svg rect {
     font-size: $font-size-sm;
     font-weight: 400;
     color: $light-yellow;
-    line-height: rem(48px);
-    // padding: 8px;
+    line-height: 50px; // padding: 8px;
     white-space: nowrap;
     overflow: hidden;
-    margin: 2px;
-    width: 100%;
-    height: 100%;
-    // border-radius: $user-avatar-border-radius;
+    width: 96%;
+    height: 50px;
+    margin: auto; // &:not(:last-child) {
+    //     border: 1px solid $green-00;
+    //     }
+}
+
+.row.badge-group {
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap;
+}
+
+.badge-group-labelrow {
+    // flex: 1 1 59px;
+    color: $clear-white-dark;
+    text-align: center;
+    font-size: 70%;
+    background: $clear-black-md;
+    padding: 6px 0 2px 0; // border: 1px solid $clear-black-md;
+    width: 96%;
+    margin: auto;
 }
 
 // ----------------- nothing below the following class --------------//

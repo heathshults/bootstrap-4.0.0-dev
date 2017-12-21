@@ -24,9 +24,9 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "Roboto", Roboto, sans-serif;
+  font-family: "Roboto";
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: 300;
   line-height: 1.5;
   color: #212529;
   background-color: #fff;

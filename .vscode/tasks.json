@@ -67,6 +67,11 @@
       "type": "npm",
       "script": "css-compile-themes",
       "problemMatcher": []
+    },
+    {
+      "type": "npm",
+      "script": "watch-css",
+      "problemMatcher": []
     }
   ]
 }
