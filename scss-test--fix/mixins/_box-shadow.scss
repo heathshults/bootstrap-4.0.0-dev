@@ -1,0 +1,23 @@
+@mixin box-shadow($shadow...) {
+    @if $enable-shadows {
+        box-shadow: $shadow;
+    }
+}
+
+@mixin box-shadow-custom($t, $r, $b, $l, $s-color) {
+    @if $enable-shadows {
+        box-shadow: $t $r $b $l $s-color;
+    }
+}
+
+@mixin box-shadow-custom-inset($t1, $r1, $b1, $l1, $s-color1) {
+    @if $enable-shadows {
+        box-shadow: inset $t1, $r1, $b1, $l1, $s-color1;
+    }
+}
+
+@mixin bs-light-off-axis-y($box-shadow-light-off-axis-y) {
+    @if $enable-shadows {
+        box-shadow: $box-shadow-light-off-axis-y;
+    }
+}

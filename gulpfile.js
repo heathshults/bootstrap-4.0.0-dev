@@ -10,7 +10,19 @@ const sourcemaps = require('gulp-sourcemaps')
 const autoprefixer = require('autoprefixer')
 const pkg = require('./package.json')
 const stylefmt = require('gulp-stylefmt')
+const clean = require('gulp-clean')
 
+// Delete the dist directory
+gulp.task('clean', function() {
+  return gulp.src([
+    'dist/**/*.css', 
+    // 'dist/**/*.js', 
+    'dist/**/*.map',
+    '../npdb-usafb-templates/app/css/*.css',
+    '../npdb-usafb-templates/app/css/*.map'
+  ])
+  .pipe(clean({force: true}));
+ });
 
 // Set the banner content
 const banner = ['/*!\n',
@@ -23,7 +35,7 @@ const banner = ['/*!\n',
 
 // Compiles SCSS files from /scss into /css
 gulp.task('sass-2-css', () => {
-  return gulp.src('./scss/bootstrap.scss')
+  return gulp.src('scss/bootstrap.scss')
     .pipe(sass())
     .pipe(header(banner, {
       pkg: 'pkg'
@@ -31,7 +43,7 @@ gulp.task('sass-2-css', () => {
     .pipe(rename({
       prefix: 'usafb-'
     }))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -39,7 +51,7 @@ gulp.task('sass-2-css', () => {
 
 // Compiles SCSS files from /scss into /css
 gulp.task('sassy-skeletor', () => {
-  return gulp.src('./scss/bootstrap.scss')
+  return gulp.src('scss/bootstrap.scss')
     .pipe(sass())
     .pipe(header(banner, {
       pkg: 'pkg'
@@ -47,7 +59,7 @@ gulp.task('sassy-skeletor', () => {
     .pipe(rename({
       prefix: 'usafb-'
     }))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -55,7 +67,7 @@ gulp.task('sassy-skeletor', () => {
 
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], () => {
-  return gulp.src('./dist/css/*.css')
+  return gulp.src('dist/css/*.css')
         .pipe(cleanCSS({
           compatibility: 'ie8'
         }))
@@ -88,37 +100,41 @@ gulp.task('minify-js', () => {
 
 // Copy vendor libraries from /node_modules into /vendor
 gulp.task('copy', () => {
-  gulp.src(['./dist/css/*.css', './dist/css/*.map'])
-        .pipe(gulp.dest('../npdb-usafb-templates/css'))
+  gulp.src(['dist/css/*.css', 'dist/css/*.map'])
+        .pipe(gulp.dest('../npdb-usafb-templates/app/css'))
+  var emptystuff = [
+  // gulp.src(['dist/js/*.js'])
+  //       .pipe(gulp.dest('../npdb-usafb-templates/app/js'))
 
-  gulp.src(['./dist/js/*.js'])
-        .pipe(gulp.dest('../npdb-usafb-templates/js'))
-
-  gulp.src(['./dist/css/*.css', './dist/css/*.map',
-    'node_modules/font-awesome/css/**',
-    '!node_modules/font-awesome/**/*.map',
-    '!node_modules/font-awesome/.npmignore',
-    '!node_modules/font-awesome/*.txt',
-    '!node_modules/font-awesome/*.md',
-    '!node_modules/font-awesome/*.json'
-    ])
-    .pipe(gulp.dest('../npdb-usafb-templates/css/vendor/font-awesome'))
+  // gulp.src([
+  //   'node_modules/font-awesome/css/**',
+  //   '!node_modules/font-awesome/**/*.map',
+  //   '!node_modules/font-awesome/.npmignore',
+  //   '!node_modules/font-awesome/*.txt',
+  //   '!node_modules/font-awesome/*.md',
+  //   '!node_modules/font-awesome/*.json'
+  //   ])
+  //   .pipe(gulp.dest('../npdb-usafb-templates/app/css/vendor/font-awesome'))
+  ]
 })
 
 // autoprefix vendor browsers where necessary
 gulp.task('autoprefixme', function () {
-  return gulp.src('/dist/css/*.css')
+  return gulp.src('dist/css/*.css')
       .pipe(sourcemaps.init())
-      .pipe(postcss([ autoprefixer() ]))
+      .pipe(postcss([autoprefixer() ]))
       .pipe(sourcemaps.write('.'))
-      .pipe(rename({prefix: 'usafb-'}))
-      .pipe(gulp.dest('../USAFB/npdb-usafb-templates/css/'))
+      .pipe(rename({
+        prefix: ''
+      }))
+      .pipe(gulp.dest('../npdb-usafb-templates/app/css/'))
 })
 
+// in test mode, needs correct directory sset for real use
 gulp.task('stylefmt', function () {
-  return gulp.src('scss/*.scss') 
+  return gulp.src('scss-test--fix/*.scss') 
     .pipe(stylefmt())
-    .pipe(gulp.dest('dist/test'));
+    .pipe(gulp.dest('scss-test--fix/test'));
 });
 
 // Run everything

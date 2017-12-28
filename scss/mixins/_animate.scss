@@ -2,21 +2,28 @@
 @mixin animateWidth($startWidth, $endWidth) {
   @keyframes growHorizontal {
     from { width: $startWidth; }
-    to { width: $endWidth }
+    to { width: $endWidth; }
+  }
+}
+
+@mixin animateWidth($startHeight, $endHeight) {
+  @keyframes shrinkVerticle {
+    from { height: $startHeight; }
+    to { height: $endHeight; }
   }
 }
 
 //
 @mixin animation($animate...) {
   $max: length($animate);
-  $animations: '';
+  $animations: "";
   @for $i from 1 through $max {
     $animations: #{$animations + nth($animate, $i)};
     @if $i < $max {
       $animations: #{$animations + ", "};
     }
   }
-  animation : $animations;
+  animation: $animations;
 }
 
 @mixin keyframes($animationName) {

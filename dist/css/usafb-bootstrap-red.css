@@ -11,6 +11,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 .full-screen-bg-profiles-red {
+  display: -ms-flexbox;
   display: flex;
   background: #4B0508 url("images/bg/usa-fb-bg.jpg");
   background-size: cover;
@@ -24,8 +25,10 @@
 }
 
 .footer-container-red {
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
   min-height: 100px;
   width: 100%;
   background: linear-gradient(to bottom, #4c0408, #9e0a0f);
@@ -33,13 +36,15 @@
 }
 
 .flexi-container-red {
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
 }
 
 .flexi-item-red {
-  -webkit-flex: 1 auto;
-  flex: 1 auto;
+  -ms-flex: 1 auto;
+      flex: 1 auto;
 }
 
 .section-main-content {
@@ -53,7 +58,8 @@
   top: 0px;
   left: 0px;
   background: rgba(0, 0, 0, 0.5);
-  filter: blur(3px);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
 }
 
 .red-theme .top-nav {
@@ -64,21 +70,29 @@
 
 .red-theme .navbar {
   position: relative;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: 1.05rem;
-  align-items: center;
-  justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   padding: 0.5rem 1rem;
   width: 100%;
 }
 
 .red-theme .navbar > .container,
 .red-theme .navbar > .container-fluid {
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 .red-theme .navbar-brand {
@@ -96,8 +110,10 @@
 }
 
 .red-theme .navbar-nav {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -127,7 +143,8 @@
 
 .red-theme .navbar-nav .nav-item-separator {
   border-left: 0.125rem rgba(255, 255, 255, 0.5) solid;
-  transform: skewX(-25deg);
+  -webkit-transform: skewX(-25deg);
+          transform: skewX(-25deg);
   margin: 1rem 0.3rem 0 0.3rem;
   height: 20px;
 }
@@ -144,8 +161,10 @@
 }
 
 .red-theme .navbar-collapse {
-  flex-basis: 100%;
-  align-items: center;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .red-theme .navbar-toggler {
@@ -183,12 +202,16 @@
 
 @media (min-width: 576px) {
   .red-theme .navbar-expand-sm {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
   }
   .red-theme .navbar-expand-sm .navbar-nav {
-    flex-direction: row;
+    -ms-flex-direction: row;
+        flex-direction: row;
   }
   .red-theme .navbar-expand-sm .navbar-nav .dropdown-menu {
     position: absolute;
@@ -203,9 +226,11 @@
   }
   .red-theme .navbar-expand-sm > .container,
   .red-theme .navbar-expand-sm > .container-fluid {
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .red-theme .navbar-expand-sm .navbar-collapse {
+    display: -ms-flexbox !important;
     display: flex !important;
   }
   .red-theme .navbar-expand-sm .navbar-toggler {
@@ -223,12 +248,16 @@
 
 @media (min-width: 768px) {
   .red-theme .navbar-expand-md {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
   }
   .red-theme .navbar-expand-md .navbar-nav {
-    flex-direction: row;
+    -ms-flex-direction: row;
+        flex-direction: row;
   }
   .red-theme .navbar-expand-md .navbar-nav .dropdown-menu {
     position: absolute;
@@ -243,9 +272,11 @@
   }
   .red-theme .navbar-expand-md > .container,
   .red-theme .navbar-expand-md > .container-fluid {
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .red-theme .navbar-expand-md .navbar-collapse {
+    display: -ms-flexbox !important;
     display: flex !important;
   }
   .red-theme .navbar-expand-md .navbar-toggler {
@@ -263,12 +294,16 @@
 
 @media (min-width: 992px) {
   .red-theme .navbar-expand-lg {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
   }
   .red-theme .navbar-expand-lg .navbar-nav {
-    flex-direction: row;
+    -ms-flex-direction: row;
+        flex-direction: row;
   }
   .red-theme .navbar-expand-lg .navbar-nav .dropdown-menu {
     position: absolute;
@@ -283,9 +318,11 @@
   }
   .red-theme .navbar-expand-lg > .container,
   .red-theme .navbar-expand-lg > .container-fluid {
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .red-theme .navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox !important;
     display: flex !important;
   }
   .red-theme .navbar-expand-lg .navbar-toggler {
@@ -303,12 +340,16 @@
 
 @media (min-width: 1280px) {
   .red-theme .navbar-expand-xl {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
   }
   .red-theme .navbar-expand-xl .navbar-nav {
-    flex-direction: row;
+    -ms-flex-direction: row;
+        flex-direction: row;
   }
   .red-theme .navbar-expand-xl .navbar-nav .dropdown-menu {
     position: absolute;
@@ -323,9 +364,11 @@
   }
   .red-theme .navbar-expand-xl > .container,
   .red-theme .navbar-expand-xl > .container-fluid {
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .red-theme .navbar-expand-xl .navbar-collapse {
+    display: -ms-flexbox !important;
     display: flex !important;
   }
   .red-theme .navbar-expand-xl .navbar-toggler {
@@ -334,9 +377,12 @@
 }
 
 .red-theme .navbar-expand {
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
 }
 
 .red-theme .navbar-expand > .container,
@@ -346,7 +392,8 @@
 }
 
 .red-theme .navbar-expand .navbar-nav {
-  flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
 }
 
 .red-theme .navbar-expand .navbar-nav .dropdown-menu {
@@ -365,10 +412,12 @@
 
 .red-theme .navbar-expand > .container,
 .red-theme .navbar-expand > .container-fluid {
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .red-theme .navbar-expand .navbar-collapse {
+  display: -ms-flexbox !important;
   display: flex !important;
 }
 
@@ -435,14 +484,15 @@
 }
 
 .red-theme .card-theme-red {
-  font-family: "Roboto", Roboto, sans-serif;
+  font-family: "Roboto Light", roboto light, "sans-serif";
   font-weight: 300;
 }
 
 .red-theme .card-theme-red .card-red {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  word-wrap: break-word;
+  -ms-flex-direction: column;
+      flex-direction: column;
   background-clip: border-box;
   color: #fff;
 }
@@ -474,7 +524,8 @@
 }
 
 .red-theme .card-theme-red .card-red-body {
-  flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
   background: rgba(0, 0, 0, 0.25);
   padding: 1.25rem;
   margin-top: 10px;
@@ -526,9 +577,15 @@
   margin-left: 1.25rem;
 }
 
-.red-theme .card-theme-red div.collapse.indent {
+.red-theme .card-theme-red div.collapse.indent .collapse {
   padding-left: 20px;
   transition: all 0.2s ease-in-out;
+}
+
+.red-theme .card-theme-red div.collapse.indent.show {
+  padding-left: 20px;
+  transition: all 0.2s ease-in-out;
+  visibility: visible;
 }
 
 .red-theme .card-theme-red .card-red > .list-group:first-child .list-group-item:first-child {
@@ -595,6 +652,7 @@
 }
 
 .red-theme .stats-container .title-3 {
+  display: -ms-inline-flexbox;
   display: inline-flex;
   color: rgba(255, 255, 255, 0.75);
   font-weight: 600;
@@ -628,7 +686,8 @@
 }
 
 .red-theme .whiteTools-wrapper .col-3 .current-stats {
-  align-items:  center;
+  -ms-flex-align:  center;
+      align-items:  center;
 }
 
 .red-theme .formField {
@@ -638,6 +697,7 @@
   color: #fff;
   width: 100%;
   margin: 1px;
+  display: -ms-flexbox;
   display: flex;
   border: solid 1px #5c090c;
   background: #2c0104;
@@ -651,8 +711,10 @@
 }
 
 .red-theme .btn-primary-03 {
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: unset !important;
+  -ms-flex-align: unset !important;
+      align-items: unset !important;
   color: white;
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -676,8 +738,10 @@
 }
 
 .red-theme .btn-primary-03-sm {
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: unset !important;
+  -ms-flex-align: unset !important;
+      align-items: unset !important;
   color: white;
   font-size: 1rem;
   text-transform: uppercase;
@@ -707,7 +771,7 @@
   content: "\f078";
   display: inline-block;
   font-family: normal normal normal 14px/1 FontAwesome;
-  font-size: "Roboto", Roboto, sans-serif;
+  font-size: "Roboto Light", roboto light, "sans-serif";
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -728,7 +792,7 @@
   top: 15px;
   z-index: 3000;
   font-family: normal normal normal 14px/1 FontAwesome;
-  font-size: "Roboto", Roboto, sans-serif;
+  font-size: "Roboto Light", roboto light, "sans-serif";
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -762,9 +826,12 @@
 .red-theme .current-stats .stat-title .badge-grade {
   visibility: hidden;
   position: absolute;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  flex-flow: column;
-  align-items: center;
+  -ms-flex-flow: column;
+      flex-flow: column;
+  -ms-flex-align: center;
+      align-items: center;
   top: -20px;
   left: -6px;
   font-size: 80%;
@@ -779,7 +846,8 @@
   max-width: 100%;
   margin: 0.375rem;
   border-radius: 50%;
-  transform: rotate(340deg);
+  -webkit-transform: rotate(340deg);
+          transform: rotate(340deg);
 }
 
 .red-theme .prev,
@@ -804,14 +872,6 @@
 
 .red-theme .fa-edit {
   display: none;
-}
-
-.red-theme .font-75 {
-  font-size: 75%;
-}
-
-.red-theme .font-50 {
-  font-size: 50%;
 }
 
 .red-theme .stat-title-position {
@@ -844,7 +904,8 @@
 .red-theme .red-theme-title-2::after {
   position: absolute;
   top: 42%;
-  flex: 1 1 90%;
+  -ms-flex: 1 1 90%;
+      flex: 1 1 90%;
   width: 100%;
   margin-left: 10px;
   content: "";
@@ -858,5 +919,4 @@
 .red-theme .icon-fill-white {
   fill: #fff;
 }
-
 /*# sourceMappingURL=usafb-bootstrap-red.css.map */

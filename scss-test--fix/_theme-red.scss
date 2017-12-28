@@ -1,0 +1,649 @@
+// red-theme 
+// author: Heath Shults
+// containers
+.full-screen-bg-profiles-red {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  background: #4b0508 url("images/bg/usa-fb-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+  object-fit: contain;
+}
+
+.footer-container-red {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  min-height: 100px;
+  background: $darkred-gradient-reverse;
+  background: $red-000;
+}
+
+.flexi-container-red {
+  display: flex;
+  flex-flow: row wrap;
+}
+/* stylelint-disable */
+.flexi-item-red {
+  -webkit-flex: 1 auto;
+  flex: 1 auto;
+}
+/* stylelint-enable */
+.section-main-content {
+  margin-top: 110px;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 110px;
+    content: "";
+    background: rgba(0, 0, 0, .5);
+    filter: blur(3px);
+  }
+}
+// top navigation
+.red-theme {
+  .top-nav {
+    position: fixed;
+    height: 110px; //background: rgba(0, 0, 0, 0.5);
+    // background: rgba(33,0,4, 0.9);
+    background: linear-gradient(180deg, rgba(33, 0, 4, 1) 12%, rgba(33, 0, 4, 1) 33%, rgba(0, 0, 0, 0) 100%); // filter: blur(13px);
+  }
+  .navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; // allow us to do the line break for collapsing content
+    align-items: center;
+    justify-content: space-between; // space out brand from logo
+    width: 100%; // Because flex properties aren't inherited, we need to redeclare these first
+    padding: $navbar-padding-y $navbar-padding-x;
+    font-size: $nav-link-font-size;
+    // few properities so that content nested within behave properly.
+    > .container,
+    > .container-fluid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  } // Navbar brand
+  //
+  // Used for brand, project, or site names.
+  .navbar-brand {
+    display: inline-block;
+    padding-top: $navbar-brand-padding-y;
+    padding-bottom: $navbar-brand-padding-y;
+    margin-right: $navbar-padding-x;
+    font-size: $navbar-brand-font-size;
+    line-height: inherit;
+    white-space: nowrap;
+    @include hover-focus {
+      text-decoration: none;
+    }
+  } // Navbar nav
+  //
+  // Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
+  .navbar-nav {
+    display: flex;
+    flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    .nav-link {
+      padding-right: 0;
+      padding-left: 0;
+      font-size: $nav-link-font-size;
+      font-weight: 500;
+      color: $xtra-light-pink;
+      text-align: left;
+      text-shadow: $text-shadow-wide-spread;
+      text-transform: uppercase;
+      letter-spacing: .9px;
+      transition: all .3s ease-out;
+    }
+    .nav-link:hover {
+      color: $nav-link-hover;
+      text-shadow: $text-shadow-outer-glow;
+    }
+    .nav-link.active {
+      color: $light-yellow;
+    }
+    .nav-item-separator {
+      height: 20px;
+      margin: $nav-item-divider-margin;
+      border-left: $nav-item-divider-border-red;
+      transform: $nav-item-divider-transform;
+    }
+    .dropdown-menu {
+      position: static;
+      float: none;
+    }
+  } // Navbar text
+  //
+  //
+  .navbar-text {
+    display: inline-block;
+    padding-top: $nav-link-padding-y;
+    padding-bottom: $nav-link-padding-y;
+  } // Responsive navbar
+  //
+  // Custom styles for responsive collapsing and toggling of navbar contents.
+  // Powered by the collapse Bootstrap JavaScript plugin.
+  // When collapsed, prevent the toggleable navbar contents from appearing in
+  // the default flexbox row orienation. Requires the use of `flex-wrap: wrap`
+  // on the `.navbar` parent.
+  .navbar-collapse {
+    flex-basis: 100%; // For always expanded or extra full navbars, ensure content aligns itself
+    // properly vertically. Can be easily overridden with flex utilities.
+    align-items: center;
+  } // Button for toggling the navbar when in its collapsed state
+  .navbar-toggler {
+    padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
+    margin: -20px -5px 0 0;
+    font-size: $navbar-toggler-font-size;
+    line-height: 1;
+    color: $navbar-toggler-color;
+    background: transparent; // remove default button style
+    border: $border-width solid transparent; // remove default button style
+    @include border-radius($navbar-toggler-border-radius);
+    @include hover-focus {
+      text-decoration: none;
+    }
+  } // Keep as a separate element so folks can easily override it with another icon
+  // or image file as needed.
+  .navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+  } // Generate series of `.navbar-expand-*` responsive classes for configuring
+  // where your navbar collapses.
+  .navbar-expand {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
+      $infix: breakpoint-infix($next, $grid-breakpoints);
+      &#{$infix} {
+        @include media-breakpoint-down($breakpoint) {
+          > .container,
+          > .container-fluid {
+            padding-right: 0;
+            padding-left: 0;
+          }
+        }
+        @include media-breakpoint-up($next) {
+          flex-direction: row nowrap;
+          // flex-wrap: nowrap;
+          justify-content: flex-start;
+          .navbar-nav {
+            flex-direction: row;
+            .dropdown-menu {
+              position: absolute;
+            }
+            .dropdown-menu-right {
+              right: 0;
+              left: auto; // Reset the default from `.dropdown-menu`
+            }
+            .nav-link {
+              padding-right: 1rem;
+              padding-left: 1rem;
+            }
+          } // For nesting containers, have to redeclare for alignment purposes
+          > .container,
+          > .container-fluid {
+            flex-wrap: nowrap;
+          } // scss-lint:disable ImportantRule
+          .navbar-collapse {
+            display: flex;
+          } // scss-lint:enable ImportantRule
+          .navbar-toggler {
+            display: none;
+          }
+        }
+      }
+    }
+  } // White links against a dark background
+  .navbar-dark {
+    .navbar-brand {
+      color: $navbar-dark-active-color;
+      @include hover-focus {
+        color: $navbar-dark-active-color;
+      }
+    }
+    .navbar-nav {
+      .nav-link {
+        color: $navbar-dark-color;
+        @include hover-focus {
+          color: $navbar-dark-hover-color;
+        } /* stylelint-disable */
+        &.disabled {
+          color: $navbar-dark-disabled-color;
+        } 
+      }
+      .show > .nav-link,
+      .active>.nav-link,
+      .nav-link.show,
+      .nav-link.active {
+        color: $navbar-dark-active-color;
+      }/* stylelint-enable */
+    }
+    .navbar-toggler {
+      color: $navbar-dark-color;
+      border-color: $navbar-dark-toggler-border-color;
+      .navbar-toggler:hover {
+        cursor: pointer;
+      }
+    }
+    .navbar-toggler-icon {
+      background-image: $navbar-dark-toggler-icon-bg;
+    }
+    .navbar-text {
+      color: $navbar-dark-color;
+    }
+  } //card red
+  .card-red-header-special {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: $card-spacer-red-top $card-spacer-red-x $card-spacer-red-bottom $card-spacer-red-x;
+    margin-bottom: 0; // Removes the default margin-bottom of <hN>
+    font-size: $font-size-base;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: rem(2px);
+    background: $blue;
+  }
+  .card-theme-red {
+    font-family: $font-family-base;
+    font-weight: 300;
+    //sdlfksdlfkjsldfkj
+    .card-red {
+      //position: relative;
+      display: flex;
+      flex-direction: column;
+      color: $white; //@include border-radius($card-border-radius);
+      // word-wrap: break-word;
+      background-clip: border-box;
+      /* stylelint-disable */
+      > .list-group:first-child {
+        .list-group-item:first-child {
+          @include border-top-radius($card-border-radius);
+        }
+      }
+      > .list-group:last-child {
+        .list-group-item:last-child {
+          @include border-bottom-radius($card-border-radius);
+        }
+      }/* stylelint-enable */
+    }
+
+    .card-red-mspacing-top {
+      margin-top: 28px;
+    }
+    .card-red-header-positioning {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    .card-red-pspacing-top {
+      padding-top: .625rem;
+    }
+    .card-red-header {
+      padding: $card-spacer-red-top $card-spacer-red-x $card-spacer-red-bottom $card-spacer-red-x;
+      margin-bottom: 0; // Removes the default margin-bottom of <hN>
+      font-size: $font-size-base;
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: rem(2px);
+      background: $blue; // border-bottom: $card-border-width solid $card-red-border-color;
+      &:first-child {
+        //@include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+      }
+    }
+    .card-red-body {
+      // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+      // as much space as possible, ensuring footers are aligned to the bottom.
+      flex: 1 1 auto;
+      padding: $card-spacer-x;
+      margin-top: 10px; // border: $card-border-width solid $red-000;
+      background: rgba(0, 0, 0, .25); //rgba(76, 4, 8, 0.5);
+    }
+    strong {
+      color: $light-yellow;
+    }
+    .card-red-title {
+      margin-bottom: $card-spacer-y;
+    }
+    .card-red-subtitle {
+      margin-top: -($card-spacer-y / 2);
+      margin-bottom: 0;
+    }
+    .card-red-text:last-child {
+      margin-bottom: 0;
+    }
+    .card-red-link {
+      color: $blue-450;
+      &:hover {
+        color: $light-yellow;
+        text-decoration: none;
+      }
+      + .card-red-link {
+        margin-left: $card-spacer-x;
+      }
+    }
+    .card-red-link-inverted {
+      display: block;
+      padding: 6px 10px;
+      color: $light-yellow;
+      background: $clear-black;
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
+      + .card-red-link-inverted {
+        margin-left: $card-spacer-x;
+      }
+    }
+    /* stylelint-disable */
+    div.collapse.indent .collapse {
+      padding-left: 20px;
+      transition: $transition-base;
+    }
+    div.collapse.indent.show {
+      padding-left: 20px;
+      visibility: visible;
+      transition: $transition-base;
+    }
+    /* stylelint-enable */
+  }
+  .user-avatar-red {
+    width: $user-avatar-width;
+    max-width: 100%;
+    margin: $user-avatar-margin;
+    background: $user-avatar-bg-color;
+    border: $user-avatar-border-width $border-type-solid $red-100;
+    border-radius: $user-avatar-border-radius;
+  }
+  .user-avatar-red-md {
+    width: $user-avatar-md-width;
+    max-width: 100%;
+    margin: $user-avatar-md-margin;
+    background: $user-avatar-red-md-bg-color;
+    border: $user-avatar-md-border-width $border-type-solid $red-100;
+    border-radius: $user-avatar-md-border-radius;
+  }
+  .user-avatar-red-lg {
+    width: $user-avatar-lg-width;
+    width: $user-avatar-lg-height;
+    max-width: 100%;
+    max-height: 100%;
+    margin: $user-avatar-lg-margin;
+    background: $user-avatar-lg-bg-color;
+    border: $user-avatar-lg-border-width $border-type-solid $red-100;
+    border-radius: $user-avatar-lg-border-radius;
+  }
+  .player-info {
+    padding-top: .625rem;
+    .theme-red-title {
+      font-size: $font-size-lg;
+      color: $blue-450;
+      text-transform: uppercase;
+    }
+    .theme-red-padded-line {
+      margin: 10px 0;
+      color: $xtra-light-pink;
+    }
+  }
+  .stats-container {
+    padding: 10px 20px 20px; // background: $clear-white;
+    .title-3 {
+      display: inline-flex;
+      padding: 15px 15px 15px 46px;
+      margin-bottom: 0;
+      font-weight: 600;
+      color: rgba(255, 255, 255, .75);
+      letter-spacing: rem(1.5px);
+      background: rgba(76, 4, 8, .75);
+      background-image: $helmet-1-right;
+      background-repeat: no-repeat;
+      background-position: 10px center;
+      background-size: 24px 24px;
+      fill: $clear-white-md;
+    }
+  }
+  .stats-wrapper .row{
+    visibility: visible;
+  }
+  .divider-br {
+    border-right: $border-width-sm $border-type-solid $clear-white-md;
+  }
+  .whiteTools-wrapper .col-3 {
+    height: 50px;
+    background: $clear-black;
+    transition: all .2s ease-in-out;
+    &:hover {
+      background: $clear-black-md;
+    }
+    .current-stats {
+      align-items: center;
+    }
+  }
+  .formField {
+    display: flex;
+    width: 100%;
+    padding: $btn-primary-02-padding-sm;
+    margin: 1px;
+    font-size: $font-size-xsm;
+    color: $white;
+    vertical-align: middle;
+    background: $red-001;
+    border: solid 1px $red-100;
+    transition: all .2s ease, border .2s ease;
+    &:disabled {
+      background: transparent;
+      border: 1px solid transparent;
+    }
+  }
+  .btn-primary-03 {
+    display: inline-flex;
+    align-items: unset;
+    padding: $btn-primary-02-padding-sm;
+    margin: 1px;
+    font-size: $btn-primary-02-font-sm;
+    color: $btn-primary-02-color;
+    text-transform: uppercase;
+    background-color: $blue;
+    background-image: $btn-primary-02-bg-grad;
+    border: $btn-primary-02-border;
+    border-radius: $btn-primary-02-border-radius;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $btn-primary-02-color;
+      //transition: $btn-primary-02-trans-bgcolor;
+      cursor: pointer;
+      background: $blue-400;
+      border: $btn-primary-02-border-hover;
+    }
+    .fa {
+      font-size: $btn-primary-02-fa-size;
+    }
+  }
+  .btn-primary-03-sm {
+    display: inline-flex;
+    align-items: unset;
+    padding: $btn-primary-02-padding-sm;
+    font-size: $btn-primary-02-font-base;
+    color: $btn-primary-02-color;
+    text-transform: uppercase;
+    background-image: $btn-primary-02-bg-grad;
+    border: $btn-primary-02-border;
+    border-radius: $btn-primary-02-border-radius;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $btn-primary-02-color;
+      cursor: pointer;
+      background: $blue-400;
+      border: $btn-primary-02-border-hover;
+      transition: $btn-primary-02-trans-bgcolor;
+    }
+    .fa {
+      font-size: $btn-primary-02-fa-size;
+    }
+  }
+  .icon-chevron-down {
+    color: $btn-primary-02-color;
+    &::after {
+      box-sizing: border-box;
+      display: inline-block;
+      margin-left: 8px;
+      font-family: normal normal normal 14px/1 FontAwesome;
+      font-size: $font-family-base;
+      text-align: right;
+      content: "\f078";
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+  .icon-calendar {
+    color: $btn-primary-02-color;
+    &::after {
+      position: absolute;
+      top: 15px;
+      right: 30px;
+      z-index: 3000;
+      box-sizing: border-box;
+      display: inline-block;
+      margin-left: 8px;
+      font-family: normal normal normal 14px/1 FontAwesome;
+      font-size: $font-family-base;
+      text-align: right;
+      content: "\f073";
+      opacity: 1;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+  .current-stats {
+    padding-top: 0;
+    padding-right: 2px;
+    padding-left: 2px;
+    white-space: nowrap;
+
+    .theme-red-badge {
+      display: block;
+      margin: 8px;
+      color: $light-yellow;
+      letter-spacing: 5px;
+      background: $clear-black-dark; // border-radius: 500px;
+    }
+    .stat-title {
+      padding: 0;
+      margin-top: 15px;
+      text-transform: uppercase;
+      // &:hover {
+      //     background: $clear-black; 
+      // }
+      .badge-grade {
+        position: absolute;
+        top: -20px;
+        left: -6px;
+        display: inline-flex;
+        flex-flow: column;
+        align-items: center;
+        width: rem(35px);
+        max-width: 100%;
+        height: rem(35px);
+        padding: 8px;
+        margin: $user-avatar-margin;
+        font-size: 80%;
+        font-weight: 400;
+        line-height: 1;
+        color: $light-yelloww;
+        white-space: nowrap;
+        visibility: hidden;
+        background: $green-000-40;
+        border-radius: $user-avatar-border-radius;
+        transform: rotate(340deg);
+        // &::before {
+        //     padding-top: percentage(1 / 1);
+        // }
+      }
+      // &:not(:last-child) {
+      // border-right: $border-width-sm $border-type-solid $clear-white-md;
+      // }
+    }
+  }
+  .prev,
+  .next,
+  .datepicker-switch,
+  .dow {
+    background: $red-100;
+    border-radius: 0;
+  }
+  .datepicker-days,
+  .datepicker-days[style] {
+    display: inline-block;
+  }
+  .datepicker-months,
+  .datepicker-months[style] {
+    display: inline-block;
+  }
+  .datepicker-years,
+  .datepicker-years[style] {
+    display: inline-block;
+  }
+  .fa-edit{
+    display: none;
+  }
+  .stat-title-position {
+    background-image: url("./images/icons/football/american-football-player.png") middle;
+  }
+  .theme-red-badge {
+    padding: 10px;
+    color: $light-yellow;
+    text-align: center;
+    letter-spacing: rem(2px);
+    background: $clear-black; // border-radius: 500px;
+  }
+  .red-theme-title-2-container {
+    width: 100%;
+    padding: 10px 10px 0 0;
+    margin-right: 20px;
+    overflow: hidden;
+  }
+  .red-theme-title-2 {
+    position: relative;
+    display: block;
+    padding: 6px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    &::after {
+      position: absolute;
+      top: 42%;
+      flex: 1 1 90%;
+      width: 100%;
+      margin-left: 10px;
+      content: "";
+      border: 3px solid $blue-450;
+    }
+  }
+  .icon-helmet-1-fill {
+    fill: $white;
+  }
+  .icon-fill-white {
+    fill: $white;
+  }
+}

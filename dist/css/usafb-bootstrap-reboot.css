@@ -24,7 +24,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "Roboto";
+  font-family: "Roboto Light", roboto light, "sans-serif";
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
@@ -55,7 +55,8 @@ p {
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
 }
@@ -184,7 +185,8 @@ label,
 select,
 summary,
 textarea {
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 
 table {
@@ -325,5 +327,4 @@ template {
 [hidden] {
   display: none !important;
 }
-
 /*# sourceMappingURL=usafb-bootstrap-reboot.css.map */

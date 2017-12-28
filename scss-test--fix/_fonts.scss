@@ -1,0 +1,33 @@
+// base-primary font
+// usage
+//*************************************************************************//
+//    font-family: 'Roboto', sans-serif;
+//    font-family: 'Roboto Condensed', sans-serif;
+//    font-family: 'Roboto Mono', monospace;
+//*************************************************************************//
+
+// light
+@font-face {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url("./css/web-fonts/roboto/roboto-light-300.woff2") format("woff2");
+  unicode-range: u+0000-00ff, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-20gf, u+2074, u+20ac, u+2122, u+2212, u+2215;
+}
+// regular
+@font-face {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("./css/web-fonts/roboto/roboto-regular-400.woff2") format("woff2");
+  unicode-range: u+0000-00ff, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2212, u+2215;
+}
+
+// Monospace font
+@font-face {
+  font-family: Roboto Mono, Trebuchet MS, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Mono"), local("RobotoMono-Regular"), url("./css/web-fonts/roboto/roboto-mono-400.woff2") format("woff2");
+  unicode-range: u+0000-00ff, u+0131, u+0152-0153, u+02bb-02bc, u+02c6, u+02da, u+02dc, u+2000-206f, u+2074, u+20ac, u+2122, u+2212, u+2215;
+}
