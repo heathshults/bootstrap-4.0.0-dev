@@ -110,7 +110,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "Roboto Light", roboto light, "sans-serif";
+  font-family: roboto, roboto light, sans-serif;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
@@ -2608,19 +2608,16 @@ tbody.collapse.show {
 
 .dropdown-menu {
   position: absolute;
-  top: 100%;
-  left: 0px;
   z-index: 1000;
   display: none;
-  float: left;
   min-width: 10rem;
-  padding: 0.5rem 0;
-  margin: 0.375rem;
-  font-size: 1rem;
+  padding-top: 0;
+  margin-top: 0;
+  font-size: 0.875rem;
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #0d2240;
+  background-color: #083660;
   background-clip: padding-box;
   border-radius: 0 0 0.25rem 0.25rem;
   width: 100%;
@@ -2689,7 +2686,8 @@ tbody.collapse.show {
 
 .dropdown-menu.show,
 .dropdown-menu-lg.show {
-  display: block;
+  display: inline-block;
+  width: 224px;
 }
 
 .dropdown-header {
@@ -2701,14 +2699,17 @@ tbody.collapse.show {
   white-space: nowrap;
 }
 
-.show .dropdown-toggle, .show .nav-link.dropdown-toggle {
-  background-color: #0d2240;
+.show .dropdown-toggle,
+.show .nav-link.dropdown-toggle {
   color: #fff;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
-.navbar-collapse.collapse.show .navbar-nav, .navbar-collapse.collapsing .navbar-nav {
+.navbar-collapse.collapse.show .navbar-nav,
+.navbar-collapse.collapsing .navbar-nav {
   position: relative;
-  left: 0px;
+  left: 0;
   z-index: 1000;
   float: left;
   min-width: 10rem;
@@ -2717,13 +2718,14 @@ tbody.collapse.show {
   font-size: 1rem;
   text-align: left;
   list-style: none;
-  background-color: #0d2240;
+  background-color: #083660;
   background-clip: padding-box;
   border-radius: 0 0 0.25rem 0.25rem;
   width: 100%;
 }
 
-.navbar-collapse.collapse.show .navbar-nav .nav-item-separator, .navbar-collapse.collapsing .navbar-nav .nav-item-separator {
+.navbar-collapse.collapse.show .navbar-nav .nav-item-separator,
+.navbar-collapse.collapsing .navbar-nav .nav-item-separator {
   display: none;
 }
 
@@ -3327,7 +3329,8 @@ tbody.collapse.show {
 }
 
 .navbar {
-  position: relative;
+  position: absolute;
+  z-index: 100;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -3372,6 +3375,7 @@ tbody.collapse.show {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
+  font-size: 0.875rem;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -3392,7 +3396,7 @@ tbody.collapse.show {
   color: #fff;
 }
 
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link .nav-link.active {
   color: #fff;
 }
 
@@ -3400,7 +3404,7 @@ tbody.collapse.show {
   border-left: 0.125rem #2e69a3 solid;
   -webkit-transform: skewX(-25deg);
           transform: skewX(-25deg);
-  margin: 1rem 0.3rem 0 0.3rem;
+  margin: 0.65rem 0.3rem 0 0.3rem;
   height: 20px;
 }
 
@@ -4891,7 +4895,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Roboto Light", roboto light, "sans-serif";
+  font-family: roboto, roboto light, sans-serif;
   font-style: normal;
   font-weight: 300;
   line-height: 1.5;
@@ -5005,7 +5009,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: "Roboto Light", roboto light, "sans-serif";
+  font-family: roboto, roboto light, sans-serif;
   font-style: normal;
   font-weight: 300;
   line-height: 1.5;
@@ -9149,7 +9153,7 @@ select#soflow-color-green:after {
   display: inline-block;
   margin-left: 8px;
   font-family: normal normal normal 14px/1 FontAwesome;
-  font-size: "Roboto Light", roboto light, "sans-serif";
+  font-size: roboto, roboto light, sans-serif;
   text-align: right;
   content: "\f078";
   text-rendering: auto;
@@ -9170,7 +9174,7 @@ select#soflow-color-green:after {
   display: inline-block;
   margin-left: 8px;
   font-family: normal normal normal 14px/1 FontAwesome;
-  font-size: "Roboto Light", roboto light, "sans-serif";
+  font-size: roboto, roboto light, sans-serif;
   text-align: right;
   content: "\f078";
   text-rendering: auto;
@@ -9210,7 +9214,7 @@ select#soflow-color-white:after {
   display: inline-block;
   margin-left: 8px;
   font-family: normal normal normal 14px/1 FontAwesome;
-  font-size: "Roboto Light", roboto light, "sans-serif";
+  font-size: roboto, roboto light, sans-serif;
   text-align: right;
   content: "\f078";
   text-rendering: auto;
@@ -9231,7 +9235,7 @@ select#soflow-color-white after {
   display: inline-block;
   margin-left: 8px;
   font-family: normal normal normal 14px/1 FontAwesome;
-  font-size: "Roboto Light", roboto light, "sans-serif";
+  font-size: roboto, roboto light, sans-serif;
   text-align: right;
   content: "\f078";
   text-rendering: auto;
@@ -9570,7 +9574,7 @@ button:hover {
   display: inline-block;
   margin-left: 8px;
   font-family: normal normal normal 14px/1 FontAwesome;
-  font-size: "Roboto Light", roboto light, "sans-serif";
+  font-size: roboto, roboto light, sans-serif;
   text-align: right;
   content: "\f078";
   text-rendering: auto;
@@ -9591,7 +9595,7 @@ button:hover {
   display: inline-block;
   margin-left: 8px;
   font-family: normal normal normal 14px/1 FontAwesome;
-  font-size: "Roboto Light", roboto light, "sans-serif";
+  font-size: roboto, roboto light, sans-serif;
   text-align: right;
   content: "\f073";
   opacity: 1;
@@ -9864,7 +9868,7 @@ button:hover {
   display: -ms-flexbox;
   display: flex;
   color: #8AB8E4;
-  background: #09254a;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 12%, rgba(0, 0, 0, 0.15) 33%, transparent 100%);
   height: 90px;
   height: 5.625rem;
 }
@@ -9944,12 +9948,54 @@ button:hover {
 .header-content-divider {
   width: 100%;
   height: 20px;
+  padding-top: 4px;
+  margin: 0 40px;
   color: #fff;
-  background: #09254a;
+  background: #fff;
+}
+
+.red-skew-bar {
+  position: relative;
+  -ms-flex: 1 auto;
+      flex: 1 auto;
+  height: 16px;
+  margin-left: -40px;
+  overflow: hidden;
+  background: #9e0a0f;
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+}
+
+.white-skew-bar {
+  position: relative;
+  -ms-flex: 0 14px;
+      flex: 0 14px;
+  width: 14px;
+  height: 16px;
+  background: #fff;
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+}
+
+.blue-skew-bar {
+  position: relative;
+  -ms-flex: 0 360px;
+      flex: 0 360px;
+  width: auto;
+  height: 16px;
+  margin-right: -40px;
+  overflow: hidden;
+  background: linear-gradient(219deg, #113f69, #0d3353);
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
 }
 
 .nav-container {
   max-width: calc(100% - 360px);
+}
+
+.bss .dropdown-menu {
+  width: 180px;
 }
 
 .alertPane {
@@ -10131,6 +10177,11 @@ option {
   border-radius: 50%;
 }
 
+.navbar-nav.my-account {
+  background: transparent;
+  border: 1px solid transparent;
+}
+
 .show .dropdown-toggle,
 .show .nav-link.dropdown-toggle {
   color: #fff !important;
@@ -10147,12 +10198,39 @@ option {
   text-transform: lowercase !important;
 }
 
-.my-account .dropdown-menu {
-  padding-top: 0;
-  margin-top: 0;
+.nav-link {
+  display: block;
+  padding: .5rem 0;
+}
+
+.divider-arrow {
+  font-size: 0.75rem;
+  position: absolute;
+  top: 100px;
+  left: 55%;
+  right: 10px;
+  width: 28px;
+  padding: 8px;
+  color: #fff;
+  text-align: center;
+  background: #09254a;
+}
+
+.dropdown-divider {
+  margin: 0;
+  height: 1px;
+  background: #fff;
+  background-blend-mode: screen;
+}
+
+.signout {
+  background: #26579C;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .content-container {
+  left: -10px;
   display: -ms-flexbox;
   display: flex;
   padding: 20px;
@@ -10360,7 +10438,7 @@ thead.cpl th .th-inner {
 .status-disabled .fa-minus-circle::after {
   display: inline-block;
   margin-left: 4px;
-  font-family: "Roboto Light", roboto light, "sans-serif";
+  font-family: roboto, roboto light, sans-serif;
   font-size: 0.875rem;
   content: "Disabled";
   outline: 0;
@@ -10378,7 +10456,7 @@ thead.cpl th .th-inner {
 .status-enabled .fa-check-circle::after {
   display: inline-block;
   margin-left: 4px;
-  font-family: "Roboto Light", roboto light, "sans-serif";
+  font-family: roboto, roboto light, sans-serif;
   font-size: 0.875rem;
   content: "Active";
 }

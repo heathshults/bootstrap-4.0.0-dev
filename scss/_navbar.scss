@@ -13,7 +13,8 @@
 // Provide a static navbar from which we expand to create full-width, fixed, and
 // other navbar variations.
 .navbar {
-    position: relative;
+    position: absolute;
+    z-index: 100;
     display: flex;
     flex-wrap: wrap; // allow us to do the line break for collapsing content
     font-size: $nav-link-font-size;
@@ -53,6 +54,7 @@
 .navbar-nav {
     display: flex;
     flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
+    font-size: $font-size-sm;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
@@ -65,12 +67,12 @@
         font-weight: 500;
         letter-spacing: .9px;
         text-align: left;
-    }
-    .nav-link:hover {
-        color: $nav-link-hover;
-    }
-    .nav-link.active {
-        color: $white;
+        &:hover {
+            color: $nav-link-hover;
+        }
+        .nav-link.active {
+            color: $white;
+        }
     }
     .nav-item-separator {
         border-left: $nav-item-divider-border;

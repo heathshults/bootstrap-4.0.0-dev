@@ -24,7 +24,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "Roboto Light", roboto light, "sans-serif";
+  font-family: roboto, roboto light, sans-serif;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;

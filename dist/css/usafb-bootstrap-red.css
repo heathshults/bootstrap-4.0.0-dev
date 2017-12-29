@@ -145,7 +145,7 @@
   border-left: 0.125rem rgba(255, 255, 255, 0.5) solid;
   -webkit-transform: skewX(-25deg);
           transform: skewX(-25deg);
-  margin: 1rem 0.3rem 0 0.3rem;
+  margin: 0.65rem 0.3rem 0 0.3rem;
   height: 20px;
 }
 
@@ -484,7 +484,7 @@
 }
 
 .red-theme .card-theme-red {
-  font-family: "Roboto Light", roboto light, "sans-serif";
+  font-family: roboto, roboto light, sans-serif;
   font-weight: 300;
 }
 
@@ -719,7 +719,7 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   background-image: linear-gradient(180deg, #09254a 65%, #113f69, 90%, #0d3353);
-  background-color: #09254a;
+  background: #09254a;
   padding: 0.625rem;
   margin: 1px;
   border: solid 0.1875rem #0d2240;
@@ -771,7 +771,7 @@
   content: "\f078";
   display: inline-block;
   font-family: normal normal normal 14px/1 FontAwesome;
-  font-size: "Roboto Light", roboto light, "sans-serif";
+  font-size: roboto, roboto light, sans-serif;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -792,7 +792,7 @@
   top: 15px;
   z-index: 3000;
   font-family: normal normal normal 14px/1 FontAwesome;
-  font-size: "Roboto Light", roboto light, "sans-serif";
+  font-size: roboto, roboto light, sans-serif;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

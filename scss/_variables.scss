@@ -198,6 +198,7 @@ $darkblue-gradient-50:              linear-gradient(to bottom, $blue-200, $blue-
 $darkblue-gradient-reverse-50:      linear-gradient(to bottom, $blue-200-50, $blue-000-50) !default;
 $darkblue-gradient-reverse:         linear-gradient(to bottom, $blue-200, $blue-400) !default;
 $darkblue-button-gradient:          linear-gradient(to bottom, $blue, $blue-200) !default;
+$skew-divider-gradient:             linear-gradient(219deg, $blue-350, $blue--01) !default;
 $darkred-gradient-reverse:          linear-gradient(to bottom, $red-000, $red) !default;
 $green-gradient-reverse:            linear-gradient(to bottom, $green-00, $green) !default;
 
@@ -318,7 +319,7 @@ $transition-collapse:    height .35s ease !default;
 $font-url--sans-serif:        "./css/web-fonts/roboto/roboto-regular.woff2 " !default;
 $font-url--monospace:         "./css/web-fonts/LiberationMono-Regular.ttf" !default;
 
-$font-family-sans-serif:  "Roboto Light", roboto light, "sans-serif" !default;
+$font-family-sans-serif:  roboto, roboto light, sans-serif !default;
 $font-family-base:        $font-family-sans-serif !default;
 $font-family-monospace:   "RobotoMono-Regular", roboto-mono, monospace !default;
 
@@ -672,11 +673,11 @@ $dropdown-padding-y:             .5rem !default;
 $dropdown-padding-x:             1rem !default;
 $dropdown-spacer:                .375rem !default;
 $dropdown-spacer-lg:             1.25 !default;
-$dropdown-bg:                    $blue-000 !default;
-$dropdown-border-color:          rgba($black,.15) !default;
+$dropdown-bg:                    $blue-300 !default;
+$dropdown-border-color:          rgba($black, .15) !default;
 $dropdown-border-width:          $border-width !default;
 $dropdown-divider-bg:            $blue-300 !default;
-$dropdown-box-shadow:            0 .5rem 1rem rgba($black,.175) !default;
+$dropdown-box-shadow:            0 .5rem 1rem rgba($black, .175) !default;
 $dropdown-box-shadow-top:        0 -8px 3px 6px rgba(0, 3, 18, .2) !default;
 $dropdown-box-shadow-bottom:     0 8px 3px 6px rgba(0, 3, 18, .2) !default;
 
@@ -723,7 +724,7 @@ $nav-item-divider-border:       ($border-width-md $blue-400 $border-type-solid) 
 $nav-item-divider-border-red:   ($border-width-md $clear-white-md $border-type-solid) !default;
 $nav-item-divider-transform:    skewX(-25deg) !default;
 $nav-item-skew:                 skewX(1deg) !default;
-$nav-item-divider-margin:       1rem .3rem 0 .3rem !default;
+$nav-item-divider-margin:       .65rem .3rem 0 .3rem !default;
 
 $nav-tabs-border-color:                       $gray-20 !default;
 $nav-tabs-border-width:                       $border-width !default;

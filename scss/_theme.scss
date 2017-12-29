@@ -1043,7 +1043,7 @@ button:hover {
 .header-container {
   display: flex; //background-image: linear-gradient(to bottom, $blue, $blue-400);
   color: $blue-500;
-  background: $blue;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 12%, rgba(0, 0, 0, 0.15) 33%, transparent 100%);
   @include px-to-rem-height(90px); //height: rem(200px)  height: 12.5rem;   padding-top: 28px;
 }
 
@@ -1109,12 +1109,47 @@ button:hover {
 .header-content-divider {
   width: 100%;
   height: 20px;
+  padding-top: 4px;
+  margin: 0 40px;
   color: $white;
-  background: $blue;
+  background: $white;
+}
+
+.red-skew-bar {
+  position: relative;
+  flex: 1 auto;
+  height: 16px;
+  margin-left: -40px;
+  overflow: hidden;
+  background: $red;
+  transform: skewX(-45deg);
+}
+
+.white-skew-bar {
+  position: relative;
+  flex: 0 14px;
+  width: 14px;
+  height: 16px;
+  background: $white;
+  transform: skewX(-45deg);
+}
+.blue-skew-bar {
+  position: relative;
+  flex: 0 360px;
+  width: auto;
+  height: 16px;
+  margin-right: -40px;
+  overflow: hidden;
+  background: $skew-divider-gradient;
+  transform: skewX(-45deg);
 }
 
 .nav-container {
   max-width: calc(100% - 360px);
+}
+
+.bss .dropdown-menu {
+  width: 180px;
 }
 
 .alertPane {
@@ -1297,6 +1332,11 @@ option {
   border-radius: $user-avatar-lg-border-radius;
 }
 
+.navbar-nav.my-account {
+  background: transparent;
+  border: 1px solid transparent;
+}
+
 .show .dropdown-toggle,
 .show .nav-link.dropdown-toggle {
   color: $white !important;
@@ -1314,16 +1354,43 @@ option {
   text-transform: lowercase !important;
 }
 
-.my-account .dropdown-menu {
-  padding-top: 0;
-  margin-top: 0;
+.nav-link {
+  display: block;
+  padding: .5rem 0;
+}
+
+.divider-arrow {
+  font-size: $font-size-xsm;
+  position: absolute;
+  top: 100px;
+  left: 55%;
+  right: 10px;
+  width: 28px;
+  padding: 8px;
+  color: $white;
+  text-align: center;
+  background: $blue;
+}
+
+.dropdown-divider {
+  margin: 0;
+  height: 1px;
+  background: $white;
+  background-blend-mode: screen;
+}
+
+.signout {
+  background: $blue-375;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .content-container {
+  left: -10px;
   display: flex;
   padding: 20px;
-}
 
+}
 .footer-container {
   display: flex;
   flex-flow: row wrap;
