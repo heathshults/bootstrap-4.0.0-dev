@@ -1044,7 +1044,7 @@ button:hover {
   display: flex; //background-image: linear-gradient(to bottom, $blue, $blue-400);
   color: $blue-500;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 12%, rgba(0, 0, 0, 0.15) 33%, transparent 100%);
-  @include px-to-rem-height(90px); //height: rem(200px)  height: 12.5rem;   padding-top: 28px;
+  height: 112px;
 }
 
 .brand-container {
@@ -2310,6 +2310,10 @@ span.loading-icon svg rect {
 .body-bg-blue {
   color: $white;
   background: $blue;
+}
+
+.flip-horz {
+        transform: scaleX(-1);
 }
 
 // ----------------- nothing below the following class --------------//

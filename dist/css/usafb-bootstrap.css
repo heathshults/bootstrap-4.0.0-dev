@@ -3409,6 +3409,7 @@ tbody.collapse.show {
 }
 
 .navbar-nav .dropdown-menu {
+  font-size: 0.875rem;
   position: static;
   float: none;
 }
@@ -3427,11 +3428,11 @@ tbody.collapse.show {
 }
 
 .navbar-toggler {
-  color: #fff;
-  margin: -20px -5px 0 0;
   padding: 0.25rem 0.75rem;
+  margin: -20px -5px 0 0;
   font-size: 1.5rem;
   line-height: 1;
+  color: #fff;
   background: transparent;
   border: 0.0625rem solid transparent;
   border-radius: 0.25rem;
@@ -9869,8 +9870,7 @@ button:hover {
   display: flex;
   color: #8AB8E4;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 12%, rgba(0, 0, 0, 0.15) 33%, transparent 100%);
-  height: 90px;
-  height: 5.625rem;
+  height: 112px;
 }
 
 .brand-container {
@@ -11082,6 +11082,11 @@ span.loading-icon svg rect {
 .body-bg-blue {
   color: #fff;
   background: #09254a;
+}
+
+.flip-horz {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 body.scaff .row > [class^="col-"],
